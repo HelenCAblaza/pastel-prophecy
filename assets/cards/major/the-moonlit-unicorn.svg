@@ -1,109 +1,166 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1080" role="img" aria-labelledby="title desc">
 <title id="title">The Moonlit Unicorn</title>
-<desc id="desc">A cute watercolor-inspired moonlit unicorn oracle card.</desc>
+<desc id="desc">A watercolor paint and line-art style Moonlit Unicorn oracle card.</desc>
 <defs>
-  <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#f9e7f2"/>
-    <stop offset="0.42" stop-color="#d9ccff"/>
-    <stop offset="0.78" stop-color="#bfe7ff"/>
+  <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fff7ea"/>
+    <stop offset="0.2" stop-color="#f8ddec"/>
+    <stop offset="0.48" stop-color="#d9ccff"/>
+    <stop offset="0.76" stop-color="#bfe7ff"/>
     <stop offset="1" stop-color="#fff7ea"/>
   </linearGradient>
-  <radialGradient id="moon" cx="42%" cy="28%" r="52%">
-    <stop offset="0" stop-color="#ffffff"/>
-    <stop offset="0.28" stop-color="#fff8d9"/>
-    <stop offset="0.72" stop-color="#f8dfa5" stop-opacity="0.42"/>
+  <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#fffef4"/>
+    <stop offset="0.45" stop-color="#fff3b9" stop-opacity=".86"/>
     <stop offset="1" stop-color="#f8dfa5" stop-opacity="0"/>
   </radialGradient>
-  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-    <feGaussianBlur stdDeviation="1.2"/>
+  <filter id="paperBlur" x="-8%" y="-8%" width="116%" height="116%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="4" seed="12" result="noise"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer>
+      <feFuncA type="table" tableValues="0 .18"/>
+    </feComponentTransfer>
+    <feBlend in="SourceGraphic" mode="multiply"/>
   </filter>
-  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="8" result="blur"/>
+  <filter id="softBleed" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="2.2"/>
+  </filter>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="7" result="blur"/>
     <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <pattern id="paper" width="28" height="28" patternUnits="userSpaceOnUse">
-    <rect width="28" height="28" fill="transparent"/>
-    <path d="M0 8 Q8 5 14 8 T28 8 M3 22 Q12 18 25 22" fill="none" stroke="#ffffff" stroke-opacity=".17" stroke-width="1"/>
-    <circle cx="6" cy="5" r="1" fill="#66527a" opacity=".05"/>
-    <circle cx="20" cy="17" r="1.2" fill="#66527a" opacity=".04"/>
+  <pattern id="grain" width="36" height="36" patternUnits="userSpaceOnUse">
+    <rect width="36" height="36" fill="transparent"/>
+    <circle cx="5" cy="8" r="1" fill="#5d4774" opacity=".08"/>
+    <circle cx="21" cy="15" r="1.4" fill="#5d4774" opacity=".05"/>
+    <circle cx="30" cy="29" r=".9" fill="#5d4774" opacity=".06"/>
+    <path d="M2 24 C10 20 18 28 34 23" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="1"/>
   </pattern>
+  <style>
+    .ink{fill:none;stroke:#6b5578;stroke-width:5.2;stroke-linecap:round;stroke-linejoin:round;opacity:.78}
+    .ink-thin{fill:none;stroke:#6b5578;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.62}
+    .paint{filter:url(#softBleed);opacity:.72}
+    .star{fill:#fffaf3;stroke:#f8dfa5;stroke-width:2;opacity:.9}
+    .tiny{fill:#fffaf3;opacity:.9}
+  </style>
 </defs>
 
-<rect x="24" y="24" width="672" height="1032" rx="54" fill="#fff7ea"/>
-<rect x="43" y="43" width="634" height="994" rx="42" fill="url(#sky)"/>
-<rect x="43" y="43" width="634" height="994" rx="42" fill="url(#paper)" opacity=".9"/>
-<rect x="58" y="58" width="604" height="964" rx="34" fill="none" stroke="#f8dfa5" stroke-width="8" opacity=".86"/>
-<rect x="72" y="72" width="576" height="936" rx="26" fill="none" stroke="#fff7ea" stroke-width="3" opacity=".72"/>
+<!-- card paper -->
+<rect x="22" y="22" width="676" height="1036" rx="56" fill="#fffaf2"/>
+<rect x="42" y="42" width="636" height="996" rx="44" fill="url(#wash)" filter="url(#paperBlur)"/>
+<rect x="42" y="42" width="636" height="996" rx="44" fill="url(#grain)" opacity=".75"/>
+<rect x="60" y="60" width="600" height="960" rx="34" fill="none" stroke="#f8dfa5" stroke-width="8" opacity=".85"/>
+<rect x="76" y="76" width="568" height="928" rx="26" fill="none" stroke="#fffaf2" stroke-width="3" opacity=".88"/>
 
-<circle cx="360" cy="215" r="145" fill="url(#moon)" filter="url(#glow)"/>
-<circle cx="382" cy="188" r="74" fill="#fff9db" opacity=".88"/>
-<circle cx="415" cy="166" r="72" fill="#d9ccff" opacity=".45"/>
-
-<g opacity=".75" fill="#fff7ea" filter="url(#soft)">
-  <ellipse cx="172" cy="298" rx="78" ry="24"/>
-  <ellipse cx="225" cy="286" rx="54" ry="20"/>
-  <ellipse cx="530" cy="294" rx="86" ry="25"/>
-  <ellipse cx="476" cy="281" rx="48" ry="18"/>
+<!-- loose watercolor background washes -->
+<g class="paint">
+  <path d="M88 154 C176 68 330 96 394 178 C456 254 370 340 238 328 C112 316 24 238 88 154Z" fill="#f8ddec"/>
+  <path d="M350 110 C484 68 620 146 622 282 C624 396 476 450 378 364 C288 286 250 146 350 110Z" fill="#cdb7f6"/>
+  <path d="M126 398 C232 334 370 374 402 486 C442 626 240 674 112 582 C28 522 42 448 126 398Z" fill="#bfe7ff"/>
+  <path d="M392 496 C514 412 662 502 644 650 C628 778 420 802 330 696 C270 626 306 556 392 496Z" fill="#c8f2df"/>
 </g>
 
-<g fill="#fff7ea" opacity=".95">
-  <path d="M144 162 l9 21 23 2 -18 14 6 23 -20-12 -20 12 6-23 -18-14 23-2z"/>
-  <path d="M568 206 l7 16 17 1 -13 11 4 17 -15-9 -15 9 4-17 -13-11 17-1z"/>
-  <circle cx="514" cy="132" r="5"/><circle cx="222" cy="204" r="4"/><circle cx="612" cy="370" r="4"/><circle cx="116" cy="410" r="4"/>
-</g>
-
-<g transform="translate(0 24)">
-  <!-- meadow washes -->
-  <path d="M88 760 C190 690 280 706 360 740 C470 684 574 704 636 772 L636 956 L88 956 Z" fill="#c8f2df" opacity=".72"/>
-  <path d="M68 825 C164 760 292 768 382 812 C466 774 575 778 652 836 L652 956 L68 956 Z" fill="#bfe7ff" opacity=".45"/>
-  <path d="M82 882 C210 830 444 838 642 890 L642 956 L82 956 Z" fill="#fff7ea" opacity=".38"/>
-
-  <!-- crystals -->
-  <g opacity=".9">
-    <path d="M126 734 L158 666 L190 734 L158 782 Z" fill="#cdb7f6" stroke="#fff7ea" stroke-width="4"/>
-    <path d="M548 756 L581 686 L616 756 L581 806 Z" fill="#bfe7ff" stroke="#fff7ea" stroke-width="4"/>
-    <path d="M486 830 L508 778 L535 830 L508 868 Z" fill="#f7bfd8" stroke="#fff7ea" stroke-width="4"/>
-    <path d="M206 835 L229 786 L253 835 L229 873 Z" fill="#f8dfa5" stroke="#fff7ea" stroke-width="4"/>
-  </g>
-
-  <!-- unicorn body -->
-  <g filter="url(#glow)">
-    <ellipse cx="365" cy="664" rx="126" ry="84" fill="#fffaf3" stroke="#d8c7e8" stroke-width="5"/>
-    <path d="M258 716 C244 774 230 820 208 856" stroke="#fffaf3" stroke-width="30" stroke-linecap="round"/>
-    <path d="M440 718 C446 775 464 820 490 854" stroke="#fffaf3" stroke-width="30" stroke-linecap="round"/>
-    <path d="M292 722 C285 784 290 822 306 860" stroke="#fffaf3" stroke-width="26" stroke-linecap="round"/>
-    <path d="M408 724 C398 784 404 824 424 858" stroke="#fffaf3" stroke-width="26" stroke-linecap="round"/>
-    <path d="M490 634 C552 622 588 650 604 694 C568 684 530 686 482 708" fill="#f7bfd8" opacity=".74"/>
-  </g>
-
-  <!-- neck/head -->
-  <path d="M318 610 C290 560 300 505 348 472 C408 432 490 468 494 540 C498 616 416 652 354 630 Z" fill="#fffaf3" stroke="#d8c7e8" stroke-width="5"/>
-  <path d="M331 494 C306 454 296 420 310 386 C342 410 361 442 365 477 Z" fill="#fffaf3" stroke="#d8c7e8" stroke-width="5"/>
-  <path d="M438 488 C456 445 484 418 520 406 C520 449 497 482 468 504 Z" fill="#fffaf3" stroke="#d8c7e8" stroke-width="5"/>
-  <path d="M392 444 L430 328 L456 456 Z" fill="#f8dfa5" stroke="#fff7ea" stroke-width="5"/>
-  <path d="M408 410 C426 398 440 384 448 368" fill="none" stroke="#fff7ea" stroke-width="5" opacity=".8"/>
-
-  <!-- mane -->
-  <path d="M338 474 C276 516 280 612 336 652 C300 646 268 618 258 580 C250 548 260 506 292 476 C318 452 356 434 394 438 C376 446 356 458 338 474 Z" fill="#f7bfd8" opacity=".86"/>
-  <path d="M358 462 C314 520 326 590 382 632" fill="none" stroke="#cdb7f6" stroke-width="18" stroke-linecap="round" opacity=".85"/>
-  <path d="M378 466 C340 538 362 596 424 628" fill="none" stroke="#bfe7ff" stroke-width="14" stroke-linecap="round" opacity=".72"/>
-
-  <!-- face -->
-  <ellipse cx="438" cy="545" rx="11" ry="15" fill="#6a5279"/>
-  <circle cx="442" cy="539" r="4" fill="#fff"/>
-  <path d="M468 580 Q444 599 421 580" fill="none" stroke="#8b72a0" stroke-width="5" stroke-linecap="round"/>
-  <circle cx="472" cy="558" r="13" fill="#f7bfd8" opacity=".56"/>
-
-  <!-- flowers -->
-  <g fill="#fff7ea" stroke="#f7bfd8" stroke-width="3" opacity=".9">
-    <path d="M150 872 c-16-18 16-18 0 0 c18-16 18 16 0 0 c16 18-16 18 0 0 c-18 16-18-16 0 0"/>
-    <path d="M574 886 c-15-17 15-17 0 0 c17-15 17 15 0 0 c15 17-15 17 0 0 c-17 15-17-15 0 0"/>
-    <path d="M330 878 c-13-15 13-15 0 0 c15-13 15 13 0 0 c13 15-13 15 0 0 c-15 13-15-13 0 0"/>
-  </g>
-</g>
+<!-- moon and sky line art -->
+<circle cx="368" cy="213" r="154" fill="url(#moonGlow)" filter="url(#glow)"/>
+<circle cx="388" cy="188" r="74" fill="#fff8d6" opacity=".78"/>
+<path class="ink-thin" d="M418 131 C378 144 350 183 358 226 C366 267 402 294 444 296"/>
+<path class="ink-thin" d="M118 298 C166 264 224 264 270 300"/>
+<path class="ink-thin" d="M464 298 C514 264 578 270 620 306"/>
+<path class="ink-thin" d="M150 316 C190 294 236 298 270 326" opacity=".35"/>
+<path class="ink-thin" d="M476 320 C520 292 580 300 620 330" opacity=".35"/>
 
 <g>
-  <rect x="104" y="908" width="512" height="78" rx="28" fill="rgba(255,247,234,.78)" stroke="#f8dfa5" stroke-width="4"/>
-  <text x="360" y="959" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#5d4774">The Moonlit Unicorn</text>
+  <path class="star" d="M144 154 l9 22 24 2 -18 15 6 24 -21-13 -21 13 6-24 -18-15 24-2z"/>
+  <path class="star" d="M568 210 l7 17 18 2 -14 11 5 18 -16-10 -16 10 5-18 -14-11 18-2z"/>
+  <circle class="tiny" cx="220" cy="205" r="4"/><circle class="tiny" cx="520" cy="124" r="5"/><circle class="tiny" cx="612" cy="382" r="4"/><circle class="tiny" cx="104" cy="418" r="4"/>
+</g>
+
+<!-- meadow watercolor -->
+<g class="paint">
+  <path d="M80 770 C170 692 278 710 356 746 C460 684 570 704 640 780 L640 968 L80 968 Z" fill="#c8f2df"/>
+  <path d="M70 840 C178 760 300 782 386 820 C474 772 574 792 654 846 L654 968 L70 968 Z" fill="#bfe7ff" opacity=".66"/>
+  <path d="M88 890 C244 826 460 842 636 900 L636 968 L88 968 Z" fill="#fff7ea" opacity=".54"/>
+</g>
+<path class="ink-thin" d="M88 786 C178 716 274 720 360 754 C470 704 566 720 638 782"/>
+<path class="ink-thin" d="M96 862 C210 820 384 826 630 882" opacity=".45"/>
+
+<!-- crystals with painted fill + line art -->
+<g>
+  <path d="M126 742 L160 668 L194 742 L160 794 Z" fill="#cdb7f6" opacity=".68"/>
+  <path class="ink-thin" d="M126 742 L160 668 L194 742 L160 794 Z M160 668 L160 794 M126 742 L194 742"/>
+  <path d="M548 760 L582 690 L618 760 L582 816 Z" fill="#bfe7ff" opacity=".72"/>
+  <path class="ink-thin" d="M548 760 L582 690 L618 760 L582 816 Z M582 690 L582 816 M548 760 L618 760"/>
+  <path d="M488 838 L510 782 L538 838 L510 876 Z" fill="#f7bfd8" opacity=".65"/>
+  <path class="ink-thin" d="M488 838 L510 782 L538 838 L510 876 Z"/>
+  <path d="M200 846 L228 786 L256 846 L228 884 Z" fill="#f8dfa5" opacity=".62"/>
+  <path class="ink-thin" d="M200 846 L228 786 L256 846 L228 884 Z"/>
+</g>
+
+<!-- unicorn watercolor fills -->
+<g>
+  <!-- soft shadow -->
+  <ellipse cx="364" cy="760" rx="170" ry="34" fill="#6b5578" opacity=".08" filter="url(#softBleed)"/>
+
+  <!-- tail paint -->
+  <path d="M488 638 C556 618 600 646 618 700 C574 688 536 694 486 724 C502 694 502 666 488 638Z" fill="#f7bfd8" opacity=".76" filter="url(#softBleed)"/>
+  <path d="M500 656 C552 648 586 668 602 700" class="ink-thin"/>
+  <path d="M506 688 C548 674 578 682 602 704" class="ink-thin" opacity=".45"/>
+
+  <!-- body -->
+  <ellipse cx="360" cy="666" rx="130" ry="86" fill="#fffaf3" opacity=".92"/>
+  <path d="M278 718 C264 772 244 824 218 862" stroke="#fffaf3" stroke-width="34" stroke-linecap="round" opacity=".96"/>
+  <path d="M430 720 C434 774 454 824 482 860" stroke="#fffaf3" stroke-width="34" stroke-linecap="round" opacity=".96"/>
+  <path d="M316 724 C308 784 312 828 328 868" stroke="#fffaf3" stroke-width="28" stroke-linecap="round" opacity=".96"/>
+  <path d="M396 724 C386 786 394 828 416 868" stroke="#fffaf3" stroke-width="28" stroke-linecap="round" opacity=".96"/>
+
+  <!-- body line art sketch -->
+  <path class="ink" d="M238 660 C250 606 304 574 372 582 C452 590 508 646 486 706 C468 756 388 778 314 752 C266 736 230 704 238 660Z"/>
+  <path class="ink" d="M278 720 C266 780 246 824 218 862"/>
+  <path class="ink" d="M430 720 C438 780 456 824 482 860"/>
+  <path class="ink-thin" d="M316 724 C308 784 312 828 328 868"/>
+  <path class="ink-thin" d="M396 724 C386 786 394 828 416 868"/>
+
+  <!-- neck/head paint -->
+  <path d="M320 612 C292 560 302 506 352 474 C410 436 492 468 496 542 C500 618 416 654 354 632 Z" fill="#fffaf3" opacity=".96"/>
+  <path d="M330 498 C306 456 298 420 314 386 C344 410 362 444 366 478 Z" fill="#fffaf3" opacity=".96"/>
+  <path d="M440 490 C456 448 484 420 520 408 C520 448 498 482 470 504 Z" fill="#fffaf3" opacity=".96"/>
+  <path class="ink" d="M320 612 C292 560 302 506 352 474 C410 436 492 468 496 542 C500 618 416 654 354 632 Z"/>
+  <path class="ink" d="M330 498 C306 456 298 420 314 386 C344 410 362 444 366 478"/>
+  <path class="ink" d="M440 490 C456 448 484 420 520 408 C520 448 498 482 470 504"/>
+
+  <!-- horn -->
+  <path d="M392 444 L430 326 L458 456 Z" fill="#f8dfa5" opacity=".9"/>
+  <path class="ink" d="M392 444 L430 326 L458 456"/>
+  <path class="ink-thin" d="M408 408 C426 396 440 382 448 366" stroke="#fff7ea" opacity=".8"/>
+
+  <!-- mane paint and line -->
+  <path d="M338 476 C276 518 280 614 336 654 C300 648 268 620 258 582 C250 550 260 508 292 478 C318 454 356 436 394 440 C376 448 356 460 338 476 Z" fill="#f7bfd8" opacity=".76" filter="url(#softBleed)"/>
+  <path d="M360 462 C314 522 326 592 382 634" stroke="#cdb7f6" stroke-width="20" stroke-linecap="round" opacity=".78" fill="none" filter="url(#softBleed)"/>
+  <path d="M382 466 C342 540 362 598 424 630" stroke="#bfe7ff" stroke-width="15" stroke-linecap="round" opacity=".68" fill="none" filter="url(#softBleed)"/>
+  <path class="ink-thin" d="M338 476 C294 514 292 590 338 650"/>
+  <path class="ink-thin" d="M362 464 C320 526 330 592 384 634"/>
+  <path class="ink-thin" d="M386 466 C350 530 366 594 424 628"/>
+
+  <!-- face -->
+  <ellipse cx="440" cy="546" rx="11" ry="15" fill="#6a5279"/>
+  <circle cx="444" cy="540" r="4.2" fill="#fff"/>
+  <path class="ink-thin" d="M468 582 Q444 600 422 582"/>
+  <circle cx="474" cy="560" r="14" fill="#f7bfd8" opacity=".52" filter="url(#softBleed)"/>
+  <path class="ink-thin" d="M472 626 C454 634 434 636 416 632" opacity=".35"/>
+</g>
+
+<!-- tiny flowers and foreground line art -->
+<g>
+  <path d="M150 880 c-16-18 16-18 0 0 c18-16 18 16 0 0 c16 18-16 18 0 0 c-18 16-18-16 0 0" fill="#fff7ea" stroke="#f7bfd8" stroke-width="3" opacity=".9"/>
+  <path d="M574 892 c-15-17 15-17 0 0 c17-15 17 15 0 0 c15 17-15 17 0 0 c-17 15-17-15 0 0" fill="#fff7ea" stroke="#f7bfd8" stroke-width="3" opacity=".9"/>
+  <path d="M330 884 c-13-15 13-15 0 0 c15-13 15 13 0 0 c13 15-13 15 0 0 c-15 13-15-13 0 0" fill="#fff7ea" stroke="#cdb7f6" stroke-width="3" opacity=".9"/>
+  <path class="ink-thin" d="M134 908 C190 884 240 898 286 910 M448 906 C500 886 558 892 610 916" opacity=".42"/>
+</g>
+
+<!-- handwritten title panel -->
+<g>
+  <path d="M106 912 C202 900 520 898 616 914 C628 934 626 972 614 990 C496 1002 228 1002 108 990 C94 968 94 934 106 912Z" fill="rgba(255,250,242,.82)" stroke="#f8dfa5" stroke-width="4"/>
+  <path class="ink-thin" d="M126 930 C222 920 500 918 594 930" opacity=".34"/>
+  <text x="360" y="963" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="#5d4774">The Moonlit Unicorn</text>
 </g>
 </svg>
