@@ -18,6 +18,7 @@ export const cards = [
     "suitName": "Major Prophecy",
     "rank": "Major",
     "keyword": "Intuition",
+    "artPath": "assets/cards/major/the-moonlit-unicorn.svg",
     "shortMeaning": "The Moonlit Unicorn carries the energy of intuition and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching intuition. The Moonlit Unicorn asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through intuition. Let The Moonlit Unicorn show you the next small step instead of the whole staircase.",

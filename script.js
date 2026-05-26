@@ -114,13 +114,17 @@ function updatePickInstruction() {
 }
 
 function cardHTML(card) {
-  return `
-    <div class="oracle-card suit-${card.suit}">
-      <div class="card-art">
+  const artContent = card.artPath
+    ? `<img class="detailed-card-art" src="${card.artPath}" alt="${card.name} watercolor card art" loading="lazy" />`
+    : `<div class="card-art">
         <div class="card-keyword">${card.keyword}</div>
         <div class="card-symbol">${SUIT_SYMBOLS[card.suit] ?? '✦'}</div>
         <div class="card-name">${card.name}</div>
-      </div>
+      </div>`;
+
+  return `
+    <div class="oracle-card suit-${card.suit} ${card.artPath ? 'has-detailed-art' : ''}">
+      ${artContent}
     </div>
   `;
 }

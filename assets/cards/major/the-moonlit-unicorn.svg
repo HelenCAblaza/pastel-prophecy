@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1080" role="img" aria-labelledby="title desc">
+<title id="title">The Moonlit Unicorn</title>
+<desc id="desc">A cute watercolor-inspired moonlit unicorn oracle card.</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f9e7f2"/>
+    <stop offset="0.42" stop-color="#d9ccff"/>
+    <stop offset="0.78" stop-color="#bfe7ff"/>
+    <stop offset="1" stop-color="#fff7ea"/>
+  </linearGradient>
+  <radialGradient id="moon" cx="42%" cy="28%" r="52%">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset="0.28" stop-color="#fff8d9"/>
+    <stop offset="0.72" stop-color="#f8dfa5" stop-opacity="0.42"/>
+    <stop offset="1" stop-color="#f8dfa5" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="1.2"/>
+  </filter>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="8" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <pattern id="paper" width="28" height="28" patternUnits="userSpaceOnUse">
+    <rect width="28" height="28" fill="transparent"/>
+    <path d="M0 8 Q8 5 14 8 T28 8 M3 22 Q12 18 25 22" fill="none" stroke="#ffffff" stroke-opacity=".17" stroke-width="1"/>
+    <circle cx="6" cy="5" r="1" fill="#66527a" opacity=".05"/>
+    <circle cx="20" cy="17" r="1.2" fill="#66527a" opacity=".04"/>
+  </pattern>
+</defs>
+
+<rect x="24" y="24" width="672" height="1032" rx="54" fill="#fff7ea"/>
+<rect x="43" y="43" width="634" height="994" rx="42" fill="url(#sky)"/>
+<rect x="43" y="43" width="634" height="994" rx="42" fill="url(#paper)" opacity=".9"/>
+<rect x="58" y="58" width="604" height="964" rx="34" fill="none" stroke="#f8dfa5" stroke-width="8" opacity=".86"/>
+<rect x="72" y="72" width="576" height="936" rx="26" fill="none" stroke="#fff7ea" stroke-width="3" opacity=".72"/>
+
+<circle cx="360" cy="215" r="145" fill="url(#moon)" filter="url(#glow)"/>
+<circle cx="382" cy="188" r="74" fill="#fff9db" opacity=".88"/>
+<circle cx="415" cy="166" r="72" fill="#d9ccff" opacity=".45"/>
+
+<g opacity=".75" fill="#fff7ea" filter="url(#soft)">
+  <ellipse cx="172" cy="298" rx="78" ry="24"/>
+  <ellipse cx="225" cy="286" rx="54" ry="20"/>
+  <ellipse cx="530" cy="294" rx="86" ry="25"/>
+  <ellipse cx="476" cy="281" rx="48" ry="18"/>
+</g>
+
+<g fill="#fff7ea" opacity=".95">
+  <path d="M144 162 l9 21 23 2 -18 14 6 23 -20-12 -20 12 6-23 -18-14 23-2z"/>
+  <path d="M568 206 l7 16 17 1 -13 11 4 17 -15-9 -15 9 4-17 -13-11 17-1z"/>
+  <circle cx="514" cy="132" r="5"/><circle cx="222" cy="204" r="4"/><circle cx="612" cy="370" r="4"/><circle cx="116" cy="410" r="4"/>
+</g>
+
+<g transform="translate(0 24)">
+  <!-- meadow washes -->
+  <path d="M88 760 C190 690 280 706 360 740 C470 684 574 704 636 772 L636 956 L88 956 Z" fill="#c8f2df" opacity=".72"/>
+  <path d="M68 825 C164 760 292 768 382 812 C466 774 575 778 652 836 L652 956 L68 956 Z" fill="#bfe7ff" opacity=".45"/>
+  <path d="M82 882 C210 830 444 838 642 890 L642 956 L82 956 Z" fill="#fff7ea" opacity=".38"/>
+
+  <!-- crystals -->
+  <g opacity=".9">
+    <path d="M126 734 L158 666 L190 734 L158 782 Z" fill="#cdb7f6" stroke="#fff7ea" stroke-width="4"/>
+    <path d="M548 756 L581 686 L616 756 L581 806 Z" fill="#bfe7ff" stroke="#fff7ea" stroke-width="4"/>
+    <path d="M486 830 L508 778 L535 830 L508 868 Z" fill="#f7bfd8" stroke="#fff7ea" stroke-width="4"/>
+    <path d="M206 835 L229 786 L253 835 L229 873 Z" fill="#f8dfa5" stroke="#fff7ea" stroke-width="4"/>
+  </g>
+
+  <!-- unicorn body -->
+  <g filter="url(#glow)">
+    <ellipse cx="365" cy="664" rx="126" ry="84" fill="#fffaf3" stroke="#d8c7e8" stroke-width="5"/>
+    <path d="M258 716 C244 774 230 820 208 856" stroke="#fffaf3" stroke-width="30" stroke-linecap="round"/>
+    <path d="M440 718 C446 775 464 820 490 854" stroke="#fffaf3" stroke-width="30" stroke-linecap="round"/>
+    <path d="M292 722 C285 784 290 822 306 860" stroke="#fffaf3" stroke-width="26" stroke-linecap="round"/>
+    <path d="M408 724 C398 784 404 824 424 858" stroke="#fffaf3" stroke-width="26" stroke-linecap="round"/>
+    <path d="M490 634 C552 622 588 650 604 694 C568 684 530 686 482 708" fill="#f7bfd8" opacity=".74"/>
+  </g>
+
+  <!-- neck/head -->
+  <path d="M318 610 C290 560 300 505 348 472 C408 432 490 468 494 540 C498 616 416 652 354 630 Z" fill="#fffaf3" stroke="#d8c7e8" stroke-width="5"/>
+  <path d="M331 494 C306 454 296 420 310 386 C342 410 361 442 365 477 Z" fill="#fffaf3" stroke="#d8c7e8" stroke-width="5"/>
+  <path d="M438 488 C456 445 484 418 520 406 C520 449 497 482 468 504 Z" fill="#fffaf3" stroke="#d8c7e8" stroke-width="5"/>
+  <path d="M392 444 L430 328 L456 456 Z" fill="#f8dfa5" stroke="#fff7ea" stroke-width="5"/>
+  <path d="M408 410 C426 398 440 384 448 368" fill="none" stroke="#fff7ea" stroke-width="5" opacity=".8"/>
+
+  <!-- mane -->
+  <path d="M338 474 C276 516 280 612 336 652 C300 646 268 618 258 580 C250 548 260 506 292 476 C318 452 356 434 394 438 C376 446 356 458 338 474 Z" fill="#f7bfd8" opacity=".86"/>
+  <path d="M358 462 C314 520 326 590 382 632" fill="none" stroke="#cdb7f6" stroke-width="18" stroke-linecap="round" opacity=".85"/>
+  <path d="M378 466 C340 538 362 596 424 628" fill="none" stroke="#bfe7ff" stroke-width="14" stroke-linecap="round" opacity=".72"/>
+
+  <!-- face -->
+  <ellipse cx="438" cy="545" rx="11" ry="15" fill="#6a5279"/>
+  <circle cx="442" cy="539" r="4" fill="#fff"/>
+  <path d="M468 580 Q444 599 421 580" fill="none" stroke="#8b72a0" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="472" cy="558" r="13" fill="#f7bfd8" opacity=".56"/>
+
+  <!-- flowers -->
+  <g fill="#fff7ea" stroke="#f7bfd8" stroke-width="3" opacity=".9">
+    <path d="M150 872 c-16-18 16-18 0 0 c18-16 18 16 0 0 c16 18-16 18 0 0 c-18 16-18-16 0 0"/>
+    <path d="M574 886 c-15-17 15-17 0 0 c17-15 17 15 0 0 c15 17-15 17 0 0 c-17 15-17-15 0 0"/>
+    <path d="M330 878 c-13-15 13-15 0 0 c15-13 15 13 0 0 c13 15-13 15 0 0 c-15 13-15-13 0 0"/>
+  </g>
+</g>
+
+<g>
+  <rect x="104" y="908" width="512" height="78" rx="28" fill="rgba(255,247,234,.78)" stroke="#f8dfa5" stroke-width="4"/>
+  <text x="360" y="959" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#5d4774">The Moonlit Unicorn</text>
+</g>
+</svg>
