@@ -2,6 +2,11 @@
 
 A mobile-first whimsical pastel tarot web app.
 
+## Live site
+
+- https://helencablaza.github.io/pastel-prophecy/
+- If you see an old version, use: https://helencablaza.github.io/pastel-prophecy/?nocache=1
+
 ## What’s in this scaffold
 
 - 78-card deck data (`data/cards.js`)
@@ -12,6 +17,10 @@ A mobile-first whimsical pastel tarot web app.
   - One combined 3-card summary
   - One shared **Do** list + **Don’t** list (for all 3 together)
 - Download reading as PNG (`html2canvas`)
+- First detailed artwork cards enabled:
+  - The First Sparkle
+  - The Moonlit Unicorn
+  - The Crystal Crown
 
 ## Project structure
 
@@ -21,6 +30,8 @@ A mobile-first whimsical pastel tarot web app.
 - `data/cards.js` — card content
 - `assets/cards/` — detailed card artworks (SVG/PNG)
 - `docs/design-plan.md` — style/design notes
+- `docs/pastel-prophecy-78-card-prompts.md` — full original prompt pack
+- `docs/animation-direction.md` — animation blueprint
 
 ## Local preview
 
@@ -32,14 +43,12 @@ Open: <http://localhost:8000>
 
 ## Deploy (GitHub Pages)
 
-This is a static site; deploy directly from the `main` branch root.
-After enabling Pages in repo settings, your URL will be:
+This static app deploys from the `main` branch root.
 
-`https://HelenCAblaza.github.io/pastel-prophecy/`
+## Cache-busting workflow (important)
 
-## Next production steps
+After JS/CSS updates, bump query versions in `index.html`:
+- `style.css?v=N`
+- `script.js?v=N`
 
-1. Add first 3 polished card artworks (The Fool / The Star / The Empress or your preferred trio)
-2. Replace placeholder card text with your final oracle voice
-3. Add card entry/reveal micro-animations per artwork
-4. Ship v1 public reading
+Then commit and push.
