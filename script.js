@@ -22,6 +22,7 @@ const $ = (selector) => document.querySelector(selector);
 const screens = [...document.querySelectorAll('.screen')];
 const deckStack = $('#deck-stack');
 const cardGrid = $('#card-grid');
+const fanScroll = $('#fan-scroll');
 const pickCount = $('#pick-count');
 const revealButton = $('#reveal-button');
 const resultList = $('#result-list');
@@ -29,6 +30,11 @@ const summaryText = $('#summary-text');
 const doList = $('#do-list');
 const dontList = $('#dont-list');
 const exportCard = $('#reading-export-card');
+
+let isFanDragging = false;
+let fanDragStartX = 0;
+let fanStartScrollLeft = 0;
+let fanDidDrag = false;
 
 function showScreen(id) {
   screens.forEach((screen) => screen.classList.toggle('is-active', screen.id === id));
@@ -81,20 +87,29 @@ function shuffleDeck() {
 function renderPickGrid() {
   cardGrid.innerHTML = '';
   selectedCards = [];
+  cardGrid.style.setProperty('--card-count', `${visibleChoices.length}`);
   updatePickInstruction();
 
-  visibleChoices.forEach((card, index) => {
+  visibleChoices.forEach((card, index, arr) => {
     const button = document.createElement('button');
     button.className = 'pick-card';
     button.type = 'button';
-    button.style.setProperty('--delay', `${index * 22}ms`);
+    button.style.setProperty('--delay', `${Math.min(index * 14, 900)}ms`);
+    button.style.setProperty('--index', `${index}`);
+    const tilt = ((index / Math.max(1, arr.length - 1)) - 0.5) * 28;
+    button.style.setProperty('--base-tilt', `${tilt.toFixed(2)}deg`);
     button.setAttribute('aria-label', `Face-down card ${index + 1}`);
     button.addEventListener('click', () => selectCard(card, button));
     cardGrid.append(button);
   });
+
+  const centerLeft = Math.max(0, (cardGrid.scrollWidth - fanScroll.clientWidth) / 2);
+  fanScroll.scrollLeft = centerLeft;
+  updateFanFocus(fanScroll.getBoundingClientRect().left + fanScroll.clientWidth / 2);
 }
 
 function selectCard(card, element) {
+  if (fanDidDrag) return;
   if (element.classList.contains('is-selected')) return;
   if (selectedCards.length >= 3) return;
 
@@ -103,6 +118,53 @@ function selectCard(card, element) {
   element.dataset.pick = selectedCards.length;
   element.setAttribute('aria-label', `${POSITIONS[selectedCards.length - 1].label} card selected`);
   updatePickInstruction();
+}
+
+function updateFanFocus(clientX) {
+  const cardsInFan = [...cardGrid.querySelectorAll('.pick-card')];
+  cardsInFan.forEach((el) => {
+    if (el.classList.contains('is-selected')) return;
+    const rect = el.getBoundingClientRect();
+    const center = rect.left + rect.width / 2;
+    const dist = Math.abs(center - clientX);
+    const lift = Math.max(0, 1 - dist / 130);
+    el.style.setProperty('--lift', lift.toFixed(3));
+    el.classList.toggle('is-focus', lift > 0.5);
+  });
+}
+
+function bindFanInteractions() {
+  fanScroll.addEventListener('pointerdown', (event) => {
+    isFanDragging = true;
+    fanDidDrag = false;
+    fanDragStartX = event.clientX;
+    fanStartScrollLeft = fanScroll.scrollLeft;
+    fanScroll.setPointerCapture(event.pointerId);
+    updateFanFocus(event.clientX);
+  });
+
+  fanScroll.addEventListener('pointermove', (event) => {
+    updateFanFocus(event.clientX);
+    if (!isFanDragging) return;
+    const delta = event.clientX - fanDragStartX;
+    if (Math.abs(delta) > 6) fanDidDrag = true;
+    fanScroll.scrollLeft = fanStartScrollLeft - delta;
+  });
+
+  const stopDrag = (event) => {
+    if (isFanDragging && event?.pointerId !== undefined && fanScroll.hasPointerCapture(event.pointerId)) {
+      fanScroll.releasePointerCapture(event.pointerId);
+    }
+    isFanDragging = false;
+    window.setTimeout(() => { fanDidDrag = false; }, 0);
+  };
+
+  fanScroll.addEventListener('pointerup', stopDrag);
+  fanScroll.addEventListener('pointercancel', stopDrag);
+  fanScroll.addEventListener('pointerleave', () => {
+    const centerX = fanScroll.getBoundingClientRect().left + fanScroll.clientWidth / 2;
+    updateFanFocus(centerX);
+  });
 }
 
 function updatePickInstruction() {
@@ -257,4 +319,5 @@ revealButton.addEventListener('click', revealReading);
 $('#download-button').addEventListener('click', downloadReadingImage);
 $('#again-button').addEventListener('click', startReading);
 
+bindFanInteractions();
 initializeDeckStack();
