@@ -1,4 +1,4 @@
-import { cards } from './data/cards.js?v=2';
+import { cards } from './data/cards.js?v=3';
 
 const POSITIONS = [
   { key: 'heartMeaning', label: 'Heart', symbol: '♡', hint: 'what your heart is feeling' },
@@ -71,7 +71,8 @@ function shuffleDeck() {
     deckStack.classList.remove('is-shuffling');
     $('#shuffle-button').disabled = false;
     $('#shuffle-instruction').textContent = 'Tap shuffle and let the cards drift like little petals.';
-    visibleChoices = shuffledDeck.slice(0, 24);
+    // Show the full deck so users can truly pick from all 78 cards.
+    visibleChoices = shuffledDeck;
     renderPickGrid();
     showScreen('pick-screen');
   }, 1850);
