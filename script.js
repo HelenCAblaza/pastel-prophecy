@@ -26,6 +26,8 @@ const pickCount = $('#pick-count');
 const revealButton = $('#reveal-button');
 const resultList = $('#result-list');
 const summaryText = $('#summary-text');
+const doList = $('#do-list');
+const dontList = $('#dont-list');
 const exportCard = $('#reading-export-card');
 
 function showScreen(id) {
@@ -137,6 +139,7 @@ function createReadingItem(card, position, index) {
     <div class="reading-position">${position.symbol} ${position.label}</div>
     ${cardHTML(card)}
     <h3>${card.name}</h3>
+    <p class="brief"><strong>Brief:</strong> ${card.shortMeaning}</p>
     <p class="meaning">${card[position.key]}</p>
   `;
   return article;
@@ -152,20 +155,48 @@ function generateSummary(reading) {
   return templates[Math.floor(Math.random() * templates.length)];
 }
 
+function generateSharedGuidance(reading) {
+  const [heart, path, magic] = reading;
+  return {
+    do: [
+      `Take one tiny action inspired by ${path.card.name}.`,
+      `Honor your feelings from ${heart.card.name} before making big decisions.`,
+      `Stay open to small blessings and signs from ${magic.card.name}.`
+    ],
+    dont: [
+      'Don’t force a final answer today — let clarity unfold gently.',
+      'Don’t ignore your emotional needs while focusing only on productivity.',
+      'Don’t compare your path to others; your timing is uniquely yours.'
+    ]
+  };
+}
+
+function renderList(element, items) {
+  element.innerHTML = '';
+  items.forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    element.append(li);
+  });
+}
+
 function revealReading() {
   const reading = selectedCards.map((card, index) => ({ card, position: POSITIONS[index] }));
   const summary = generateSummary(reading);
+  const guidance = generateSharedGuidance(reading);
 
   resultList.innerHTML = '';
   reading.forEach(({ card, position }, index) => {
     resultList.append(createReadingItem(card, position, index));
   });
   summaryText.textContent = summary;
-  buildExportCard(reading, summary);
+  renderList(doList, guidance.do);
+  renderList(dontList, guidance.dont);
+  buildExportCard(reading, summary, guidance);
   showScreen('result-screen');
 }
 
-function buildExportCard(reading, summary) {
+function buildExportCard(reading, summary, guidance) {
   const date = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
   exportCard.innerHTML = `
     <h2>The Pastel Prophecy</h2>
@@ -176,13 +207,18 @@ function buildExportCard(reading, summary) {
           <div class="reading-position">${position.symbol} ${position.label}</div>
           ${cardHTML(card)}
           <h3>${card.name}</h3>
+          <p><strong>Brief:</strong> ${card.shortMeaning}</p>
           <p>${card[position.key]}</p>
         </section>
       `).join('')}
     </div>
     <section class="export-summary">
-      <h3>Your Prophecy</h3>
+      <h3>3 Cards Together</h3>
       <p>${summary}</p>
+      <h3>Do (for all 3 cards)</h3>
+      <ul>${guidance.do.map((item) => `<li>${item}</li>`).join('')}</ul>
+      <h3>Don’t (for all 3 cards)</h3>
+      <ul>${guidance.dont.map((item) => `<li>${item}</li>`).join('')}</ul>
     </section>
     <div class="export-footer">A soft little prophecy for your day ✨</div>
   `;

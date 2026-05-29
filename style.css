@@ -163,8 +163,14 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 .suit-feathers { --glow-color: rgba(190,225,255,.78); --sparkle-color:#d8cdf6; --card-bg: linear-gradient(160deg,#fff7ea,#dcefff 48%,#d8cdf6); }
 .suit-crystals { --glow-color: rgba(200,242,223,.78); --sparkle-color:#fff7ea; --card-bg: linear-gradient(160deg,#fff7ea,#dff8ed 48%,#c8f2df); }
 .meaning { margin:0; text-align:center; line-height:1.5; color: var(--soft-ink); }
-.summary-card { text-align:center; }
+.brief { margin: 0; text-align: center; line-height: 1.45; color: #755f8b; font-size: .95rem; }
+.summary-card { text-align:left; }
+.summary-card h3 { text-align:center; }
 .summary-card p { line-height:1.58; margin:10px 0 0; color:var(--soft-ink); }
+.guidance-block { margin-top: 14px; }
+.guidance-block h4 { margin: 0 0 8px; font-size: 1rem; color: #6c5685; }
+.guidance-block ul { margin: 0; padding-left: 1.15rem; color: var(--soft-ink); line-height: 1.45; }
+.guidance-block li { margin: 4px 0; }
 .action-row { display:grid; gap:10px; width:100%; margin-top: 12px; }
 
 .export-wrap { position: fixed; left: -9999px; top: 0; width: 1080px; }
