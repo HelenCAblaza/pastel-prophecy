@@ -10,6 +10,7 @@ A mobile-first whimsical pastel tarot web app.
 ## What’s in this scaffold
 
 - 78-card deck data (`data/cards.js`)
+- Full 78-card original artwork set enabled (`assets/cards/**` SVG)
 - 3-step reading flow: Begin → Shuffle → Pick 3
 - Animated UI: floating cards, shimmer glow, magical shuffle
 - Result format aligned to your preference:

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-label="The Rose Garden tarot card art">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fff4d6"/><stop offset="55%" stop-color="#f8c8d8"/><stop offset="100%" stop-color="#c8e9ff"/></linearGradient>
+<radialGradient id="halo" cx="50%" cy="35%" r="40%"><stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="600" height="900" fill="url(#bg)"/>
+<rect x="28" y="28" width="544" height="844" rx="30" fill="none" stroke="#e9c46a" stroke-width="8"/>
+<circle cx="300" cy="310" r="170" fill="url(#halo)"/>
+<g fill="#fff" opacity="0.85"><circle cx="120" cy="220" r="5"/><circle cx="190" cy="165" r="4"/><circle cx="430" cy="180" r="6"/><circle cx="480" cy="260" r="4"/><circle cx="150" cy="380" r="4"/><circle cx="420" cy="390" r="5"/></g>
+<g stroke="#e9c46a" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.85"><path d="M175 610 C245 540, 355 540, 425 610"/><path d="M200 650 C255 600, 345 600, 400 650"/></g>
+<circle cx="300" cy="330" r="72" fill="#fffdf8" opacity="0.92"/>
+<text x="300" y="335" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#5a496e">CARE</text>
+<text x="300" y="700" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#5a496e" opacity="0.85">Major Prophecy</text>
+<rect x="150" y="770" width="300" height="70" rx="28" fill="#fffdf8" opacity="0.86"/>
+<text x="300" y="815" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#5a496e">THE ROSE GARDEN</text>
+</svg>

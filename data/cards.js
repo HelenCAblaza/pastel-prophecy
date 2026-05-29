@@ -48,7 +48,8 @@ export const cards = [
     "shortMeaning": "The Rose Garden carries the energy of care and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching care. The Rose Garden asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through care. Let The Rose Garden show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is care. The Rose Garden brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is care. The Rose Garden brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-rose-garden.svg"
   },
   {
     "id": "the-silver-lantern",
@@ -60,7 +61,8 @@ export const cards = [
     "shortMeaning": "The Silver Lantern carries the energy of guidance and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching guidance. The Silver Lantern asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through guidance. Let The Silver Lantern show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is guidance. The Silver Lantern brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is guidance. The Silver Lantern brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-silver-lantern.svg"
   },
   {
     "id": "the-twin-stars",
@@ -72,7 +74,8 @@ export const cards = [
     "shortMeaning": "The Twin Stars carries the energy of connection and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching connection. The Twin Stars asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through connection. Let The Twin Stars show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is connection. The Twin Stars brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is connection. The Twin Stars brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-twin-stars.svg"
   },
   {
     "id": "the-rainbow-bridge",
@@ -84,7 +87,8 @@ export const cards = [
     "shortMeaning": "The Rainbow Bridge carries the energy of transition and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching transition. The Rainbow Bridge asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through transition. Let The Rainbow Bridge show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is transition. The Rainbow Bridge brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is transition. The Rainbow Bridge brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-rainbow-bridge.svg"
   },
   {
     "id": "the-velvet-lionheart",
@@ -96,7 +100,8 @@ export const cards = [
     "shortMeaning": "The Velvet Lionheart carries the energy of courage and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching courage. The Velvet Lionheart asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through courage. Let The Velvet Lionheart show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is courage. The Velvet Lionheart brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is courage. The Velvet Lionheart brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-velvet-lionheart.svg"
   },
   {
     "id": "the-hidden-clover",
@@ -108,7 +113,8 @@ export const cards = [
     "shortMeaning": "The Hidden Clover carries the energy of surprise and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching surprise. The Hidden Clover asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through surprise. Let The Hidden Clover show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is surprise. The Hidden Clover brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is surprise. The Hidden Clover brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-hidden-clover.svg"
   },
   {
     "id": "the-golden-wheel",
@@ -120,7 +126,8 @@ export const cards = [
     "shortMeaning": "The Golden Wheel carries the energy of cycles and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching cycles. The Golden Wheel asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through cycles. Let The Golden Wheel show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is cycles. The Golden Wheel brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is cycles. The Golden Wheel brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-golden-wheel.svg"
   },
   {
     "id": "the-soft-thunder",
@@ -132,7 +139,8 @@ export const cards = [
     "shortMeaning": "The Soft Thunder carries the energy of awakening and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching awakening. The Soft Thunder asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through awakening. Let The Soft Thunder show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is awakening. The Soft Thunder brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is awakening. The Soft Thunder brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-soft-thunder.svg"
   },
   {
     "id": "the-floating-ribbon",
@@ -144,7 +152,8 @@ export const cards = [
     "shortMeaning": "The Floating Ribbon carries the energy of surrender and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching surrender. The Floating Ribbon asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through surrender. Let The Floating Ribbon show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is surrender. The Floating Ribbon brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is surrender. The Floating Ribbon brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-floating-ribbon.svg"
   },
   {
     "id": "the-butterfly-door",
@@ -156,7 +165,8 @@ export const cards = [
     "shortMeaning": "The Butterfly Door carries the energy of transformation and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching transformation. The Butterfly Door asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through transformation. Let The Butterfly Door show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is transformation. The Butterfly Door brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is transformation. The Butterfly Door brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-butterfly-door.svg"
   },
   {
     "id": "the-teacup-moon",
@@ -168,7 +178,8 @@ export const cards = [
     "shortMeaning": "The Teacup Moon carries the energy of balance and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching balance. The Teacup Moon asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through balance. Let The Teacup Moon show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is balance. The Teacup Moon brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is balance. The Teacup Moon brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-teacup-moon.svg"
   },
   {
     "id": "the-shadow-jewel",
@@ -180,7 +191,8 @@ export const cards = [
     "shortMeaning": "The Shadow Jewel carries the energy of truth and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching truth. The Shadow Jewel asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through truth. Let The Shadow Jewel show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is truth. The Shadow Jewel brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is truth. The Shadow Jewel brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-shadow-jewel.svg"
   },
   {
     "id": "the-cloud-tower",
@@ -192,7 +204,8 @@ export const cards = [
     "shortMeaning": "The Cloud Tower carries the energy of release and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching release. The Cloud Tower asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through release. Let The Cloud Tower show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is release. The Cloud Tower brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is release. The Cloud Tower brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-cloud-tower.svg"
   },
   {
     "id": "the-wishing-star",
@@ -204,7 +217,8 @@ export const cards = [
     "shortMeaning": "The Wishing Star carries the energy of hope and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching hope. The Wishing Star asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through hope. Let The Wishing Star show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is hope. The Wishing Star brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is hope. The Wishing Star brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-wishing-star.svg"
   },
   {
     "id": "the-dream-pond",
@@ -216,7 +230,8 @@ export const cards = [
     "shortMeaning": "The Dream Pond carries the energy of mystery and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching mystery. The Dream Pond asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through mystery. Let The Dream Pond show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is mystery. The Dream Pond brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is mystery. The Dream Pond brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-dream-pond.svg"
   },
   {
     "id": "the-sunflower-mane",
@@ -228,7 +243,8 @@ export const cards = [
     "shortMeaning": "The Sunflower Mane carries the energy of joy and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching joy. The Sunflower Mane asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through joy. Let The Sunflower Mane show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is joy. The Sunflower Mane brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is joy. The Sunflower Mane brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-sunflower-mane.svg"
   },
   {
     "id": "the-bell-of-awakening",
@@ -240,7 +256,8 @@ export const cards = [
     "shortMeaning": "The Bell of Awakening carries the energy of calling and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching calling. The Bell of Awakening asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through calling. Let The Bell of Awakening show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is calling. The Bell of Awakening brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is calling. The Bell of Awakening brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-bell-of-awakening.svg"
   },
   {
     "id": "the-pastel-world",
@@ -252,7 +269,8 @@ export const cards = [
     "shortMeaning": "The Pastel World carries the energy of completion and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching completion. The Pastel World asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through completion. Let The Pastel World show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is completion. The Pastel World brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is completion. The Pastel World brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-pastel-world.svg"
   },
   {
     "id": "the-secret-meadow",
@@ -264,7 +282,8 @@ export const cards = [
     "shortMeaning": "The Secret Meadow carries the energy of wonder and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching wonder. The Secret Meadow asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through wonder. Let The Secret Meadow show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is wonder. The Secret Meadow brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is wonder. The Secret Meadow brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/major/the-secret-meadow.svg"
   },
   {
     "id": "ace-of-dewdrops",
@@ -276,7 +295,8 @@ export const cards = [
     "shortMeaning": "Ace of Dewdrops speaks of tenderness in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching tenderness. Ace of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through tenderness. Let Ace of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is tenderness. Ace of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is tenderness. Ace of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/ace-of-dewdrops.svg"
   },
   {
     "id": "two-of-dewdrops",
@@ -288,7 +308,8 @@ export const cards = [
     "shortMeaning": "Two of Dewdrops speaks of trust in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching trust. Two of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through trust. Let Two of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is trust. Two of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is trust. Two of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/two-of-dewdrops.svg"
   },
   {
     "id": "three-of-dewdrops",
@@ -300,7 +321,8 @@ export const cards = [
     "shortMeaning": "Three of Dewdrops speaks of friendship in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching friendship. Three of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through friendship. Let Three of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is friendship. Three of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is friendship. Three of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/three-of-dewdrops.svg"
   },
   {
     "id": "four-of-dewdrops",
@@ -312,7 +334,8 @@ export const cards = [
     "shortMeaning": "Four of Dewdrops speaks of longing in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching longing. Four of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through longing. Let Four of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is longing. Four of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is longing. Four of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/four-of-dewdrops.svg"
   },
   {
     "id": "five-of-dewdrops",
@@ -324,7 +347,8 @@ export const cards = [
     "shortMeaning": "Five of Dewdrops speaks of healing in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching healing. Five of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through healing. Let Five of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is healing. Five of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is healing. Five of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/five-of-dewdrops.svg"
   },
   {
     "id": "six-of-dewdrops",
@@ -336,7 +360,8 @@ export const cards = [
     "shortMeaning": "Six of Dewdrops speaks of receiving in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching receiving. Six of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through receiving. Let Six of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is receiving. Six of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is receiving. Six of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/six-of-dewdrops.svg"
   },
   {
     "id": "seven-of-dewdrops",
@@ -348,7 +373,8 @@ export const cards = [
     "shortMeaning": "Seven of Dewdrops speaks of reflection in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching reflection. Seven of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through reflection. Let Seven of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is reflection. Seven of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is reflection. Seven of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/seven-of-dewdrops.svg"
   },
   {
     "id": "eight-of-dewdrops",
@@ -360,7 +386,8 @@ export const cards = [
     "shortMeaning": "Eight of Dewdrops speaks of harmony in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching harmony. Eight of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through harmony. Let Eight of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is harmony. Eight of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is harmony. Eight of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/eight-of-dewdrops.svg"
   },
   {
     "id": "nine-of-dewdrops",
@@ -372,7 +399,8 @@ export const cards = [
     "shortMeaning": "Nine of Dewdrops speaks of devotion in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching devotion. Nine of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through devotion. Let Nine of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is devotion. Nine of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is devotion. Nine of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/nine-of-dewdrops.svg"
   },
   {
     "id": "ten-of-dewdrops",
@@ -384,7 +412,8 @@ export const cards = [
     "shortMeaning": "Ten of Dewdrops speaks of full heart in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching full heart. Ten of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through full heart. Let Ten of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is full heart. Ten of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is full heart. Ten of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/ten-of-dewdrops.svg"
   },
   {
     "id": "page-of-dewdrops",
@@ -396,7 +425,8 @@ export const cards = [
     "shortMeaning": "Page of Dewdrops speaks of curiosity in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching curiosity. Page of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through curiosity. Let Page of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is curiosity. Page of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is curiosity. Page of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/page-of-dewdrops.svg"
   },
   {
     "id": "knight-of-dewdrops",
@@ -408,7 +438,8 @@ export const cards = [
     "shortMeaning": "Knight of Dewdrops speaks of movement in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching movement. Knight of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through movement. Let Knight of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is movement. Knight of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is movement. Knight of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/knight-of-dewdrops.svg"
   },
   {
     "id": "queen-of-dewdrops",
@@ -420,7 +451,8 @@ export const cards = [
     "shortMeaning": "Queen of Dewdrops speaks of nurture in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching nurture. Queen of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through nurture. Let Queen of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is nurture. Queen of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is nurture. Queen of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/queen-of-dewdrops.svg"
   },
   {
     "id": "king-of-dewdrops",
@@ -432,7 +464,8 @@ export const cards = [
     "shortMeaning": "King of Dewdrops speaks of deep care in the realm of emotion. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching deep care. King of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through deep care. Let King of Dewdrops show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is deep care. King of Dewdrops brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is deep care. King of Dewdrops brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/dewdrops/king-of-dewdrops.svg"
   },
   {
     "id": "ace-of-sparkles",
@@ -444,7 +477,8 @@ export const cards = [
     "shortMeaning": "Ace of Sparkles speaks of ignition in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching ignition. Ace of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through ignition. Let Ace of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is ignition. Ace of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is ignition. Ace of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/ace-of-sparkles.svg"
   },
   {
     "id": "two-of-sparkles",
@@ -456,7 +490,8 @@ export const cards = [
     "shortMeaning": "Two of Sparkles speaks of choice in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching choice. Two of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through choice. Let Two of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is choice. Two of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is choice. Two of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/two-of-sparkles.svg"
   },
   {
     "id": "three-of-sparkles",
@@ -468,7 +503,8 @@ export const cards = [
     "shortMeaning": "Three of Sparkles speaks of celebration in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching celebration. Three of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through celebration. Let Three of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is celebration. Three of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is celebration. Three of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/three-of-sparkles.svg"
   },
   {
     "id": "four-of-sparkles",
@@ -480,7 +516,8 @@ export const cards = [
     "shortMeaning": "Four of Sparkles speaks of practice in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching practice. Four of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through practice. Let Four of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is practice. Four of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is practice. Four of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/four-of-sparkles.svg"
   },
   {
     "id": "five-of-sparkles",
@@ -492,7 +529,8 @@ export const cards = [
     "shortMeaning": "Five of Sparkles speaks of restless fire in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching restless fire. Five of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through restless fire. Let Five of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is restless fire. Five of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is restless fire. Five of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/five-of-sparkles.svg"
   },
   {
     "id": "six-of-sparkles",
@@ -504,7 +542,8 @@ export const cards = [
     "shortMeaning": "Six of Sparkles speaks of victory in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching victory. Six of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through victory. Let Six of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is victory. Six of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is victory. Six of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/six-of-sparkles.svg"
   },
   {
     "id": "seven-of-sparkles",
@@ -516,7 +555,8 @@ export const cards = [
     "shortMeaning": "Seven of Sparkles speaks of adventure in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching adventure. Seven of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through adventure. Let Seven of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is adventure. Seven of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is adventure. Seven of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/seven-of-sparkles.svg"
   },
   {
     "id": "eight-of-sparkles",
@@ -528,7 +568,8 @@ export const cards = [
     "shortMeaning": "Eight of Sparkles speaks of momentum in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching momentum. Eight of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through momentum. Let Eight of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is momentum. Eight of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is momentum. Eight of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/eight-of-sparkles.svg"
   },
   {
     "id": "nine-of-sparkles",
@@ -540,7 +581,8 @@ export const cards = [
     "shortMeaning": "Nine of Sparkles speaks of resilience in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching resilience. Nine of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through resilience. Let Nine of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is resilience. Nine of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is resilience. Nine of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/nine-of-sparkles.svg"
   },
   {
     "id": "ten-of-sparkles",
@@ -552,7 +594,8 @@ export const cards = [
     "shortMeaning": "Ten of Sparkles speaks of bright finish in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching bright finish. Ten of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through bright finish. Let Ten of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is bright finish. Ten of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is bright finish. Ten of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/ten-of-sparkles.svg"
   },
   {
     "id": "page-of-sparkles",
@@ -564,7 +607,8 @@ export const cards = [
     "shortMeaning": "Page of Sparkles speaks of messenger in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching messenger. Page of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through messenger. Let Page of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is messenger. Page of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is messenger. Page of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/page-of-sparkles.svg"
   },
   {
     "id": "knight-of-sparkles",
@@ -576,7 +620,8 @@ export const cards = [
     "shortMeaning": "Knight of Sparkles speaks of quest in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching quest. Knight of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through quest. Let Knight of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is quest. Knight of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is quest. Knight of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/knight-of-sparkles.svg"
   },
   {
     "id": "queen-of-sparkles",
@@ -588,7 +633,8 @@ export const cards = [
     "shortMeaning": "Queen of Sparkles speaks of radiance in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching radiance. Queen of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through radiance. Let Queen of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is radiance. Queen of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is radiance. Queen of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/queen-of-sparkles.svg"
   },
   {
     "id": "king-of-sparkles",
@@ -600,7 +646,8 @@ export const cards = [
     "shortMeaning": "King of Sparkles speaks of warm power in the realm of creativity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching warm power. King of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through warm power. Let King of Sparkles show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is warm power. King of Sparkles brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is warm power. King of Sparkles brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/sparkles/king-of-sparkles.svg"
   },
   {
     "id": "ace-of-feathers",
@@ -612,7 +659,8 @@ export const cards = [
     "shortMeaning": "Ace of Feathers speaks of clarity in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching clarity. Ace of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through clarity. Let Ace of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is clarity. Ace of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is clarity. Ace of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/ace-of-feathers.svg"
   },
   {
     "id": "two-of-feathers",
@@ -624,7 +672,8 @@ export const cards = [
     "shortMeaning": "Two of Feathers speaks of decision in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching decision. Two of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through decision. Let Two of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is decision. Two of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is decision. Two of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/two-of-feathers.svg"
   },
   {
     "id": "three-of-feathers",
@@ -636,7 +685,8 @@ export const cards = [
     "shortMeaning": "Three of Feathers speaks of heartbreak in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching heartbreak. Three of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through heartbreak. Let Three of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is heartbreak. Three of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is heartbreak. Three of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/three-of-feathers.svg"
   },
   {
     "id": "four-of-feathers",
@@ -648,7 +698,8 @@ export const cards = [
     "shortMeaning": "Four of Feathers speaks of stillness in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching stillness. Four of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through stillness. Let Four of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is stillness. Four of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is stillness. Four of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/four-of-feathers.svg"
   },
   {
     "id": "five-of-feathers",
@@ -660,7 +711,8 @@ export const cards = [
     "shortMeaning": "Five of Feathers speaks of tension in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching tension. Five of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through tension. Let Five of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is tension. Five of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is tension. Five of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/five-of-feathers.svg"
   },
   {
     "id": "six-of-feathers",
@@ -672,7 +724,8 @@ export const cards = [
     "shortMeaning": "Six of Feathers speaks of insight in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching insight. Six of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through insight. Let Six of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is insight. Six of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is insight. Six of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/six-of-feathers.svg"
   },
   {
     "id": "seven-of-feathers",
@@ -684,7 +737,8 @@ export const cards = [
     "shortMeaning": "Seven of Feathers speaks of secrets in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching secrets. Seven of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through secrets. Let Seven of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is secrets. Seven of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is secrets. Seven of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/seven-of-feathers.svg"
   },
   {
     "id": "eight-of-feathers",
@@ -696,7 +750,8 @@ export const cards = [
     "shortMeaning": "Eight of Feathers speaks of imagination in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching imagination. Eight of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through imagination. Let Eight of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is imagination. Eight of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is imagination. Eight of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/eight-of-feathers.svg"
   },
   {
     "id": "nine-of-feathers",
@@ -708,7 +763,8 @@ export const cards = [
     "shortMeaning": "Nine of Feathers speaks of worry in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching worry. Nine of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through worry. Let Nine of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is worry. Nine of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is worry. Nine of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/nine-of-feathers.svg"
   },
   {
     "id": "ten-of-feathers",
@@ -720,7 +776,8 @@ export const cards = [
     "shortMeaning": "Ten of Feathers speaks of soft dawn in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching soft dawn. Ten of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through soft dawn. Let Ten of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is soft dawn. Ten of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is soft dawn. Ten of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/ten-of-feathers.svg"
   },
   {
     "id": "page-of-feathers",
@@ -732,7 +789,8 @@ export const cards = [
     "shortMeaning": "Page of Feathers speaks of page in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching page. Page of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through page. Let Page of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is page. Page of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is page. Page of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/page-of-feathers.svg"
   },
   {
     "id": "knight-of-feathers",
@@ -744,7 +802,8 @@ export const cards = [
     "shortMeaning": "Knight of Feathers speaks of knight in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching knight. Knight of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through knight. Let Knight of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is knight. Knight of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is knight. Knight of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/knight-of-feathers.svg"
   },
   {
     "id": "queen-of-feathers",
@@ -756,7 +815,8 @@ export const cards = [
     "shortMeaning": "Queen of Feathers speaks of queen in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching queen. Queen of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through queen. Let Queen of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is queen. Queen of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is queen. Queen of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/queen-of-feathers.svg"
   },
   {
     "id": "king-of-feathers",
@@ -768,7 +828,8 @@ export const cards = [
     "shortMeaning": "King of Feathers speaks of king in the realm of clarity. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching king. King of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through king. Let King of Feathers show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is king. King of Feathers brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is king. King of Feathers brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/feathers/king-of-feathers.svg"
   },
   {
     "id": "ace-of-crystals",
@@ -780,7 +841,8 @@ export const cards = [
     "shortMeaning": "Ace of Crystals speaks of seed in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching seed. Ace of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through seed. Let Ace of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is seed. Ace of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is seed. Ace of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/ace-of-crystals.svg"
   },
   {
     "id": "two-of-crystals",
@@ -792,7 +854,8 @@ export const cards = [
     "shortMeaning": "Two of Crystals speaks of exchange in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching exchange. Two of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through exchange. Let Two of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is exchange. Two of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is exchange. Two of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/two-of-crystals.svg"
   },
   {
     "id": "three-of-crystals",
@@ -804,7 +867,8 @@ export const cards = [
     "shortMeaning": "Three of Crystals speaks of craft in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching craft. Three of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through craft. Let Three of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is craft. Three of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is craft. Three of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/three-of-crystals.svg"
   },
   {
     "id": "four-of-crystals",
@@ -816,7 +880,8 @@ export const cards = [
     "shortMeaning": "Four of Crystals speaks of safety in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching safety. Four of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through safety. Let Four of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is safety. Four of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is safety. Four of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/four-of-crystals.svg"
   },
   {
     "id": "five-of-crystals",
@@ -828,7 +893,8 @@ export const cards = [
     "shortMeaning": "Five of Crystals speaks of need in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching need. Five of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through need. Let Five of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is need. Five of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is need. Five of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/five-of-crystals.svg"
   },
   {
     "id": "six-of-crystals",
@@ -840,7 +906,8 @@ export const cards = [
     "shortMeaning": "Six of Crystals speaks of generosity in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching generosity. Six of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through generosity. Let Six of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is generosity. Six of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is generosity. Six of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/six-of-crystals.svg"
   },
   {
     "id": "seven-of-crystals",
@@ -852,7 +919,8 @@ export const cards = [
     "shortMeaning": "Seven of Crystals speaks of patience in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching patience. Seven of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through patience. Let Seven of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is patience. Seven of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is patience. Seven of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/seven-of-crystals.svg"
   },
   {
     "id": "eight-of-crystals",
@@ -864,7 +932,8 @@ export const cards = [
     "shortMeaning": "Eight of Crystals speaks of practice in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching practice. Eight of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through practice. Let Eight of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is practice. Eight of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is practice. Eight of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/eight-of-crystals.svg"
   },
   {
     "id": "nine-of-crystals",
@@ -876,7 +945,8 @@ export const cards = [
     "shortMeaning": "Nine of Crystals speaks of independence in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching independence. Nine of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through independence. Let Nine of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is independence. Nine of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is independence. Nine of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/nine-of-crystals.svg"
   },
   {
     "id": "ten-of-crystals",
@@ -888,7 +958,8 @@ export const cards = [
     "shortMeaning": "Ten of Crystals speaks of belonging in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching belonging. Ten of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through belonging. Let Ten of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is belonging. Ten of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is belonging. Ten of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/ten-of-crystals.svg"
   },
   {
     "id": "page-of-crystals",
@@ -900,7 +971,8 @@ export const cards = [
     "shortMeaning": "Page of Crystals speaks of student in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching student. Page of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through student. Let Page of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is student. Page of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is student. Page of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/page-of-crystals.svg"
   },
   {
     "id": "knight-of-crystals",
@@ -912,7 +984,8 @@ export const cards = [
     "shortMeaning": "Knight of Crystals speaks of builder in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching builder. Knight of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through builder. Let Knight of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is builder. Knight of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is builder. Knight of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/knight-of-crystals.svg"
   },
   {
     "id": "queen-of-crystals",
@@ -924,7 +997,8 @@ export const cards = [
     "shortMeaning": "Queen of Crystals speaks of keeper in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching keeper. Queen of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through keeper. Let Queen of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is keeper. Queen of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is keeper. Queen of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/queen-of-crystals.svg"
   },
   {
     "id": "king-of-crystals",
@@ -936,6 +1010,7 @@ export const cards = [
     "shortMeaning": "King of Crystals speaks of steward in the realm of grounding. A small pastel sign is asking to be noticed.",
     "heartMeaning": "Your heart is touching steward. King of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through steward. Let King of Crystals show you the next small step instead of the whole staircase.",
-    "magicMeaning": "Your hidden magic is steward. King of Crystals brings a soft blessing that helps the day open in your favor."
+    "magicMeaning": "Your hidden magic is steward. King of Crystals brings a soft blessing that helps the day open in your favor.",
+    "artPath": "assets/cards/crystals/king-of-crystals.svg"
   }
 ];
