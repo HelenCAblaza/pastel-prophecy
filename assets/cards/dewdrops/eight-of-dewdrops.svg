@@ -1,40 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
-  <title id="t">Eight Of Dewdrops</title>
-  <desc id="d">Whimsical pastel tarot artwork inspired by hand-drawn style, original composition.</desc>
+  <title id="t">Eight of Dewdrops</title>
+  <desc id="d">Detailed whimsical original tarot artwork for Eight of Dewdrops.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff9ef"/>
-      <stop offset="50%" stop-color="#cdefff"/>
-      <stop offset="100%" stop-color="#f6d7f0"/>
+      <stop offset="0%" stop-color="#fff9f0"/>
+      <stop offset="42%" stop-color="#d5efff"/>
+      <stop offset="70%" stop-color="#9fd7ff"/>
+      <stop offset="100%" stop-color="#ffd7ef"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.8"/></filter>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#77bff0" stop-opacity="0.16"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="22" y="22" width="476" height="736" rx="34" fill="none" stroke="#fff9ee" stroke-width="6" opacity=".86"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M52 88 C180 72,336 106,468 80" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/>
-  <path d="M52 153 C180 167,336 139,468 163" stroke="#fff" stroke-opacity=".42" stroke-width="2.7" fill="none"/>
+  <path d="M45 82 C170 62,340 104,475 76" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 163 C175 177,337 147,475 175" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="264" cy="370" r="132" fill="#ffffff" opacity=".22" filter="url(#soft)"/>
-  
-  <path d="M260 228 C300 290,342 330,342 390 C342 455,305 504,260 504 C215 504,178 455,178 390 C178 330,220 290,260 228 Z" fill="#b8e8ff" opacity=".9"/>
-  <path d="M260 258 C286 300,314 332,314 385 C314 428,290 462,260 462 C230 462,206 428,206 385 C206 332,234 300,260 258 Z" fill="#f7fdff" opacity=".9"/>
-  <circle cx="238" cy="346" r="10" fill="#fff" opacity=".9"/>
-        
+  <circle cx="244" cy="307" r="96" fill="url(#orb)" filter="url(#soft)"/>
 
-  <g><circle cx="396" cy="163" r="4.17" fill="#fff" opacity=".74"/>
-    <circle cx="404" cy="465" r="3.15" fill="#fff" opacity=".74"/>
-    <circle cx="171" cy="229" r="2.31" fill="#fff" opacity=".74"/>
-    <circle cx="370" cy="560" r="3.61" fill="#fff" opacity=".74"/>
-    <circle cx="376" cy="257" r="2.25" fill="#fff" opacity=".74"/>
-    <circle cx="386" cy="341" r="2.28" fill="#fff" opacity=".74"/>
-    <circle cx="408" cy="207" r="4.63" fill="#fff" opacity=".74"/>
-    <circle cx="142" cy="322" r="4.37" fill="#fff" opacity=".74"/>
-    <circle cx="161" cy="354" r="3.33" fill="#fff" opacity=".74"/>
-    <circle cx="401" cy="483" r="3.39" fill="#fff" opacity=".74"/></g>
+  <path d="M 303 321 C 325 356, 329 384, 303 399 C 277 384, 281 356, 303 321 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 295 356 C 317 390, 321 418, 295 432 C 269 418, 273 390, 295 356 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 260 400 C 282 449, 286 477, 260 506 C 234 477, 238 449, 260 400 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 214 345 C 236 377, 240 405, 214 417 C 188 405, 192 377, 214 345 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 156 322 C 178 356, 182 384, 156 398 C 130 384, 134 356, 156 322 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 234 291 C 256 325, 260 353, 234 367 C 208 353, 212 325, 234 291 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 260 232 C 282 267, 286 295, 260 310 C 234 295, 238 267, 260 232 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 324 258 C 346 300, 350 328, 324 350 C 298 328, 302 300, 324 258 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
 
-  <rect x="80" y="618" width="360" height="86" rx="24" fill="#fff9ef" opacity=".8"/>
-  <text x="260" y="653" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" fill="#6f5686">Eight Of Dewdrops</text>
-  <text x="260" y="680" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="16" fill="#8b74a2">Dewdrops</text>
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 127 470 C 194 425, 326 515, 393 470 C 326 425, 194 515, 127 470" stroke="#9fd7ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 124 488 C 192 447, 328 529, 396 488 C 328 447, 192 529, 124 488" stroke="#ffd7ef" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 131 506 C 196 464, 324 548, 389 506 C 324 464, 196 548, 131 506" stroke="#77bff0" stroke-opacity=".52" stroke-width="4" fill="none"/>
+
+  <g>
+    <circle cx="333" cy="555" r="4.80" fill="#fff" opacity="0.78"/>
+    <circle cx="439" cy="181" r="2.81" fill="#fff" opacity="0.83"/>
+    <circle cx="358" cy="498" r="2.21" fill="#fff" opacity="0.65"/>
+    <circle cx="154" cy="327" r="3.46" fill="#fff" opacity="0.43"/>
+    <circle cx="439" cy="166" r="2.57" fill="#fff" opacity="0.58"/>
+    <circle cx="398" cy="347" r="3.09" fill="#fff" opacity="0.37"/>
+    <circle cx="259" cy="522" r="3.05" fill="#fff" opacity="0.67"/>
+    <circle cx="319" cy="262" r="2.47" fill="#fff" opacity="0.47"/>
+    <circle cx="441" cy="563" r="1.55" fill="#fff" opacity="0.84"/>
+    <circle cx="322" cy="457" r="3.65" fill="#fff" opacity="0.49"/>
+    <circle cx="262" cy="300" r="3.43" fill="#fff" opacity="0.48"/>
+    <circle cx="128" cy="485" r="4.32" fill="#fff" opacity="0.38"/>
+    <circle cx="364" cy="177" r="1.83" fill="#fff" opacity="0.68"/>
+    <circle cx="235" cy="303" r="3.46" fill="#fff" opacity="0.43"/>
+    <circle cx="117" cy="401" r="2.89" fill="#fff" opacity="0.78"/>
+    <circle cx="377" cy="105" r="3.91" fill="#fff" opacity="0.60"/>
+    <circle cx="139" cy="182" r="1.93" fill="#fff" opacity="0.55"/>
+    <circle cx="326" cy="453" r="2.62" fill="#fff" opacity="0.42"/>
+    <circle cx="450" cy="292" r="1.61" fill="#fff" opacity="0.88"/>
+    <circle cx="63" cy="585" r="3.13" fill="#fff" opacity="0.76"/>
+    <circle cx="455" cy="161" r="4.62" fill="#fff" opacity="0.82"/>
+    <circle cx="364" cy="196" r="2.48" fill="#fff" opacity="0.64"/>
+    <circle cx="292" cy="596" r="3.08" fill="#fff" opacity="0.85"/>
+    <circle cx="356" cy="387" r="3.59" fill="#fff" opacity="0.65"/>
+    <circle cx="387" cy="331" r="2.37" fill="#fff" opacity="0.43"/>
+    <circle cx="420" cy="583" r="2.84" fill="#fff" opacity="0.49"/>
+  </g>
+
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">Eight of Dewdrops</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">dewdrops • eight</text>
 </svg>

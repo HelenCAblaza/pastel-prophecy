@@ -1,40 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
-  <title id="t">Page Of Sparkles</title>
-  <desc id="d">Whimsical pastel tarot artwork inspired by hand-drawn style, original composition.</desc>
+  <title id="t">Page of Sparkles</title>
+  <desc id="d">Detailed whimsical original tarot artwork for Page of Sparkles.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff7ea"/>
-      <stop offset="50%" stop-color="#ffd7a8"/>
-      <stop offset="100%" stop-color="#f9c8dd"/>
+      <stop offset="0%" stop-color="#fff7e8"/>
+      <stop offset="42%" stop-color="#ffe0b3"/>
+      <stop offset="70%" stop-color="#ffc57d"/>
+      <stop offset="100%" stop-color="#f9d2f1"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.8"/></filter>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#ffab63" stop-opacity="0.16"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="22" y="22" width="476" height="736" rx="34" fill="none" stroke="#fff9ee" stroke-width="6" opacity=".86"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M52 82 C180 66,336 100,468 74" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/>
-  <path d="M52 146 C180 160,336 132,468 156" stroke="#fff" stroke-opacity=".42" stroke-width="2.7" fill="none"/>
+  <path d="M45 85 C170 65,340 107,475 79" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 152 C175 166,337 136,475 164" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="264" cy="370" r="132" fill="#ffffff" opacity=".22" filter="url(#soft)"/>
-  
-  <path d="M260 236 L286 302 L356 302 L300 345 L322 414 L260 372 L198 414 L220 345 L164 302 L234 302 Z" fill="#ffc27a"/>
-  <path d="M260 266 L278 312 L327 312 L288 341 L304 390 L260 360 L216 390 L232 341 L193 312 L242 312 Z" fill="#fff7ec"/>
-  <circle cx="326" cy="248" r="11" fill="#f9c8dd"/>
-        
+  <circle cx="299" cy="232" r="96" fill="url(#orb)" filter="url(#soft)"/>
 
-  <g><circle cx="336" cy="351" r="2.75" fill="#fff" opacity=".74"/>
-    <circle cx="359" cy="504" r="2.78" fill="#fff" opacity=".74"/>
-    <circle cx="288" cy="138" r="3.90" fill="#fff" opacity=".74"/>
-    <circle cx="222" cy="366" r="4.24" fill="#fff" opacity=".74"/>
-    <circle cx="123" cy="482" r="2.33" fill="#fff" opacity=".74"/>
-    <circle cx="210" cy="112" r="2.57" fill="#fff" opacity=".74"/>
-    <circle cx="339" cy="268" r="2.89" fill="#fff" opacity=".74"/>
-    <circle cx="350" cy="256" r="2.06" fill="#fff" opacity=".74"/>
-    <circle cx="370" cy="277" r="3.07" fill="#fff" opacity=".74"/>
-    <circle cx="341" cy="467" r="3.66" fill="#fff" opacity=".74"/></g>
+  <path d="M 358 329 L 365.3 347.7 L 384.0 355 L 365.3 362.3 L 358 381.0 L 350.7 362.3 L 332.0 355 L 350.7 347.7 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 200 411 L 211.5 440.5 L 241.0 452 L 211.5 463.5 L 200 493.0 L 188.5 463.5 L 159.0 452 L 188.5 440.5 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 381 406 L 388.3 424.7 L 407.0 432 L 388.3 439.3 L 381 458.0 L 373.7 439.3 L 355.0 432 L 373.7 424.7 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 310 210 L 320.9 238.1 L 349.0 249 L 320.9 259.9 L 310 288.0 L 299.1 259.9 L 271.0 249 L 299.1 238.1 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
 
-  <rect x="80" y="618" width="360" height="86" rx="24" fill="#fff9ef" opacity=".8"/>
-  <text x="260" y="653" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" fill="#6f5686">Page Of Sparkles</text>
-  <text x="260" y="680" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="16" fill="#8b74a2">Sparkles</text>
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 146 470 C 203 436, 317 504, 374 470 C 317 436, 203 504, 146 470" stroke="#ffab63" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 138 488 C 199 460, 321 516, 382 488 C 321 460, 199 516, 138 488" stroke="#f9d2f1" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 124 506 C 192 477, 328 535, 396 506 C 328 477, 192 535, 124 506" stroke="#ffab63" stroke-opacity=".52" stroke-width="4" fill="none"/>
+
+  <g>
+    <circle cx="270" cy="332" r="1.42" fill="#fff" opacity="0.72"/>
+    <circle cx="220" cy="413" r="4.18" fill="#fff" opacity="0.63"/>
+    <circle cx="72" cy="553" r="3.28" fill="#fff" opacity="0.56"/>
+    <circle cx="315" cy="551" r="1.84" fill="#fff" opacity="0.83"/>
+    <circle cx="167" cy="288" r="3.84" fill="#fff" opacity="0.57"/>
+    <circle cx="353" cy="458" r="3.16" fill="#fff" opacity="0.40"/>
+    <circle cx="365" cy="147" r="4.35" fill="#fff" opacity="0.64"/>
+    <circle cx="234" cy="237" r="1.95" fill="#fff" opacity="0.39"/>
+    <circle cx="307" cy="278" r="2.19" fill="#fff" opacity="0.78"/>
+    <circle cx="125" cy="439" r="3.94" fill="#fff" opacity="0.82"/>
+    <circle cx="295" cy="297" r="1.94" fill="#fff" opacity="0.73"/>
+    <circle cx="148" cy="301" r="2.03" fill="#fff" opacity="0.51"/>
+    <circle cx="458" cy="162" r="1.46" fill="#fff" opacity="0.40"/>
+    <circle cx="394" cy="462" r="4.64" fill="#fff" opacity="0.49"/>
+    <circle cx="307" cy="161" r="3.77" fill="#fff" opacity="0.53"/>
+    <circle cx="190" cy="416" r="2.03" fill="#fff" opacity="0.77"/>
+    <circle cx="77" cy="272" r="4.66" fill="#fff" opacity="0.83"/>
+    <circle cx="450" cy="138" r="2.43" fill="#fff" opacity="0.80"/>
+    <circle cx="179" cy="377" r="3.63" fill="#fff" opacity="0.44"/>
+    <circle cx="443" cy="306" r="3.40" fill="#fff" opacity="0.88"/>
+    <circle cx="190" cy="379" r="3.30" fill="#fff" opacity="0.78"/>
+    <circle cx="87" cy="129" r="1.41" fill="#fff" opacity="0.87"/>
+    <circle cx="85" cy="247" r="1.47" fill="#fff" opacity="0.40"/>
+    <circle cx="334" cy="497" r="2.85" fill="#fff" opacity="0.66"/>
+    <circle cx="78" cy="508" r="4.24" fill="#fff" opacity="0.79"/>
+    <circle cx="78" cy="353" r="1.85" fill="#fff" opacity="0.53"/>
+  </g>
+
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">Page of Sparkles</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">sparkles • page</text>
 </svg>

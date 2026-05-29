@@ -1,41 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
   <title id="t">The Rainbow Bridge</title>
-  <desc id="d">Whimsical pastel tarot art for The Rainbow Bridge.</desc>
+  <desc id="d">Detailed whimsical original tarot artwork for The Rainbow Bridge.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff7ea"/>
-      <stop offset="45%" stop-color="#ffd6e6"/>
-      <stop offset="100%" stop-color="#c7ebff"/>
+      <stop offset="0%" stop-color="#fff8ee"/>
+      <stop offset="42%" stop-color="#ffdcee"/>
+      <stop offset="70%" stop-color="#d9ccff"/>
+      <stop offset="100%" stop-color="#ffe2ac"/>
     </linearGradient>
-    <radialGradient id="orb" cx="50%" cy="45%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
-      <stop offset="100%" stop-color="#e4d7ff" stop-opacity="0.15"/>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#bfe7ff" stop-opacity="0.16"/>
     </radialGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3"/>
-    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="24" y="24" width="472" height="732" rx="34" fill="none" stroke="#fff8ea" stroke-width="6" opacity=".82"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M50 72 C170 48,350 94,470 64" stroke="#fff" stroke-opacity=".52" stroke-width="3" fill="none"/>
-  <path d="M50 144 C170 162,350 126,470 158" stroke="#fff" stroke-opacity=".4" stroke-width="2.5" fill="none"/>
+  <path d="M45 82 C170 62,340 104,475 76" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 166 C175 180,337 150,475 178" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="255" cy="223" r="82" fill="url(#orb)" filter="url(#soft)"/>
-  
-  <g opacity="0.96">
-    <rect x="162" y="220" width="196" height="230" rx="28" fill="#fff9ff"/>
-    <rect x="182" y="242" width="156" height="186" rx="20" fill="#e4d7ff" opacity=".55"/>
-    <circle cx="260" cy="325" r="52" fill="#ffe0a3" opacity=".85"/>
-    <path d="M260 275 L274 314 L318 314 L282 338 L296 377 L260 351 L224 377 L238 338 L202 314 L246 314 Z" fill="#fff7ea"/>
-    <circle cx="260" cy="325" r="12" fill="#fff"/>
-  </g>
+  <circle cx="233" cy="305" r="96" fill="url(#orb)" filter="url(#soft)"/>
+
+  <ellipse cx="260" cy="395" rx="150" ry="110" fill="#f2e8ff"/><path d="M120 410 C190 300,330 300,400 410 C350 495,170 495,120 410 Z" fill="#fff6de"/><path d="M160 430 Q260 330 360 430" stroke="#fff" stroke-width="5" fill="none"/>
+
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 168 470 C 214 430, 306 510, 352 470 C 306 430, 214 510, 168 470" stroke="#bfe7ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 149 488 C 205 454, 315 522, 371 488 C 315 454, 205 522, 149 488" stroke="#d9ccff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 130 506 C 195 476, 325 536, 390 506 C 325 476, 195 536, 130 506" stroke="#bfe7ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
 
   <g>
-    <circle cx="112" cy="352" r="2.99" fill="#fff" opacity=".72"/><circle cx="422" cy="201" r="3.64" fill="#fff" opacity=".72"/><circle cx="243" cy="359" r="2.70" fill="#fff" opacity=".72"/><circle cx="224" cy="277" r="2.65" fill="#fff" opacity=".72"/><circle cx="419" cy="138" r="2.65" fill="#fff" opacity=".72"/><circle cx="266" cy="448" r="4.45" fill="#fff" opacity=".72"/><circle cx="223" cy="132" r="3.03" fill="#fff" opacity=".72"/><circle cx="222" cy="139" r="4.07" fill="#fff" opacity=".72"/>
+    <circle cx="368" cy="385" r="2.96" fill="#fff" opacity="0.59"/>
+    <circle cx="191" cy="392" r="2.04" fill="#fff" opacity="0.70"/>
+    <circle cx="156" cy="430" r="3.55" fill="#fff" opacity="0.69"/>
+    <circle cx="190" cy="103" r="2.58" fill="#fff" opacity="0.86"/>
+    <circle cx="189" cy="117" r="4.05" fill="#fff" opacity="0.87"/>
+    <circle cx="157" cy="454" r="1.81" fill="#fff" opacity="0.60"/>
+    <circle cx="152" cy="327" r="4.37" fill="#fff" opacity="0.72"/>
+    <circle cx="149" cy="360" r="1.64" fill="#fff" opacity="0.65"/>
+    <circle cx="228" cy="160" r="2.13" fill="#fff" opacity="0.63"/>
+    <circle cx="155" cy="538" r="2.66" fill="#fff" opacity="0.75"/>
+    <circle cx="201" cy="271" r="2.10" fill="#fff" opacity="0.37"/>
+    <circle cx="240" cy="453" r="1.99" fill="#fff" opacity="0.51"/>
+    <circle cx="291" cy="170" r="3.78" fill="#fff" opacity="0.78"/>
+    <circle cx="232" cy="390" r="3.48" fill="#fff" opacity="0.37"/>
+    <circle cx="189" cy="411" r="1.98" fill="#fff" opacity="0.38"/>
+    <circle cx="447" cy="115" r="3.78" fill="#fff" opacity="0.86"/>
+    <circle cx="253" cy="290" r="4.37" fill="#fff" opacity="0.38"/>
+    <circle cx="385" cy="202" r="1.71" fill="#fff" opacity="0.76"/>
+    <circle cx="456" cy="154" r="4.41" fill="#fff" opacity="0.49"/>
+    <circle cx="431" cy="429" r="4.23" fill="#fff" opacity="0.82"/>
+    <circle cx="109" cy="367" r="3.93" fill="#fff" opacity="0.64"/>
+    <circle cx="274" cy="417" r="4.04" fill="#fff" opacity="0.81"/>
+    <circle cx="288" cy="552" r="2.05" fill="#fff" opacity="0.52"/>
+    <circle cx="107" cy="249" r="1.45" fill="#fff" opacity="0.50"/>
+    <circle cx="171" cy="463" r="3.66" fill="#fff" opacity="0.50"/>
+    <circle cx="96" cy="336" r="4.28" fill="#fff" opacity="0.62"/>
   </g>
 
-  <rect x="64" y="620" width="392" height="92" rx="24" fill="#fff7ea" opacity=".78"/>
-  <text x="260" y="678" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" fill="#6f5686">The Rainbow Bridge</text>
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">The Rainbow Bridge</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">arched rainbow over waterfall</text>
 </svg>

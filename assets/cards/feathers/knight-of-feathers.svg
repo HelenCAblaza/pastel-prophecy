@@ -1,41 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
-  <title id="t">Knight Of Feathers</title>
-  <desc id="d">Whimsical pastel tarot artwork inspired by hand-drawn style, original composition.</desc>
+  <title id="t">Knight of Feathers</title>
+  <desc id="d">Detailed whimsical original tarot artwork for Knight of Feathers.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fff8f0"/>
-      <stop offset="50%" stop-color="#e0efff"/>
-      <stop offset="100%" stop-color="#ead6ff"/>
+      <stop offset="42%" stop-color="#e5eeff"/>
+      <stop offset="70%" stop-color="#bfd3ff"/>
+      <stop offset="100%" stop-color="#e1d6ff"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.8"/></filter>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#9ab6ff" stop-opacity="0.16"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="22" y="22" width="476" height="736" rx="34" fill="none" stroke="#fff9ee" stroke-width="6" opacity=".86"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M52 87 C180 71,336 105,468 79" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/>
-  <path d="M52 165 C180 179,336 151,468 175" stroke="#fff" stroke-opacity=".42" stroke-width="2.7" fill="none"/>
+  <path d="M45 81 C170 61,340 103,475 75" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 166 C175 180,337 150,475 178" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="264" cy="370" r="132" fill="#ffffff" opacity=".22" filter="url(#soft)"/>
-  
-  <ellipse cx="260" cy="365" rx="142" ry="92" fill="#e0efff"/>
-  <path d="M254 286 C206 302,172 350,176 398 C180 444,214 478,258 488 C238 452,234 412,238 386 C242 344,268 318,302 298 C286 294,272 292,254 286 Z" fill="#c9dcff"/>
-  <path d="M266 286 C314 302,348 350,344 398 C340 444,306 478,262 488 C282 452,286 412,282 386 C278 344,252 318,218 298 C234 294,248 292,266 286 Z" fill="#a9c1ff"/>
-  <path d="M232 356 Q260 344 288 356" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round"/>
-        
+  <circle cx="292" cy="314" r="96" fill="url(#orb)" filter="url(#soft)"/>
 
-  <g><circle cx="425" cy="568" r="4.17" fill="#fff" opacity=".74"/>
-    <circle cx="130" cy="188" r="2.83" fill="#fff" opacity=".74"/>
-    <circle cx="323" cy="203" r="3.91" fill="#fff" opacity=".74"/>
-    <circle cx="332" cy="428" r="3.14" fill="#fff" opacity=".74"/>
-    <circle cx="281" cy="550" r="3.29" fill="#fff" opacity=".74"/>
-    <circle cx="351" cy="145" r="4.40" fill="#fff" opacity=".74"/>
-    <circle cx="120" cy="368" r="4.54" fill="#fff" opacity=".74"/>
-    <circle cx="369" cy="214" r="3.94" fill="#fff" opacity=".74"/>
-    <circle cx="319" cy="301" r="3.75" fill="#fff" opacity=".74"/>
-    <circle cx="369" cy="551" r="4.13" fill="#fff" opacity=".74"/></g>
+  <path d="M 112 399 C 172 357, 238 429, 224 491 C 198 463, 166 457, 138 463 C 156 439, 164 417, 112 399 Z" fill="#eaf0ff" stroke="#fff" stroke-width="2" opacity=".83"/>
+    <path d="M 158 344 C 218 302, 284 374, 270 436 C 244 408, 212 402, 184 408 C 202 384, 210 362, 158 344 Z" fill="#eaf0ff" stroke="#fff" stroke-width="2" opacity=".83"/>
+    <path d="M 198 303 C 258 261, 324 333, 310 395 C 284 367, 252 361, 224 367 C 242 343, 250 321, 198 303 Z" fill="#eaf0ff" stroke="#fff" stroke-width="2" opacity=".83"/>
+    <path d="M 243 277 C 303 235, 369 307, 355 369 C 329 341, 297 335, 269 341 C 287 317, 295 295, 243 277 Z" fill="#eaf0ff" stroke="#fff" stroke-width="2" opacity=".83"/>
+    <path d="M 295 261 C 355 219, 421 291, 407 353 C 381 325, 349 319, 321 325 C 339 301, 347 279, 295 261 Z" fill="#eaf0ff" stroke="#fff" stroke-width="2" opacity=".83"/>
 
-  <rect x="80" y="618" width="360" height="86" rx="24" fill="#fff9ef" opacity=".8"/>
-  <text x="260" y="653" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" fill="#6f5686">Knight Of Feathers</text>
-  <text x="260" y="680" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="16" fill="#8b74a2">Feathers</text>
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 145 470 C 203 427, 317 513, 375 470 C 317 427, 203 513, 145 470" stroke="#bfd3ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 146 488 C 203 448, 317 528, 374 488 C 317 448, 203 528, 146 488" stroke="#9ab6ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 168 506 C 214 464, 306 548, 352 506 C 306 464, 214 548, 168 506" stroke="#e1d6ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+
+  <g>
+    <circle cx="97" cy="399" r="1.62" fill="#fff" opacity="0.85"/>
+    <circle cx="444" cy="297" r="3.76" fill="#fff" opacity="0.60"/>
+    <circle cx="381" cy="368" r="3.27" fill="#fff" opacity="0.77"/>
+    <circle cx="207" cy="577" r="3.65" fill="#fff" opacity="0.85"/>
+    <circle cx="287" cy="550" r="3.09" fill="#fff" opacity="0.85"/>
+    <circle cx="143" cy="130" r="3.12" fill="#fff" opacity="0.75"/>
+    <circle cx="349" cy="305" r="4.35" fill="#fff" opacity="0.79"/>
+    <circle cx="193" cy="237" r="2.95" fill="#fff" opacity="0.68"/>
+    <circle cx="149" cy="411" r="2.30" fill="#fff" opacity="0.83"/>
+    <circle cx="268" cy="331" r="3.36" fill="#fff" opacity="0.41"/>
+    <circle cx="179" cy="513" r="3.16" fill="#fff" opacity="0.71"/>
+    <circle cx="240" cy="554" r="4.24" fill="#fff" opacity="0.89"/>
+    <circle cx="451" cy="536" r="3.54" fill="#fff" opacity="0.74"/>
+    <circle cx="385" cy="348" r="2.35" fill="#fff" opacity="0.38"/>
+    <circle cx="80" cy="88" r="4.19" fill="#fff" opacity="0.55"/>
+    <circle cx="237" cy="261" r="3.80" fill="#fff" opacity="0.37"/>
+    <circle cx="311" cy="471" r="4.04" fill="#fff" opacity="0.37"/>
+    <circle cx="117" cy="506" r="2.17" fill="#fff" opacity="0.75"/>
+    <circle cx="308" cy="562" r="4.62" fill="#fff" opacity="0.44"/>
+    <circle cx="419" cy="550" r="1.89" fill="#fff" opacity="0.39"/>
+    <circle cx="355" cy="251" r="3.85" fill="#fff" opacity="0.56"/>
+    <circle cx="111" cy="322" r="3.99" fill="#fff" opacity="0.55"/>
+    <circle cx="380" cy="343" r="3.29" fill="#fff" opacity="0.39"/>
+    <circle cx="147" cy="393" r="3.87" fill="#fff" opacity="0.38"/>
+    <circle cx="110" cy="585" r="2.68" fill="#fff" opacity="0.79"/>
+    <circle cx="432" cy="587" r="1.68" fill="#fff" opacity="0.77"/>
+  </g>
+
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">Knight of Feathers</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">feathers • knight</text>
 </svg>

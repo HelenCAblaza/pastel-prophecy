@@ -1,41 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
-  <title id="t">Four Of Crystals</title>
-  <desc id="d">Whimsical pastel tarot artwork inspired by hand-drawn style, original composition.</desc>
+  <title id="t">Four of Crystals</title>
+  <desc id="d">Detailed whimsical original tarot artwork for Four of Crystals.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fffaf0"/>
-      <stop offset="50%" stop-color="#d8f7ea"/>
-      <stop offset="100%" stop-color="#d7d1ff"/>
+      <stop offset="42%" stop-color="#dff8ee"/>
+      <stop offset="70%" stop-color="#bdeedc"/>
+      <stop offset="100%" stop-color="#d8d1ff"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.8"/></filter>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#8ed8bf" stop-opacity="0.16"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="22" y="22" width="476" height="736" rx="34" fill="none" stroke="#fff9ee" stroke-width="6" opacity=".86"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M52 78 C180 62,336 96,468 70" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/>
-  <path d="M52 165 C180 179,336 151,468 175" stroke="#fff" stroke-opacity=".42" stroke-width="2.7" fill="none"/>
+  <path d="M45 72 C170 52,340 94,475 66" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 161 C175 175,337 145,475 173" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="264" cy="370" r="132" fill="#ffffff" opacity=".22" filter="url(#soft)"/>
-  
-  <polygon points="260,232 330,300 302,414 218,414 190,300" fill="#bcefdc"/>
-  <polygon points="260,258 306,306 286,390 234,390 214,306" fill="#f4fff8"/>
-  <path d="M190 300 L260 232 L330 300" stroke="#ffffff" stroke-width="4" fill="none" opacity=".8"/>
-  <circle cx="260" cy="347" r="9" fill="#d7d1ff"/>
-        
+  <circle cx="231" cy="232" r="96" fill="url(#orb)" filter="url(#soft)"/>
 
-  <g><circle cx="154" cy="537" r="2.06" fill="#fff" opacity=".74"/>
-    <circle cx="306" cy="479" r="2.99" fill="#fff" opacity=".74"/>
-    <circle cx="256" cy="358" r="2.85" fill="#fff" opacity=".74"/>
-    <circle cx="280" cy="275" r="3.72" fill="#fff" opacity=".74"/>
-    <circle cx="175" cy="497" r="2.93" fill="#fff" opacity=".74"/>
-    <circle cx="425" cy="253" r="2.22" fill="#fff" opacity=".74"/>
-    <circle cx="106" cy="204" r="2.56" fill="#fff" opacity=".74"/>
-    <circle cx="330" cy="118" r="4.75" fill="#fff" opacity=".74"/>
-    <circle cx="418" cy="238" r="3.88" fill="#fff" opacity=".74"/>
-    <circle cx="140" cy="218" r="2.13" fill="#fff" opacity=".74"/></g>
+  <polygon points="200,309 225,336 217,389 183,389 175,336" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="278,323 296,351 290,405 266,405 260,351" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="275,363 297,386 289,431 261,431 253,386" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="280,402 304,427 296,476 264,476 256,427" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
 
-  <rect x="80" y="618" width="360" height="86" rx="24" fill="#fff9ef" opacity=".8"/>
-  <text x="260" y="653" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" fill="#6f5686">Four Of Crystals</text>
-  <text x="260" y="680" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="16" fill="#8b74a2">Crystals</text>
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 165 470 C 213 443, 307 497, 355 470 C 307 443, 213 497, 165 470" stroke="#bdeedc" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 159 488 C 210 456, 310 520, 361 488 C 310 456, 210 520, 159 488" stroke="#d8d1ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 140 506 C 200 465, 320 547, 380 506 C 320 465, 200 547, 140 506" stroke="#bdeedc" stroke-opacity=".52" stroke-width="4" fill="none"/>
+
+  <g>
+    <circle cx="70" cy="519" r="3.59" fill="#fff" opacity="0.72"/>
+    <circle cx="114" cy="304" r="1.56" fill="#fff" opacity="0.90"/>
+    <circle cx="415" cy="362" r="4.13" fill="#fff" opacity="0.71"/>
+    <circle cx="285" cy="590" r="3.67" fill="#fff" opacity="0.77"/>
+    <circle cx="417" cy="506" r="3.11" fill="#fff" opacity="0.79"/>
+    <circle cx="251" cy="489" r="1.45" fill="#fff" opacity="0.41"/>
+    <circle cx="286" cy="372" r="2.10" fill="#fff" opacity="0.88"/>
+    <circle cx="457" cy="119" r="3.80" fill="#fff" opacity="0.46"/>
+    <circle cx="305" cy="475" r="4.66" fill="#fff" opacity="0.82"/>
+    <circle cx="265" cy="93" r="1.69" fill="#fff" opacity="0.46"/>
+    <circle cx="64" cy="392" r="3.70" fill="#fff" opacity="0.66"/>
+    <circle cx="232" cy="297" r="2.03" fill="#fff" opacity="0.81"/>
+    <circle cx="246" cy="392" r="1.45" fill="#fff" opacity="0.46"/>
+    <circle cx="95" cy="105" r="3.78" fill="#fff" opacity="0.87"/>
+    <circle cx="281" cy="355" r="1.59" fill="#fff" opacity="0.78"/>
+    <circle cx="219" cy="568" r="1.80" fill="#fff" opacity="0.35"/>
+    <circle cx="344" cy="593" r="4.51" fill="#fff" opacity="0.67"/>
+    <circle cx="376" cy="316" r="2.43" fill="#fff" opacity="0.85"/>
+    <circle cx="427" cy="405" r="1.56" fill="#fff" opacity="0.80"/>
+    <circle cx="413" cy="548" r="2.53" fill="#fff" opacity="0.57"/>
+    <circle cx="77" cy="581" r="4.30" fill="#fff" opacity="0.76"/>
+    <circle cx="114" cy="594" r="3.24" fill="#fff" opacity="0.71"/>
+    <circle cx="415" cy="553" r="4.16" fill="#fff" opacity="0.55"/>
+    <circle cx="294" cy="130" r="3.54" fill="#fff" opacity="0.54"/>
+    <circle cx="219" cy="351" r="4.32" fill="#fff" opacity="0.59"/>
+    <circle cx="130" cy="335" r="4.06" fill="#fff" opacity="0.85"/>
+  </g>
+
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">Four of Crystals</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">crystals • four</text>
 </svg>

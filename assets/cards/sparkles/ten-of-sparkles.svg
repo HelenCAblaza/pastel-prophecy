@@ -1,40 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
-  <title id="t">Ten Of Sparkles</title>
-  <desc id="d">Whimsical pastel tarot artwork inspired by hand-drawn style, original composition.</desc>
+  <title id="t">Ten of Sparkles</title>
+  <desc id="d">Detailed whimsical original tarot artwork for Ten of Sparkles.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff7ea"/>
-      <stop offset="50%" stop-color="#ffd7a8"/>
-      <stop offset="100%" stop-color="#f9c8dd"/>
+      <stop offset="0%" stop-color="#fff7e8"/>
+      <stop offset="42%" stop-color="#ffe0b3"/>
+      <stop offset="70%" stop-color="#ffc57d"/>
+      <stop offset="100%" stop-color="#f9d2f1"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.8"/></filter>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#ffab63" stop-opacity="0.16"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="22" y="22" width="476" height="736" rx="34" fill="none" stroke="#fff9ee" stroke-width="6" opacity=".86"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M52 83 C180 67,336 101,468 75" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/>
-  <path d="M52 161 C180 175,336 147,468 171" stroke="#fff" stroke-opacity=".42" stroke-width="2.7" fill="none"/>
+  <path d="M45 77 C170 57,340 99,475 71" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 157 C175 171,337 141,475 169" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="264" cy="370" r="132" fill="#ffffff" opacity=".22" filter="url(#soft)"/>
-  
-  <path d="M260 236 L286 302 L356 302 L300 345 L322 414 L260 372 L198 414 L220 345 L164 302 L234 302 Z" fill="#ffc27a"/>
-  <path d="M260 266 L278 312 L327 312 L288 341 L304 390 L260 360 L216 390 L232 341 L193 312 L242 312 Z" fill="#fff7ec"/>
-  <circle cx="326" cy="248" r="11" fill="#f9c8dd"/>
-        
+  <circle cx="237" cy="277" r="96" fill="url(#orb)" filter="url(#soft)"/>
 
-  <g><circle cx="178" cy="298" r="3.58" fill="#fff" opacity=".74"/>
-    <circle cx="271" cy="367" r="4.56" fill="#fff" opacity=".74"/>
-    <circle cx="145" cy="515" r="3.56" fill="#fff" opacity=".74"/>
-    <circle cx="146" cy="545" r="3.10" fill="#fff" opacity=".74"/>
-    <circle cx="417" cy="559" r="3.10" fill="#fff" opacity=".74"/>
-    <circle cx="341" cy="360" r="3.32" fill="#fff" opacity=".74"/>
-    <circle cx="386" cy="264" r="3.98" fill="#fff" opacity=".74"/>
-    <circle cx="380" cy="422" r="3.58" fill="#fff" opacity=".74"/>
-    <circle cx="398" cy="494" r="4.45" fill="#fff" opacity=".74"/>
-    <circle cx="174" cy="456" r="4.20" fill="#fff" opacity=".74"/></g>
+  <path d="M 398 395 L 406.1 415.9 L 427.0 424 L 406.1 432.1 L 398 453.0 L 389.9 432.1 L 369.0 424 L 389.9 415.9 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 367 428 L 378.2 456.8 L 407.0 468 L 378.2 479.2 L 367 508.0 L 355.8 479.2 L 327.0 468 L 355.8 456.8 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 167 402 L 176.8 427.2 L 202.0 437 L 176.8 446.8 L 167 472.0 L 157.2 446.8 L 132.0 437 L 157.2 427.2 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 168 422 L 176.4 443.6 L 198.0 452 L 176.4 460.4 L 168 482.0 L 159.6 460.4 L 138.0 452 L 159.6 443.6 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 375 397 L 385.6 424.4 L 413.0 435 L 385.6 445.6 L 375 473.0 L 364.4 445.6 L 337.0 435 L 364.4 424.4 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 311 297 L 320.2 320.8 L 344.0 330 L 320.2 339.2 L 311 363.0 L 301.8 339.2 L 278.0 330 L 301.8 320.8 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 360 326 L 368.1 346.9 L 389.0 355 L 368.1 363.1 L 360 384.0 L 351.9 363.1 L 331.0 355 L 351.9 346.9 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 408 272 L 419.2 300.8 L 448.0 312 L 419.2 323.2 L 408 352.0 L 396.8 323.2 L 368.0 312 L 396.8 300.8 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 402 355 L 412.1 380.9 L 438.0 391 L 412.1 401.1 L 402 427.0 L 391.9 401.1 L 366.0 391 L 391.9 380.9 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
+    <path d="M 196 371 L 206.4 397.6 L 233.0 408 L 206.4 418.4 L 196 445.0 L 185.6 418.4 L 159.0 408 L 185.6 397.6 Z" fill="#ffe8b4" stroke="#fff" stroke-width="2" opacity=".86"/>
 
-  <rect x="80" y="618" width="360" height="86" rx="24" fill="#fff9ef" opacity=".8"/>
-  <text x="260" y="653" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" fill="#6f5686">Ten Of Sparkles</text>
-  <text x="260" y="680" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="16" fill="#8b74a2">Sparkles</text>
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 157 470 C 209 439, 311 501, 363 470 C 311 439, 209 501, 157 470" stroke="#ffc57d" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 165 488 C 213 447, 307 529, 355 488 C 307 447, 213 529, 165 488" stroke="#ffab63" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 129 506 C 195 475, 325 537, 391 506 C 325 475, 195 537, 129 506" stroke="#ffc57d" stroke-opacity=".52" stroke-width="4" fill="none"/>
+
+  <g>
+    <circle cx="404" cy="274" r="4.76" fill="#fff" opacity="0.54"/>
+    <circle cx="420" cy="112" r="4.55" fill="#fff" opacity="0.41"/>
+    <circle cx="335" cy="502" r="2.69" fill="#fff" opacity="0.81"/>
+    <circle cx="337" cy="524" r="3.31" fill="#fff" opacity="0.65"/>
+    <circle cx="92" cy="208" r="3.30" fill="#fff" opacity="0.54"/>
+    <circle cx="361" cy="532" r="3.68" fill="#fff" opacity="0.37"/>
+    <circle cx="365" cy="186" r="2.70" fill="#fff" opacity="0.62"/>
+    <circle cx="119" cy="175" r="1.51" fill="#fff" opacity="0.78"/>
+    <circle cx="377" cy="488" r="2.25" fill="#fff" opacity="0.81"/>
+    <circle cx="407" cy="414" r="2.68" fill="#fff" opacity="0.42"/>
+    <circle cx="357" cy="532" r="1.93" fill="#fff" opacity="0.66"/>
+    <circle cx="276" cy="369" r="3.48" fill="#fff" opacity="0.60"/>
+    <circle cx="402" cy="317" r="4.50" fill="#fff" opacity="0.90"/>
+    <circle cx="254" cy="120" r="2.67" fill="#fff" opacity="0.51"/>
+    <circle cx="112" cy="511" r="4.50" fill="#fff" opacity="0.73"/>
+    <circle cx="210" cy="338" r="2.49" fill="#fff" opacity="0.49"/>
+    <circle cx="105" cy="477" r="3.40" fill="#fff" opacity="0.53"/>
+    <circle cx="421" cy="508" r="1.61" fill="#fff" opacity="0.86"/>
+    <circle cx="183" cy="540" r="3.94" fill="#fff" opacity="0.45"/>
+    <circle cx="270" cy="151" r="3.84" fill="#fff" opacity="0.47"/>
+    <circle cx="156" cy="489" r="3.32" fill="#fff" opacity="0.88"/>
+    <circle cx="138" cy="112" r="4.55" fill="#fff" opacity="0.72"/>
+    <circle cx="328" cy="200" r="2.69" fill="#fff" opacity="0.72"/>
+    <circle cx="149" cy="155" r="3.17" fill="#fff" opacity="0.62"/>
+    <circle cx="159" cy="327" r="1.76" fill="#fff" opacity="0.85"/>
+    <circle cx="276" cy="221" r="2.33" fill="#fff" opacity="0.38"/>
+  </g>
+
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">Ten of Sparkles</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">sparkles • ten</text>
 </svg>

@@ -1,42 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
   <title id="t">The Golden Wheel</title>
-  <desc id="d">Whimsical pastel tarot art for The Golden Wheel.</desc>
+  <desc id="d">Detailed whimsical original tarot artwork for The Golden Wheel.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff7ea"/>
-      <stop offset="45%" stop-color="#ffe1f2"/>
-      <stop offset="100%" stop-color="#d5f4e6"/>
+      <stop offset="0%" stop-color="#fff8ee"/>
+      <stop offset="42%" stop-color="#ffdcee"/>
+      <stop offset="70%" stop-color="#d9ccff"/>
+      <stop offset="100%" stop-color="#ffe2ac"/>
     </linearGradient>
-    <radialGradient id="orb" cx="50%" cy="45%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
-      <stop offset="100%" stop-color="#cfe9ff" stop-opacity="0.15"/>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#bfe7ff" stop-opacity="0.16"/>
     </radialGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3"/>
-    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="24" y="24" width="472" height="732" rx="34" fill="none" stroke="#fff8ea" stroke-width="6" opacity=".82"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M50 76 C170 52,350 98,470 68" stroke="#fff" stroke-opacity=".52" stroke-width="3" fill="none"/>
-  <path d="M50 136 C170 154,350 118,470 150" stroke="#fff" stroke-opacity=".4" stroke-width="2.5" fill="none"/>
+  <path d="M45 75 C170 55,340 97,475 69" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 158 C175 172,337 142,475 170" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="279" cy="209" r="82" fill="url(#orb)" filter="url(#soft)"/>
-  
-  <g opacity="0.95">
-    <circle cx="260" cy="320" r="102" fill="#cfe9ff"/>
-    <circle cx="260" cy="320" r="74" fill="#fff8ff"/>
-    <path d="M260 238 L277 287 L330 287 L287 318 L304 368 L260 338 L216 368 L233 318 L190 287 L243 287 Z" fill="#ffe9b8"/>
-    <circle cx="200" cy="250" r="9" fill="#fff"/>
-    <circle cx="330" cy="265" r="7" fill="#fff"/>
-    <circle cx="315" cy="380" r="8" fill="#fff"/>
-  </g>
+  <circle cx="262" cy="252" r="96" fill="url(#orb)" filter="url(#soft)"/>
+
+  <circle cx="260" cy="370" r="126" fill="#f6ecff"/><circle cx="260" cy="370" r="80" fill="#fff9e9"/><g stroke="#fff" stroke-width="6"><line x1="260" y1="370" x2="370" y2="370"/><line x1="260" y1="370" x2="337" y2="447"/><line x1="260" y1="370" x2="260" y2="480"/><line x1="260" y1="370" x2="183" y2="447"/><line x1="260" y1="370" x2="150" y2="370"/><line x1="260" y1="370" x2="183" y2="293"/><line x1="260" y1="370" x2="260" y2="260"/><line x1="260" y1="370" x2="337" y2="293"/></g>
+
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 162 470 C 211 429, 309 511, 358 470 C 309 429, 211 511, 162 470" stroke="#bfe7ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 165 488 C 213 458, 307 518, 355 488 C 307 458, 213 518, 165 488" stroke="#ffe2ac" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 121 506 C 191 463, 329 549, 399 506 C 329 463, 191 549, 121 506" stroke="#ffe2ac" stroke-opacity=".52" stroke-width="4" fill="none"/>
 
   <g>
-    <circle cx="184" cy="191" r="3.35" fill="#fff" opacity=".72"/><circle cx="138" cy="194" r="4.04" fill="#fff" opacity=".72"/><circle cx="132" cy="398" r="3.72" fill="#fff" opacity=".72"/><circle cx="371" cy="375" r="3.05" fill="#fff" opacity=".72"/><circle cx="266" cy="464" r="2.52" fill="#fff" opacity=".72"/><circle cx="278" cy="548" r="4.38" fill="#fff" opacity=".72"/><circle cx="183" cy="393" r="4.26" fill="#fff" opacity=".72"/><circle cx="140" cy="345" r="3.43" fill="#fff" opacity=".72"/>
+    <circle cx="99" cy="589" r="2.61" fill="#fff" opacity="0.53"/>
+    <circle cx="130" cy="326" r="4.18" fill="#fff" opacity="0.80"/>
+    <circle cx="225" cy="265" r="3.18" fill="#fff" opacity="0.68"/>
+    <circle cx="282" cy="563" r="3.61" fill="#fff" opacity="0.77"/>
+    <circle cx="194" cy="561" r="4.58" fill="#fff" opacity="0.52"/>
+    <circle cx="172" cy="519" r="2.36" fill="#fff" opacity="0.45"/>
+    <circle cx="366" cy="388" r="3.06" fill="#fff" opacity="0.62"/>
+    <circle cx="310" cy="436" r="3.86" fill="#fff" opacity="0.85"/>
+    <circle cx="221" cy="578" r="4.76" fill="#fff" opacity="0.37"/>
+    <circle cx="214" cy="553" r="4.13" fill="#fff" opacity="0.85"/>
+    <circle cx="158" cy="295" r="3.77" fill="#fff" opacity="0.57"/>
+    <circle cx="226" cy="164" r="2.97" fill="#fff" opacity="0.45"/>
+    <circle cx="442" cy="402" r="2.22" fill="#fff" opacity="0.47"/>
+    <circle cx="399" cy="536" r="1.89" fill="#fff" opacity="0.60"/>
+    <circle cx="355" cy="445" r="1.54" fill="#fff" opacity="0.78"/>
+    <circle cx="372" cy="115" r="2.17" fill="#fff" opacity="0.69"/>
+    <circle cx="134" cy="100" r="2.62" fill="#fff" opacity="0.68"/>
+    <circle cx="326" cy="154" r="2.41" fill="#fff" opacity="0.78"/>
+    <circle cx="331" cy="363" r="3.65" fill="#fff" opacity="0.77"/>
+    <circle cx="373" cy="222" r="2.11" fill="#fff" opacity="0.70"/>
+    <circle cx="197" cy="182" r="4.42" fill="#fff" opacity="0.89"/>
+    <circle cx="339" cy="321" r="4.60" fill="#fff" opacity="0.52"/>
+    <circle cx="221" cy="273" r="1.42" fill="#fff" opacity="0.84"/>
+    <circle cx="193" cy="518" r="3.51" fill="#fff" opacity="0.58"/>
+    <circle cx="306" cy="418" r="3.99" fill="#fff" opacity="0.56"/>
+    <circle cx="233" cy="462" r="2.80" fill="#fff" opacity="0.86"/>
   </g>
 
-  <rect x="64" y="620" width="392" height="92" rx="24" fill="#fff7ea" opacity=".78"/>
-  <text x="260" y="678" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" fill="#6f5686">The Golden Wheel</text>
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">The Golden Wheel</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">ornamental wheel with 8 runes</text>
 </svg>

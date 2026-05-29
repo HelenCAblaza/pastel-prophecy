@@ -1,41 +1,70 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
-  <title id="t">Queen Of Crystals</title>
-  <desc id="d">Whimsical pastel tarot artwork inspired by hand-drawn style, original composition.</desc>
+  <title id="t">Queen of Crystals</title>
+  <desc id="d">Detailed whimsical original tarot artwork for Queen of Crystals.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fffaf0"/>
-      <stop offset="50%" stop-color="#d8f7ea"/>
-      <stop offset="100%" stop-color="#d7d1ff"/>
+      <stop offset="42%" stop-color="#dff8ee"/>
+      <stop offset="70%" stop-color="#bdeedc"/>
+      <stop offset="100%" stop-color="#d8d1ff"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.8"/></filter>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#8ed8bf" stop-opacity="0.16"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="22" y="22" width="476" height="736" rx="34" fill="none" stroke="#fff9ee" stroke-width="6" opacity=".86"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M52 78 C180 62,336 96,468 70" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/>
-  <path d="M52 156 C180 170,336 142,468 166" stroke="#fff" stroke-opacity=".42" stroke-width="2.7" fill="none"/>
+  <path d="M45 72 C170 52,340 94,475 66" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 152 C175 166,337 136,475 164" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="264" cy="370" r="132" fill="#ffffff" opacity=".22" filter="url(#soft)"/>
-  
-  <polygon points="260,232 330,300 302,414 218,414 190,300" fill="#bcefdc"/>
-  <polygon points="260,258 306,306 286,390 234,390 214,306" fill="#f4fff8"/>
-  <path d="M190 300 L260 232 L330 300" stroke="#ffffff" stroke-width="4" fill="none" opacity=".8"/>
-  <circle cx="260" cy="347" r="9" fill="#d7d1ff"/>
-        
+  <circle cx="238" cy="295" r="96" fill="url(#orb)" filter="url(#soft)"/>
 
-  <g><circle cx="181" cy="573" r="3.42" fill="#fff" opacity=".74"/>
-    <circle cx="292" cy="439" r="2.29" fill="#fff" opacity=".74"/>
-    <circle cx="359" cy="193" r="4.73" fill="#fff" opacity=".74"/>
-    <circle cx="259" cy="499" r="4.57" fill="#fff" opacity=".74"/>
-    <circle cx="267" cy="519" r="2.32" fill="#fff" opacity=".74"/>
-    <circle cx="90" cy="218" r="2.25" fill="#fff" opacity=".74"/>
-    <circle cx="319" cy="221" r="4.71" fill="#fff" opacity=".74"/>
-    <circle cx="126" cy="506" r="3.08" fill="#fff" opacity=".74"/>
-    <circle cx="250" cy="154" r="2.47" fill="#fff" opacity=".74"/>
-    <circle cx="357" cy="280" r="4.60" fill="#fff" opacity=".74"/></g>
+  <polygon points="314,373 329,394 324,435 304,435 299,394" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="381,245 400,269 393,317 369,317 362,269" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="289,415 304,435 299,473 279,473 274,435" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="218,219 236,248 230,305 206,305 200,248" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="221,223 246,244 237,285 205,285 196,244" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="307,344 326,365 319,406 295,406 288,365" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
 
-  <rect x="80" y="618" width="360" height="86" rx="24" fill="#fff9ef" opacity=".8"/>
-  <text x="260" y="653" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" fill="#6f5686">Queen Of Crystals</text>
-  <text x="260" y="680" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="16" fill="#8b74a2">Crystals</text>
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 160 470 C 210 425, 310 515, 360 470 C 310 425, 210 515, 160 470" stroke="#bdeedc" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 137 488 C 199 452, 321 524, 383 488 C 321 452, 199 524, 137 488" stroke="#8ed8bf" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 155 506 C 208 462, 312 550, 365 506 C 312 462, 208 550, 155 506" stroke="#bdeedc" stroke-opacity=".52" stroke-width="4" fill="none"/>
+
+  <g>
+    <circle cx="289" cy="411" r="3.31" fill="#fff" opacity="0.46"/>
+    <circle cx="308" cy="311" r="4.04" fill="#fff" opacity="0.80"/>
+    <circle cx="285" cy="524" r="3.52" fill="#fff" opacity="0.61"/>
+    <circle cx="95" cy="445" r="4.58" fill="#fff" opacity="0.66"/>
+    <circle cx="184" cy="528" r="1.65" fill="#fff" opacity="0.50"/>
+    <circle cx="362" cy="432" r="2.25" fill="#fff" opacity="0.52"/>
+    <circle cx="102" cy="401" r="4.18" fill="#fff" opacity="0.42"/>
+    <circle cx="373" cy="487" r="1.77" fill="#fff" opacity="0.63"/>
+    <circle cx="280" cy="553" r="1.96" fill="#fff" opacity="0.90"/>
+    <circle cx="447" cy="187" r="2.68" fill="#fff" opacity="0.53"/>
+    <circle cx="387" cy="387" r="4.41" fill="#fff" opacity="0.66"/>
+    <circle cx="146" cy="328" r="2.51" fill="#fff" opacity="0.86"/>
+    <circle cx="246" cy="132" r="2.81" fill="#fff" opacity="0.85"/>
+    <circle cx="170" cy="307" r="3.72" fill="#fff" opacity="0.81"/>
+    <circle cx="340" cy="285" r="3.71" fill="#fff" opacity="0.77"/>
+    <circle cx="255" cy="545" r="2.22" fill="#fff" opacity="0.89"/>
+    <circle cx="150" cy="350" r="4.18" fill="#fff" opacity="0.39"/>
+    <circle cx="166" cy="461" r="3.39" fill="#fff" opacity="0.54"/>
+    <circle cx="338" cy="284" r="2.47" fill="#fff" opacity="0.51"/>
+    <circle cx="158" cy="145" r="3.88" fill="#fff" opacity="0.89"/>
+    <circle cx="118" cy="314" r="1.67" fill="#fff" opacity="0.86"/>
+    <circle cx="240" cy="152" r="2.23" fill="#fff" opacity="0.54"/>
+    <circle cx="321" cy="221" r="2.23" fill="#fff" opacity="0.80"/>
+    <circle cx="99" cy="125" r="2.32" fill="#fff" opacity="0.40"/>
+    <circle cx="196" cy="225" r="2.44" fill="#fff" opacity="0.89"/>
+    <circle cx="220" cy="587" r="2.78" fill="#fff" opacity="0.61"/>
+  </g>
+
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">Queen of Crystals</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">crystals • queen</text>
 </svg>

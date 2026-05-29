@@ -1,41 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
   <title id="t">The Silver Lantern</title>
-  <desc id="d">Whimsical pastel tarot art for The Silver Lantern.</desc>
+  <desc id="d">Detailed whimsical original tarot artwork for The Silver Lantern.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff7ea"/>
-      <stop offset="45%" stop-color="#ffd7ee"/>
-      <stop offset="100%" stop-color="#bfe7ff"/>
+      <stop offset="0%" stop-color="#fff8ee"/>
+      <stop offset="42%" stop-color="#ffdcee"/>
+      <stop offset="70%" stop-color="#d9ccff"/>
+      <stop offset="100%" stop-color="#ffe2ac"/>
     </linearGradient>
-    <radialGradient id="orb" cx="50%" cy="45%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
-      <stop offset="100%" stop-color="#d8c8ff" stop-opacity="0.15"/>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#bfe7ff" stop-opacity="0.16"/>
     </radialGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3"/>
-    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="24" y="24" width="472" height="732" rx="34" fill="none" stroke="#fff8ea" stroke-width="6" opacity=".82"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M50 74 C170 50,350 96,470 66" stroke="#fff" stroke-opacity=".52" stroke-width="3" fill="none"/>
-  <path d="M50 141 C170 159,350 123,470 155" stroke="#fff" stroke-opacity=".4" stroke-width="2.5" fill="none"/>
+  <path d="M45 86 C170 66,340 108,475 80" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 161 C175 175,337 145,475 173" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="249" cy="219" r="82" fill="url(#orb)" filter="url(#soft)"/>
-  
-  <g opacity="0.96">
-    <rect x="162" y="220" width="196" height="230" rx="28" fill="#fff9ff"/>
-    <rect x="182" y="242" width="156" height="186" rx="20" fill="#d8c8ff" opacity=".55"/>
-    <circle cx="260" cy="325" r="52" fill="#f8dfa5" opacity=".85"/>
-    <path d="M260 275 L274 314 L318 314 L282 338 L296 377 L260 351 L224 377 L238 338 L202 314 L246 314 Z" fill="#fff7ea"/>
-    <circle cx="260" cy="325" r="12" fill="#fff"/>
-  </g>
+  <circle cx="221" cy="297" r="96" fill="url(#orb)" filter="url(#soft)"/>
+
+  <ellipse cx="260" cy="395" rx="150" ry="110" fill="#f2e8ff"/><path d="M120 410 C190 300,330 300,400 410 C350 495,170 495,120 410 Z" fill="#fff6de"/><path d="M160 430 Q260 330 360 430" stroke="#fff" stroke-width="5" fill="none"/>
+
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 170 470 C 215 427, 305 513, 350 470 C 305 427, 215 513, 170 470" stroke="#d9ccff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 122 488 C 191 446, 329 530, 398 488 C 329 446, 191 530, 122 488" stroke="#ffe2ac" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 146 506 C 203 460, 317 552, 374 506 C 317 460, 203 552, 146 506" stroke="#d9ccff" stroke-opacity=".52" stroke-width="4" fill="none"/>
 
   <g>
-    <circle cx="101" cy="403" r="4.39" fill="#fff" opacity=".72"/><circle cx="353" cy="323" r="3.75" fill="#fff" opacity=".72"/><circle cx="394" cy="396" r="3.13" fill="#fff" opacity=".72"/><circle cx="318" cy="385" r="2.83" fill="#fff" opacity=".72"/><circle cx="292" cy="271" r="3.96" fill="#fff" opacity=".72"/><circle cx="411" cy="511" r="3.24" fill="#fff" opacity=".72"/><circle cx="390" cy="463" r="3.78" fill="#fff" opacity=".72"/><circle cx="361" cy="244" r="2.69" fill="#fff" opacity=".72"/>
+    <circle cx="270" cy="483" r="3.25" fill="#fff" opacity="0.59"/>
+    <circle cx="197" cy="482" r="2.37" fill="#fff" opacity="0.89"/>
+    <circle cx="378" cy="533" r="3.92" fill="#fff" opacity="0.71"/>
+    <circle cx="302" cy="326" r="2.09" fill="#fff" opacity="0.38"/>
+    <circle cx="220" cy="305" r="2.22" fill="#fff" opacity="0.89"/>
+    <circle cx="302" cy="227" r="1.88" fill="#fff" opacity="0.44"/>
+    <circle cx="414" cy="344" r="4.65" fill="#fff" opacity="0.56"/>
+    <circle cx="400" cy="181" r="1.97" fill="#fff" opacity="0.35"/>
+    <circle cx="187" cy="90" r="4.79" fill="#fff" opacity="0.61"/>
+    <circle cx="106" cy="184" r="3.44" fill="#fff" opacity="0.61"/>
+    <circle cx="366" cy="198" r="2.50" fill="#fff" opacity="0.67"/>
+    <circle cx="137" cy="453" r="4.38" fill="#fff" opacity="0.80"/>
+    <circle cx="307" cy="143" r="3.81" fill="#fff" opacity="0.81"/>
+    <circle cx="293" cy="121" r="3.01" fill="#fff" opacity="0.87"/>
+    <circle cx="376" cy="562" r="4.55" fill="#fff" opacity="0.57"/>
+    <circle cx="366" cy="102" r="3.28" fill="#fff" opacity="0.62"/>
+    <circle cx="446" cy="103" r="2.16" fill="#fff" opacity="0.68"/>
+    <circle cx="67" cy="487" r="3.74" fill="#fff" opacity="0.53"/>
+    <circle cx="302" cy="337" r="3.40" fill="#fff" opacity="0.40"/>
+    <circle cx="74" cy="192" r="3.83" fill="#fff" opacity="0.84"/>
+    <circle cx="129" cy="310" r="3.72" fill="#fff" opacity="0.75"/>
+    <circle cx="167" cy="495" r="2.16" fill="#fff" opacity="0.37"/>
+    <circle cx="350" cy="277" r="4.58" fill="#fff" opacity="0.57"/>
+    <circle cx="327" cy="413" r="1.94" fill="#fff" opacity="0.48"/>
+    <circle cx="398" cy="483" r="3.98" fill="#fff" opacity="0.82"/>
+    <circle cx="366" cy="123" r="4.77" fill="#fff" opacity="0.61"/>
   </g>
 
-  <rect x="64" y="620" width="392" height="92" rx="24" fill="#fff7ea" opacity=".78"/>
-  <text x="260" y="678" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" fill="#6f5686">The Silver Lantern</text>
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">The Silver Lantern</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">lantern floating through fog</text>
 </svg>

@@ -1,41 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
-  <title id="t">Knight Of Crystals</title>
-  <desc id="d">Whimsical pastel tarot artwork inspired by hand-drawn style, original composition.</desc>
+  <title id="t">Knight of Crystals</title>
+  <desc id="d">Detailed whimsical original tarot artwork for Knight of Crystals.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fffaf0"/>
-      <stop offset="50%" stop-color="#d8f7ea"/>
-      <stop offset="100%" stop-color="#d7d1ff"/>
+      <stop offset="42%" stop-color="#dff8ee"/>
+      <stop offset="70%" stop-color="#bdeedc"/>
+      <stop offset="100%" stop-color="#d8d1ff"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.8"/></filter>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#8ed8bf" stop-opacity="0.16"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="22" y="22" width="476" height="736" rx="34" fill="none" stroke="#fff9ee" stroke-width="6" opacity=".86"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M52 80 C180 64,336 98,468 72" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/>
-  <path d="M52 164 C180 178,336 150,468 174" stroke="#fff" stroke-opacity=".42" stroke-width="2.7" fill="none"/>
+  <path d="M45 85 C170 65,340 107,475 79" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 150 C175 164,337 134,475 162" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="264" cy="370" r="132" fill="#ffffff" opacity=".22" filter="url(#soft)"/>
-  
-  <polygon points="260,232 330,300 302,414 218,414 190,300" fill="#bcefdc"/>
-  <polygon points="260,258 306,306 286,390 234,390 214,306" fill="#f4fff8"/>
-  <path d="M190 300 L260 232 L330 300" stroke="#ffffff" stroke-width="4" fill="none" opacity=".8"/>
-  <circle cx="260" cy="347" r="9" fill="#d7d1ff"/>
-        
+  <circle cx="287" cy="268" r="96" fill="url(#orb)" filter="url(#soft)"/>
 
-  <g><circle cx="240" cy="193" r="3.98" fill="#fff" opacity=".74"/>
-    <circle cx="291" cy="388" r="3.29" fill="#fff" opacity=".74"/>
-    <circle cx="350" cy="137" r="3.40" fill="#fff" opacity=".74"/>
-    <circle cx="239" cy="279" r="3.51" fill="#fff" opacity=".74"/>
-    <circle cx="137" cy="350" r="2.66" fill="#fff" opacity=".74"/>
-    <circle cx="144" cy="530" r="3.26" fill="#fff" opacity=".74"/>
-    <circle cx="160" cy="206" r="4.28" fill="#fff" opacity=".74"/>
-    <circle cx="255" cy="192" r="3.44" fill="#fff" opacity=".74"/>
-    <circle cx="305" cy="245" r="4.36" fill="#fff" opacity=".74"/>
-    <circle cx="89" cy="374" r="4.26" fill="#fff" opacity=".74"/></g>
+  <polygon points="193,379 213,407 206,461 180,461 173,407" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="388,312 402,342 397,402 379,402 374,342" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="137,329 155,355 149,407 125,407 119,355" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="386,405 401,435 396,493 376,493 371,435" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
+    <polygon points="231,226 252,254 245,310 217,310 210,254" fill="#dff9ef" stroke="#fff" stroke-width="2" opacity=".82"/>
 
-  <rect x="80" y="618" width="360" height="86" rx="24" fill="#fff9ef" opacity=".8"/>
-  <text x="260" y="653" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" fill="#6f5686">Knight Of Crystals</text>
-  <text x="260" y="680" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="16" fill="#8b74a2">Crystals</text>
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 161 470 C 211 438, 309 502, 359 470 C 309 438, 211 502, 161 470" stroke="#bdeedc" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 156 488 C 208 452, 312 524, 364 488 C 312 452, 208 524, 156 488" stroke="#d8d1ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 160 506 C 210 464, 310 548, 360 506 C 310 464, 210 548, 160 506" stroke="#bdeedc" stroke-opacity=".52" stroke-width="4" fill="none"/>
+
+  <g>
+    <circle cx="127" cy="522" r="2.30" fill="#fff" opacity="0.90"/>
+    <circle cx="63" cy="125" r="2.40" fill="#fff" opacity="0.40"/>
+    <circle cx="222" cy="581" r="3.70" fill="#fff" opacity="0.61"/>
+    <circle cx="206" cy="152" r="1.44" fill="#fff" opacity="0.49"/>
+    <circle cx="263" cy="265" r="3.42" fill="#fff" opacity="0.43"/>
+    <circle cx="130" cy="260" r="2.60" fill="#fff" opacity="0.74"/>
+    <circle cx="224" cy="474" r="2.81" fill="#fff" opacity="0.63"/>
+    <circle cx="241" cy="483" r="4.68" fill="#fff" opacity="0.78"/>
+    <circle cx="91" cy="247" r="1.69" fill="#fff" opacity="0.69"/>
+    <circle cx="458" cy="173" r="2.79" fill="#fff" opacity="0.49"/>
+    <circle cx="326" cy="589" r="3.54" fill="#fff" opacity="0.41"/>
+    <circle cx="390" cy="188" r="2.56" fill="#fff" opacity="0.76"/>
+    <circle cx="449" cy="261" r="4.02" fill="#fff" opacity="0.36"/>
+    <circle cx="344" cy="178" r="4.75" fill="#fff" opacity="0.79"/>
+    <circle cx="359" cy="415" r="4.13" fill="#fff" opacity="0.58"/>
+    <circle cx="289" cy="468" r="1.78" fill="#fff" opacity="0.79"/>
+    <circle cx="79" cy="233" r="2.17" fill="#fff" opacity="0.39"/>
+    <circle cx="381" cy="102" r="2.74" fill="#fff" opacity="0.70"/>
+    <circle cx="316" cy="458" r="1.60" fill="#fff" opacity="0.71"/>
+    <circle cx="379" cy="137" r="2.90" fill="#fff" opacity="0.37"/>
+    <circle cx="331" cy="448" r="3.84" fill="#fff" opacity="0.51"/>
+    <circle cx="318" cy="312" r="4.69" fill="#fff" opacity="0.58"/>
+    <circle cx="179" cy="459" r="1.58" fill="#fff" opacity="0.43"/>
+    <circle cx="128" cy="100" r="3.17" fill="#fff" opacity="0.73"/>
+    <circle cx="238" cy="133" r="3.83" fill="#fff" opacity="0.76"/>
+    <circle cx="317" cy="123" r="3.75" fill="#fff" opacity="0.77"/>
+  </g>
+
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">Knight of Crystals</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">crystals • knight</text>
 </svg>

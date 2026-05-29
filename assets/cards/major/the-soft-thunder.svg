@@ -1,42 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
   <title id="t">The Soft Thunder</title>
-  <desc id="d">Whimsical pastel tarot art for The Soft Thunder.</desc>
+  <desc id="d">Detailed whimsical original tarot artwork for The Soft Thunder.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff7ea"/>
-      <stop offset="45%" stop-color="#ffe1f2"/>
-      <stop offset="100%" stop-color="#d5f4e6"/>
+      <stop offset="0%" stop-color="#fff8ee"/>
+      <stop offset="42%" stop-color="#ffdcee"/>
+      <stop offset="70%" stop-color="#d9ccff"/>
+      <stop offset="100%" stop-color="#ffe2ac"/>
     </linearGradient>
-    <radialGradient id="orb" cx="50%" cy="45%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
-      <stop offset="100%" stop-color="#cfe9ff" stop-opacity="0.15"/>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#bfe7ff" stop-opacity="0.16"/>
     </radialGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3"/>
-    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="24" y="24" width="472" height="732" rx="34" fill="none" stroke="#fff8ea" stroke-width="6" opacity=".82"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M50 71 C170 47,350 93,470 63" stroke="#fff" stroke-opacity=".52" stroke-width="3" fill="none"/>
-  <path d="M50 142 C170 160,350 124,470 156" stroke="#fff" stroke-opacity=".4" stroke-width="2.5" fill="none"/>
+  <path d="M45 81 C170 61,340 103,475 75" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 163 C175 177,337 147,475 175" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="288" cy="201" r="82" fill="url(#orb)" filter="url(#soft)"/>
-  
-  <g opacity="0.95">
-    <ellipse cx="260" cy="350" rx="150" ry="95" fill="#ffe1f2"/>
-    <ellipse cx="260" cy="342" rx="110" ry="70" fill="#fff7ff"/>
-    <circle cx="220" cy="332" r="14" fill="#ffe9b8"/>
-    <circle cx="260" cy="322" r="18" fill="#ffe9b8"/>
-    <circle cx="302" cy="334" r="12" fill="#ffe9b8"/>
-    <path d="M210 382 Q260 432 310 382" stroke="#b485c5" stroke-width="6" fill="none" stroke-linecap="round"/>
-  </g>
+  <circle cx="299" cy="261" r="96" fill="url(#orb)" filter="url(#soft)"/>
+
+  <ellipse cx="260" cy="395" rx="150" ry="110" fill="#f2e8ff"/><path d="M120 410 C190 300,330 300,400 410 C350 495,170 495,120 410 Z" fill="#fff6de"/><path d="M160 430 Q260 330 360 430" stroke="#fff" stroke-width="5" fill="none"/>
+
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 153 470 C 207 437, 313 503, 367 470 C 313 437, 207 503, 153 470" stroke="#ffe2ac" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 127 488 C 194 456, 326 520, 393 488 C 326 456, 194 520, 127 488" stroke="#ffe2ac" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 149 506 C 205 475, 315 537, 371 506 C 315 475, 205 537, 149 506" stroke="#d9ccff" stroke-opacity=".52" stroke-width="4" fill="none"/>
 
   <g>
-    <circle cx="233" cy="250" r="3.83" fill="#fff" opacity=".72"/><circle cx="198" cy="298" r="3.94" fill="#fff" opacity=".72"/><circle cx="177" cy="221" r="4.29" fill="#fff" opacity=".72"/><circle cx="369" cy="511" r="3.45" fill="#fff" opacity=".72"/><circle cx="247" cy="375" r="2.63" fill="#fff" opacity=".72"/><circle cx="237" cy="347" r="2.96" fill="#fff" opacity=".72"/><circle cx="374" cy="236" r="3.24" fill="#fff" opacity=".72"/><circle cx="398" cy="278" r="4.13" fill="#fff" opacity=".72"/>
+    <circle cx="158" cy="392" r="3.06" fill="#fff" opacity="0.88"/>
+    <circle cx="284" cy="413" r="3.22" fill="#fff" opacity="0.84"/>
+    <circle cx="284" cy="594" r="3.41" fill="#fff" opacity="0.79"/>
+    <circle cx="170" cy="429" r="3.31" fill="#fff" opacity="0.66"/>
+    <circle cx="179" cy="136" r="2.92" fill="#fff" opacity="0.66"/>
+    <circle cx="443" cy="404" r="4.00" fill="#fff" opacity="0.61"/>
+    <circle cx="137" cy="429" r="1.62" fill="#fff" opacity="0.83"/>
+    <circle cx="437" cy="573" r="3.56" fill="#fff" opacity="0.38"/>
+    <circle cx="175" cy="113" r="2.65" fill="#fff" opacity="0.56"/>
+    <circle cx="291" cy="468" r="1.44" fill="#fff" opacity="0.87"/>
+    <circle cx="397" cy="576" r="3.63" fill="#fff" opacity="0.72"/>
+    <circle cx="341" cy="110" r="3.37" fill="#fff" opacity="0.45"/>
+    <circle cx="257" cy="330" r="2.18" fill="#fff" opacity="0.56"/>
+    <circle cx="270" cy="224" r="2.08" fill="#fff" opacity="0.61"/>
+    <circle cx="184" cy="177" r="4.27" fill="#fff" opacity="0.65"/>
+    <circle cx="135" cy="170" r="3.21" fill="#fff" opacity="0.68"/>
+    <circle cx="213" cy="198" r="4.22" fill="#fff" opacity="0.57"/>
+    <circle cx="147" cy="447" r="4.25" fill="#fff" opacity="0.45"/>
+    <circle cx="345" cy="459" r="4.14" fill="#fff" opacity="0.41"/>
+    <circle cx="221" cy="324" r="3.89" fill="#fff" opacity="0.40"/>
+    <circle cx="68" cy="567" r="1.46" fill="#fff" opacity="0.60"/>
+    <circle cx="255" cy="415" r="2.50" fill="#fff" opacity="0.61"/>
+    <circle cx="209" cy="212" r="2.69" fill="#fff" opacity="0.54"/>
+    <circle cx="197" cy="302" r="4.20" fill="#fff" opacity="0.46"/>
+    <circle cx="375" cy="534" r="1.66" fill="#fff" opacity="0.54"/>
+    <circle cx="148" cy="402" r="1.99" fill="#fff" opacity="0.70"/>
   </g>
 
-  <rect x="64" y="620" width="392" height="92" rx="24" fill="#fff7ea" opacity=".78"/>
-  <text x="260" y="678" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" fill="#6f5686">The Soft Thunder</text>
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">The Soft Thunder</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">storm cloud with gentle lightning ribbons</text>
 </svg>

@@ -1,48 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
   <title id="t">The Velvet Lionheart</title>
-  <desc id="d">Whimsical pastel tarot art for The Velvet Lionheart.</desc>
+  <desc id="d">Detailed whimsical original tarot artwork for The Velvet Lionheart.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff7ea"/>
-      <stop offset="45%" stop-color="#ffd6e6"/>
-      <stop offset="100%" stop-color="#c7ebff"/>
+      <stop offset="0%" stop-color="#fff8ee"/>
+      <stop offset="42%" stop-color="#ffdcee"/>
+      <stop offset="70%" stop-color="#d9ccff"/>
+      <stop offset="100%" stop-color="#ffe2ac"/>
     </linearGradient>
-    <radialGradient id="orb" cx="50%" cy="45%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
-      <stop offset="100%" stop-color="#e4d7ff" stop-opacity="0.15"/>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#bfe7ff" stop-opacity="0.16"/>
     </radialGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3"/>
-    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="24" y="24" width="472" height="732" rx="34" fill="none" stroke="#fff8ea" stroke-width="6" opacity=".82"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M50 74 C170 50,350 96,470 66" stroke="#fff" stroke-opacity=".52" stroke-width="3" fill="none"/>
-  <path d="M50 142 C170 160,350 124,470 156" stroke="#fff" stroke-opacity=".4" stroke-width="2.5" fill="none"/>
+  <path d="M45 87 C170 67,340 109,475 81" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 163 C175 177,337 147,475 175" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="280" cy="220" r="82" fill="url(#orb)" filter="url(#soft)"/>
-  
-  <g opacity="0.95">
-    <ellipse cx="260" cy="360" rx="120" ry="82" fill="#ffd6e6"/>
-    <circle cx="260" cy="305" r="66" fill="#fff5ff"/>
-    <ellipse cx="215" cy="289" rx="15" ry="20" fill="#ffffff"/>
-    <ellipse cx="305" cy="289" rx="15" ry="20" fill="#ffffff"/>
-    <circle cx="220" cy="292" r="7" fill="#9b79ad"/>
-    <circle cx="300" cy="292" r="7" fill="#9b79ad"/>
-    <circle cx="224" cy="288" r="2.2" fill="#ffffff"/>
-    <circle cx="304" cy="288" r="2.2" fill="#ffffff"/>
-    <path d="M245 325 Q260 340 275 325" stroke="#9b79ad" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <path d="M245 258 L225 232 L242 236" fill="#f6dcff"/>
-    <path d="M275 258 L295 232 L278 236" fill="#f6dcff"/>
-    <path d="M258 232 L278 178 L295 236 Z" fill="#ffe0a3" opacity=".92"/>
-  </g>
+  <circle cx="283" cy="298" r="96" fill="url(#orb)" filter="url(#soft)"/>
+
+  <ellipse cx="260" cy="395" rx="150" ry="110" fill="#f2e8ff"/><path d="M120 410 C190 300,330 300,400 410 C350 495,170 495,120 410 Z" fill="#fff6de"/><path d="M160 430 Q260 330 360 430" stroke="#fff" stroke-width="5" fill="none"/>
+
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 145 470 C 203 444, 317 496, 375 470 C 317 444, 203 496, 145 470" stroke="#ffe2ac" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 125 488 C 193 445, 327 531, 395 488 C 327 445, 193 531, 125 488" stroke="#d9ccff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 154 506 C 207 471, 313 541, 366 506 C 313 471, 207 541, 154 506" stroke="#bfe7ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
 
   <g>
-    <circle cx="297" cy="480" r="2.23" fill="#fff" opacity=".72"/><circle cx="382" cy="256" r="2.89" fill="#fff" opacity=".72"/><circle cx="258" cy="453" r="4.34" fill="#fff" opacity=".72"/><circle cx="107" cy="364" r="4.44" fill="#fff" opacity=".72"/><circle cx="195" cy="283" r="2.56" fill="#fff" opacity=".72"/><circle cx="162" cy="277" r="2.25" fill="#fff" opacity=".72"/><circle cx="294" cy="478" r="4.04" fill="#fff" opacity=".72"/><circle cx="311" cy="141" r="2.71" fill="#fff" opacity=".72"/>
+    <circle cx="368" cy="414" r="3.58" fill="#fff" opacity="0.67"/>
+    <circle cx="448" cy="112" r="4.60" fill="#fff" opacity="0.86"/>
+    <circle cx="162" cy="405" r="1.92" fill="#fff" opacity="0.42"/>
+    <circle cx="73" cy="487" r="4.41" fill="#fff" opacity="0.77"/>
+    <circle cx="278" cy="120" r="2.12" fill="#fff" opacity="0.57"/>
+    <circle cx="433" cy="466" r="4.50" fill="#fff" opacity="0.38"/>
+    <circle cx="380" cy="494" r="1.64" fill="#fff" opacity="0.88"/>
+    <circle cx="364" cy="496" r="1.71" fill="#fff" opacity="0.76"/>
+    <circle cx="409" cy="318" r="2.54" fill="#fff" opacity="0.87"/>
+    <circle cx="241" cy="173" r="3.34" fill="#fff" opacity="0.87"/>
+    <circle cx="302" cy="203" r="4.47" fill="#fff" opacity="0.66"/>
+    <circle cx="126" cy="545" r="3.46" fill="#fff" opacity="0.78"/>
+    <circle cx="98" cy="260" r="2.52" fill="#fff" opacity="0.78"/>
+    <circle cx="327" cy="142" r="3.20" fill="#fff" opacity="0.56"/>
+    <circle cx="167" cy="569" r="2.41" fill="#fff" opacity="0.50"/>
+    <circle cx="361" cy="301" r="2.09" fill="#fff" opacity="0.45"/>
+    <circle cx="441" cy="410" r="1.75" fill="#fff" opacity="0.43"/>
+    <circle cx="103" cy="233" r="2.91" fill="#fff" opacity="0.73"/>
+    <circle cx="244" cy="593" r="3.60" fill="#fff" opacity="0.38"/>
+    <circle cx="353" cy="88" r="4.26" fill="#fff" opacity="0.40"/>
+    <circle cx="355" cy="318" r="3.40" fill="#fff" opacity="0.82"/>
+    <circle cx="199" cy="458" r="4.64" fill="#fff" opacity="0.35"/>
+    <circle cx="226" cy="381" r="1.51" fill="#fff" opacity="0.54"/>
+    <circle cx="329" cy="210" r="4.02" fill="#fff" opacity="0.69"/>
+    <circle cx="292" cy="468" r="4.10" fill="#fff" opacity="0.86"/>
+    <circle cx="72" cy="505" r="3.94" fill="#fff" opacity="0.86"/>
   </g>
 
-  <rect x="64" y="620" width="392" height="92" rx="24" fill="#fff7ea" opacity=".78"/>
-  <text x="260" y="678" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" fill="#6f5686">The Velvet Lionheart</text>
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">The Velvet Lionheart</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">lion with velvet banner and crest</text>
 </svg>

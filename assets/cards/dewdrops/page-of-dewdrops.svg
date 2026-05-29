@@ -1,40 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
-  <title id="t">Page Of Dewdrops</title>
-  <desc id="d">Whimsical pastel tarot artwork inspired by hand-drawn style, original composition.</desc>
+  <title id="t">Page of Dewdrops</title>
+  <desc id="d">Detailed whimsical original tarot artwork for Page of Dewdrops.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fff9ef"/>
-      <stop offset="50%" stop-color="#cdefff"/>
-      <stop offset="100%" stop-color="#f6d7f0"/>
+      <stop offset="0%" stop-color="#fff9f0"/>
+      <stop offset="42%" stop-color="#d5efff"/>
+      <stop offset="70%" stop-color="#9fd7ff"/>
+      <stop offset="100%" stop-color="#ffd7ef"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.8"/></filter>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#77bff0" stop-opacity="0.16"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="22" y="22" width="476" height="736" rx="34" fill="none" stroke="#fff9ee" stroke-width="6" opacity=".86"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M52 76 C180 60,336 94,468 68" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/>
-  <path d="M52 148 C180 162,336 134,468 158" stroke="#fff" stroke-opacity=".42" stroke-width="2.7" fill="none"/>
+  <path d="M45 85 C170 65,340 107,475 79" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 146 C175 160,337 130,475 158" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="264" cy="370" r="132" fill="#ffffff" opacity=".22" filter="url(#soft)"/>
-  
-  <path d="M260 228 C300 290,342 330,342 390 C342 455,305 504,260 504 C215 504,178 455,178 390 C178 330,220 290,260 228 Z" fill="#b8e8ff" opacity=".9"/>
-  <path d="M260 258 C286 300,314 332,314 385 C314 428,290 462,260 462 C230 462,206 428,206 385 C206 332,234 300,260 258 Z" fill="#f7fdff" opacity=".9"/>
-  <circle cx="238" cy="346" r="10" fill="#fff" opacity=".9"/>
-        
+  <circle cx="223" cy="261" r="96" fill="url(#orb)" filter="url(#soft)"/>
 
-  <g><circle cx="214" cy="452" r="2.71" fill="#fff" opacity=".74"/>
-    <circle cx="176" cy="275" r="3.48" fill="#fff" opacity=".74"/>
-    <circle cx="387" cy="482" r="3.75" fill="#fff" opacity=".74"/>
-    <circle cx="93" cy="292" r="2.36" fill="#fff" opacity=".74"/>
-    <circle cx="183" cy="236" r="2.86" fill="#fff" opacity=".74"/>
-    <circle cx="110" cy="465" r="2.99" fill="#fff" opacity=".74"/>
-    <circle cx="370" cy="313" r="2.68" fill="#fff" opacity=".74"/>
-    <circle cx="90" cy="403" r="4.00" fill="#fff" opacity=".74"/>
-    <circle cx="419" cy="503" r="4.25" fill="#fff" opacity=".74"/>
-    <circle cx="341" cy="578" r="2.46" fill="#fff" opacity=".74"/></g>
+  <path d="M 375 318 C 397 356, 401 384, 375 402 C 349 384, 353 356, 375 318 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 276 367 C 298 414, 302 442, 276 469 C 250 442, 254 414, 276 367 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 208 357 C 230 411, 234 439, 208 473 C 182 439, 186 411, 208 357 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 172 302 C 194 344, 198 372, 172 394 C 146 372, 150 344, 172 302 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 274 299 C 296 335, 300 363, 274 379 C 248 363, 252 335, 274 299 Z" fill="#d8f3ff" opacity=".78" stroke="#ffffff" stroke-width="2"/>
 
-  <rect x="80" y="618" width="360" height="86" rx="24" fill="#fff9ef" opacity=".8"/>
-  <text x="260" y="653" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" fill="#6f5686">Page Of Dewdrops</text>
-  <text x="260" y="680" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="16" fill="#8b74a2">Dewdrops</text>
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 155 470 C 208 435, 312 505, 365 470 C 312 435, 208 505, 155 470" stroke="#ffd7ef" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 149 488 C 205 461, 315 515, 371 488 C 315 461, 205 515, 149 488" stroke="#ffd7ef" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 126 506 C 193 469, 327 543, 394 506 C 327 469, 193 543, 126 506" stroke="#9fd7ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+
+  <g>
+    <circle cx="68" cy="495" r="2.23" fill="#fff" opacity="0.89"/>
+    <circle cx="355" cy="265" r="3.60" fill="#fff" opacity="0.79"/>
+    <circle cx="315" cy="254" r="4.33" fill="#fff" opacity="0.53"/>
+    <circle cx="315" cy="241" r="2.25" fill="#fff" opacity="0.57"/>
+    <circle cx="74" cy="454" r="2.15" fill="#fff" opacity="0.77"/>
+    <circle cx="365" cy="174" r="2.70" fill="#fff" opacity="0.70"/>
+    <circle cx="92" cy="484" r="3.06" fill="#fff" opacity="0.70"/>
+    <circle cx="396" cy="326" r="2.44" fill="#fff" opacity="0.74"/>
+    <circle cx="129" cy="510" r="4.11" fill="#fff" opacity="0.40"/>
+    <circle cx="202" cy="243" r="4.39" fill="#fff" opacity="0.84"/>
+    <circle cx="265" cy="181" r="3.79" fill="#fff" opacity="0.54"/>
+    <circle cx="248" cy="100" r="3.73" fill="#fff" opacity="0.72"/>
+    <circle cx="446" cy="153" r="2.48" fill="#fff" opacity="0.47"/>
+    <circle cx="365" cy="467" r="4.19" fill="#fff" opacity="0.54"/>
+    <circle cx="166" cy="92" r="2.02" fill="#fff" opacity="0.65"/>
+    <circle cx="231" cy="254" r="2.34" fill="#fff" opacity="0.73"/>
+    <circle cx="111" cy="282" r="2.34" fill="#fff" opacity="0.47"/>
+    <circle cx="364" cy="210" r="4.42" fill="#fff" opacity="0.81"/>
+    <circle cx="265" cy="372" r="3.94" fill="#fff" opacity="0.83"/>
+    <circle cx="206" cy="346" r="1.60" fill="#fff" opacity="0.90"/>
+    <circle cx="284" cy="209" r="3.29" fill="#fff" opacity="0.54"/>
+    <circle cx="314" cy="102" r="2.30" fill="#fff" opacity="0.71"/>
+    <circle cx="139" cy="318" r="3.18" fill="#fff" opacity="0.64"/>
+    <circle cx="90" cy="597" r="2.94" fill="#fff" opacity="0.35"/>
+    <circle cx="266" cy="229" r="1.53" fill="#fff" opacity="0.77"/>
+    <circle cx="166" cy="149" r="3.87" fill="#fff" opacity="0.82"/>
+  </g>
+
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">Page of Dewdrops</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">dewdrops • page</text>
 </svg>

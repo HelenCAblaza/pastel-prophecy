@@ -1,41 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 780" role="img" aria-labelledby="t d">
-  <title id="t">Two Of Feathers</title>
-  <desc id="d">Whimsical pastel tarot artwork inspired by hand-drawn style, original composition.</desc>
+  <title id="t">Two of Feathers</title>
+  <desc id="d">Detailed whimsical original tarot artwork for Two of Feathers.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fff8f0"/>
-      <stop offset="50%" stop-color="#e0efff"/>
-      <stop offset="100%" stop-color="#ead6ff"/>
+      <stop offset="42%" stop-color="#e5eeff"/>
+      <stop offset="70%" stop-color="#bfd3ff"/>
+      <stop offset="100%" stop-color="#e1d6ff"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.8"/></filter>
+    <radialGradient id="orb" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#9ab6ff" stop-opacity="0.16"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
   </defs>
 
   <rect width="520" height="780" fill="url(#bg)"/>
-  <rect x="22" y="22" width="476" height="736" rx="34" fill="none" stroke="#fff9ee" stroke-width="6" opacity=".86"/>
+  <rect x="20" y="20" width="480" height="740" rx="34" fill="none" stroke="#fff9ef" stroke-width="6" opacity=".9"/>
 
-  <path d="M52 83 C180 67,336 101,468 75" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/>
-  <path d="M52 161 C180 175,336 147,468 171" stroke="#fff" stroke-opacity=".42" stroke-width="2.7" fill="none"/>
+  <path d="M45 77 C170 57,340 99,475 71" stroke="#fff" stroke-opacity=".50" stroke-width="3.2" fill="none"/>
+  <path d="M45 157 C175 171,337 141,475 169" stroke="#fff" stroke-opacity=".42" stroke-width="2.6" fill="none"/>
 
-  <circle cx="264" cy="370" r="132" fill="#ffffff" opacity=".22" filter="url(#soft)"/>
-  
-  <ellipse cx="260" cy="365" rx="142" ry="92" fill="#e0efff"/>
-  <path d="M254 286 C206 302,172 350,176 398 C180 444,214 478,258 488 C238 452,234 412,238 386 C242 344,268 318,302 298 C286 294,272 292,254 286 Z" fill="#c9dcff"/>
-  <path d="M266 286 C314 302,348 350,344 398 C340 444,306 478,262 488 C282 452,286 412,282 386 C278 344,252 318,218 298 C234 294,248 292,266 286 Z" fill="#a9c1ff"/>
-  <path d="M232 356 Q260 344 288 356" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round"/>
-        
+  <circle cx="237" cy="277" r="96" fill="url(#orb)" filter="url(#soft)"/>
 
-  <g><circle cx="178" cy="298" r="3.58" fill="#fff" opacity=".74"/>
-    <circle cx="271" cy="367" r="4.56" fill="#fff" opacity=".74"/>
-    <circle cx="145" cy="515" r="3.56" fill="#fff" opacity=".74"/>
-    <circle cx="146" cy="545" r="3.10" fill="#fff" opacity=".74"/>
-    <circle cx="417" cy="559" r="3.10" fill="#fff" opacity=".74"/>
-    <circle cx="341" cy="360" r="3.32" fill="#fff" opacity=".74"/>
-    <circle cx="386" cy="264" r="3.98" fill="#fff" opacity=".74"/>
-    <circle cx="380" cy="422" r="3.58" fill="#fff" opacity=".74"/>
-    <circle cx="398" cy="494" r="4.45" fill="#fff" opacity=".74"/>
-    <circle cx="174" cy="456" r="4.20" fill="#fff" opacity=".74"/></g>
+  <path d="M 123 292 C 183 250, 249 322, 235 384 C 209 356, 177 350, 149 356 C 167 332, 175 310, 123 292 Z" fill="#eaf0ff" stroke="#fff" stroke-width="2" opacity=".83"/>
+    <path d="M 157 278 C 217 236, 283 308, 269 370 C 243 342, 211 336, 183 342 C 201 318, 209 296, 157 278 Z" fill="#eaf0ff" stroke="#fff" stroke-width="2" opacity=".83"/>
 
-  <rect x="80" y="618" width="360" height="86" rx="24" fill="#fff9ef" opacity=".8"/>
-  <text x="260" y="653" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" fill="#6f5686">Two Of Feathers</text>
-  <text x="260" y="680" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="16" fill="#8b74a2">Feathers</text>
+  <path d="M72 560 C150 518,220 540,260 556 C305 575,370 578,448 538 L448 650 L72 650 Z" fill="#ffffff" fill-opacity=".20"/>
+  <path d="M 124 470 C 192 441, 328 499, 396 470 C 328 441, 192 499, 124 470" stroke="#e1d6ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 145 488 C 203 446, 317 530, 375 488 C 317 446, 203 530, 145 488" stroke="#bfd3ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+    <path d="M 120 506 C 190 460, 330 552, 400 506 C 330 460, 190 552, 120 506" stroke="#e1d6ff" stroke-opacity=".52" stroke-width="4" fill="none"/>
+
+  <g>
+    <circle cx="263" cy="468" r="3.08" fill="#fff" opacity="0.61"/>
+    <circle cx="428" cy="397" r="3.81" fill="#fff" opacity="0.66"/>
+    <circle cx="350" cy="260" r="3.70" fill="#fff" opacity="0.68"/>
+    <circle cx="149" cy="171" r="3.00" fill="#fff" opacity="0.44"/>
+    <circle cx="155" cy="166" r="2.57" fill="#fff" opacity="0.85"/>
+    <circle cx="449" cy="112" r="4.55" fill="#fff" opacity="0.41"/>
+    <circle cx="335" cy="502" r="2.69" fill="#fff" opacity="0.81"/>
+    <circle cx="337" cy="524" r="3.31" fill="#fff" opacity="0.65"/>
+    <circle cx="92" cy="208" r="3.30" fill="#fff" opacity="0.54"/>
+    <circle cx="361" cy="532" r="3.68" fill="#fff" opacity="0.37"/>
+    <circle cx="365" cy="186" r="2.70" fill="#fff" opacity="0.62"/>
+    <circle cx="119" cy="175" r="1.51" fill="#fff" opacity="0.78"/>
+    <circle cx="377" cy="488" r="2.25" fill="#fff" opacity="0.81"/>
+    <circle cx="407" cy="414" r="2.68" fill="#fff" opacity="0.42"/>
+    <circle cx="357" cy="532" r="1.93" fill="#fff" opacity="0.66"/>
+    <circle cx="276" cy="369" r="3.48" fill="#fff" opacity="0.60"/>
+    <circle cx="402" cy="317" r="4.50" fill="#fff" opacity="0.90"/>
+    <circle cx="254" cy="120" r="2.67" fill="#fff" opacity="0.51"/>
+    <circle cx="112" cy="511" r="4.50" fill="#fff" opacity="0.73"/>
+    <circle cx="210" cy="338" r="2.49" fill="#fff" opacity="0.49"/>
+    <circle cx="105" cy="477" r="3.40" fill="#fff" opacity="0.53"/>
+    <circle cx="421" cy="508" r="1.61" fill="#fff" opacity="0.86"/>
+    <circle cx="183" cy="540" r="3.94" fill="#fff" opacity="0.45"/>
+    <circle cx="270" cy="151" r="3.84" fill="#fff" opacity="0.47"/>
+    <circle cx="156" cy="489" r="3.32" fill="#fff" opacity="0.88"/>
+    <circle cx="138" cy="112" r="4.55" fill="#fff" opacity="0.72"/>
+  </g>
+
+  <rect x="58" y="620" width="404" height="95" rx="24" fill="#fff8ef" opacity=".82"/>
+  <text x="260" y="668" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="33" fill="#6d5585">Two of Feathers</text>
+  <text x="260" y="692" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="14" fill="#8a74a0">feathers • two</text>
 </svg>
