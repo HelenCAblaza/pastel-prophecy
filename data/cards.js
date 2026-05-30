@@ -244,7 +244,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching joy. The Sunflower Mane asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through joy. Let The Sunflower Mane show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is joy. The Sunflower Mane brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-sunflower-mane.svg"
+    "artPath": "assets/cards/imported/the-moon.jpg"
   },
   {
     "id": "the-bell-of-awakening",
