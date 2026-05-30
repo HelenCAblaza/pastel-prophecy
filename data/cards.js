@@ -179,7 +179,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching balance. The Teacup Moon asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through balance. Let The Teacup Moon show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is balance. The Teacup Moon brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-teacup-moon.svg"
+    "artPath": "assets/cards/imported/death.jpg"
   },
   {
     "id": "the-shadow-jewel",
