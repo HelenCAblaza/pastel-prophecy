@@ -127,7 +127,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching cycles. The Golden Wheel asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through cycles. Let The Golden Wheel show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is cycles. The Golden Wheel brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-golden-wheel.svg"
+    "artPath": "assets/cards/imported/the-hermit.jpg"
   },
   {
     "id": "the-soft-thunder",
