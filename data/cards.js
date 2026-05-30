@@ -478,7 +478,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching ignition. Ace of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through ignition. Let Ace of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is ignition. Ace of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/sparkles/ace-of-sparkles.svg"
+    "artPath": "assets/cards/imported/ace-of-wands.jpg"
   },
   {
     "id": "two-of-sparkles",
