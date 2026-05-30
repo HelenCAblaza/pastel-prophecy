@@ -504,7 +504,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching celebration. Three of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through celebration. Let Three of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is celebration. Three of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/sparkles/three-of-sparkles.svg"
+    "artPath": "assets/cards/imported/three-of-wands.jpg"
   },
   {
     "id": "four-of-sparkles",
