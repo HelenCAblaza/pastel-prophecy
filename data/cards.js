@@ -517,7 +517,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching practice. Four of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through practice. Let Four of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is practice. Four of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/sparkles/four-of-sparkles.svg"
+    "artPath": "assets/cards/imported/four-of-wands.jpg"
   },
   {
     "id": "five-of-sparkles",
