@@ -192,7 +192,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching truth. The Shadow Jewel asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through truth. Let The Shadow Jewel show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is truth. The Shadow Jewel brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-shadow-jewel.svg"
+    "artPath": "assets/cards/imported/temperance.jpg"
   },
   {
     "id": "the-cloud-tower",
