@@ -283,7 +283,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching wonder. The Secret Meadow asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through wonder. Let The Secret Meadow show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is wonder. The Secret Meadow brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-secret-meadow.svg"
+    "artPath": "assets/cards/imported/the-world.jpg"
   },
   {
     "id": "ace-of-dewdrops",
