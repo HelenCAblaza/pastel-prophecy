@@ -556,7 +556,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching adventure. Seven of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through adventure. Let Seven of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is adventure. Seven of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/sparkles/seven-of-sparkles.svg"
+    "artPath": "assets/cards/imported/seven-of-wands.jpg"
   },
   {
     "id": "eight-of-sparkles",
