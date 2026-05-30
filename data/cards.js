@@ -153,7 +153,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching surrender. The Floating Ribbon asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through surrender. Let The Floating Ribbon show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is surrender. The Floating Ribbon brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-floating-ribbon.svg"
+    "artPath": "assets/cards/imported/justice.jpg"
   },
   {
     "id": "the-butterfly-door",
