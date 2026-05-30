@@ -218,7 +218,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching hope. The Wishing Star asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through hope. Let The Wishing Star show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is hope. The Wishing Star brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-wishing-star.svg"
+    "artPath": "assets/cards/imported/the-tower.jpg"
   },
   {
     "id": "the-dream-pond",
