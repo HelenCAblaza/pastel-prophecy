@@ -101,7 +101,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching courage. The Velvet Lionheart asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through courage. Let The Velvet Lionheart show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is courage. The Velvet Lionheart brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-velvet-lionheart.svg"
+    "artPath": "assets/cards/imported/the-chariot.jpg"
   },
   {
     "id": "the-hidden-clover",
