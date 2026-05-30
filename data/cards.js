@@ -231,7 +231,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching mystery. The Dream Pond asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through mystery. Let The Dream Pond show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is mystery. The Dream Pond brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-dream-pond.svg"
+    "artPath": "assets/cards/imported/the-star.jpg"
   },
   {
     "id": "the-sunflower-mane",
