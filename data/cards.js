@@ -140,7 +140,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching awakening. The Soft Thunder asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through awakening. Let The Soft Thunder show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is awakening. The Soft Thunder brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-soft-thunder.svg"
+    "artPath": "assets/cards/imported/wheel-of-fortune.jpg"
   },
   {
     "id": "the-floating-ribbon",
