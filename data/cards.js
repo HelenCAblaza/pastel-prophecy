@@ -6,7 +6,7 @@ export const cards = [
     "suitName": "Major Arcana",
     "rank": "Major",
     "keyword": "Beginning",
-    "artPath": "assets/cards/major/the-first-sparkle.svg",
+    "artPath": "assets/cards/imported/the-fool.jpg",
     "shortMeaning": "The First Sparkle carries the energy of beginning and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching beginning. The First Sparkle asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through beginning. Let The First Sparkle show you the next small step instead of the whole staircase.",
@@ -19,7 +19,7 @@ export const cards = [
     "suitName": "Major Arcana",
     "rank": "Major",
     "keyword": "Intuition",
-    "artPath": "assets/cards/major/the-moonlit-unicorn.svg",
+    "artPath": "assets/cards/imported/the-magician.jpg",
     "shortMeaning": "The Moonlit Unicorn carries the energy of intuition and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching intuition. The Moonlit Unicorn asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through intuition. Let The Moonlit Unicorn show you the next small step instead of the whole staircase.",
@@ -32,7 +32,7 @@ export const cards = [
     "suitName": "Major Arcana",
     "rank": "Major",
     "keyword": "Self-Worth",
-    "artPath": "assets/cards/major/the-crystal-crown.svg",
+    "artPath": "assets/cards/imported/the-high-priestess.jpg",
     "shortMeaning": "The Crystal Crown carries the energy of self-worth and asks you to listen for the quiet sparkle underneath the obvious answer.",
     "heartMeaning": "Your heart is touching self-worth. The Crystal Crown asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through self-worth. Let The Crystal Crown show you the next small step instead of the whole staircase.",
@@ -49,7 +49,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching care. The Rose Garden asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through care. Let The Rose Garden show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is care. The Rose Garden brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-rose-garden.svg"
+    "artPath": "assets/cards/imported/the-empress.jpg"
   },
   {
     "id": "the-silver-lantern",
@@ -62,7 +62,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching guidance. The Silver Lantern asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through guidance. Let The Silver Lantern show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is guidance. The Silver Lantern brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-silver-lantern.svg"
+    "artPath": "assets/cards/imported/the-emperor.jpg"
   },
   {
     "id": "the-twin-stars",
@@ -75,7 +75,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching connection. The Twin Stars asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through connection. Let The Twin Stars show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is connection. The Twin Stars brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-twin-stars.svg"
+    "artPath": "assets/cards/imported/the-hierophant.jpg"
   },
   {
     "id": "the-rainbow-bridge",
@@ -88,7 +88,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching transition. The Rainbow Bridge asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through transition. Let The Rainbow Bridge show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is transition. The Rainbow Bridge brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/major/the-rainbow-bridge.svg"
+    "artPath": "assets/cards/imported/the-lovers.jpg"
   },
   {
     "id": "the-velvet-lionheart",
@@ -205,7 +205,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching release. The Cloud Tower asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through release. Let The Cloud Tower show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is release. The Cloud Tower brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/the-devil.jpg"
+    "artPath": "assets/cards/major/the-cloud-tower.svg"
   },
   {
     "id": "the-wishing-star",
@@ -218,7 +218,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching hope. The Wishing Star asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through hope. Let The Wishing Star show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is hope. The Wishing Star brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/the-tower.jpg"
+    "artPath": "assets/cards/major/the-wishing-star.svg"
   },
   {
     "id": "the-dream-pond",
@@ -231,7 +231,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching mystery. The Dream Pond asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through mystery. Let The Dream Pond show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is mystery. The Dream Pond brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/the-star.jpg"
+    "artPath": "assets/cards/major/the-dream-pond.svg"
   },
   {
     "id": "the-sunflower-mane",
@@ -257,7 +257,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching calling. The Bell of Awakening asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through calling. Let The Bell of Awakening show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is calling. The Bell of Awakening brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/the-sun.jpg"
+    "artPath": "assets/cards/major/the-bell-of-awakening.svg"
   },
   {
     "id": "the-pastel-world",
@@ -270,7 +270,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching completion. The Pastel World asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through completion. Let The Pastel World show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is completion. The Pastel World brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/judgement.jpg"
+    "artPath": "assets/cards/major/the-pastel-world.svg"
   },
   {
     "id": "the-secret-meadow",
@@ -283,7 +283,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching wonder. The Secret Meadow asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through wonder. Let The Secret Meadow show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is wonder. The Secret Meadow brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/the-world.jpg"
+    "artPath": "assets/cards/major/the-secret-meadow.svg"
   },
   {
     "id": "ace-of-dewdrops",
@@ -478,7 +478,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching ignition. Ace of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through ignition. Let Ace of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is ignition. Ace of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/ace-of-wands.jpg"
+    "artPath": "assets/cards/sparkles/ace-of-sparkles.svg"
   },
   {
     "id": "two-of-sparkles",
@@ -491,7 +491,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching choice. Two of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through choice. Let Two of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is choice. Two of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/two-of-wands.jpg"
+    "artPath": "assets/cards/sparkles/two-of-sparkles.svg"
   },
   {
     "id": "three-of-sparkles",
@@ -504,7 +504,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching celebration. Three of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through celebration. Let Three of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is celebration. Three of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/three-of-wands.jpg"
+    "artPath": "assets/cards/sparkles/three-of-sparkles.svg"
   },
   {
     "id": "four-of-sparkles",
@@ -517,7 +517,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching practice. Four of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through practice. Let Four of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is practice. Four of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/four-of-wands.jpg"
+    "artPath": "assets/cards/sparkles/four-of-sparkles.svg"
   },
   {
     "id": "five-of-sparkles",
@@ -530,7 +530,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching restless fire. Five of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through restless fire. Let Five of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is restless fire. Five of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/five-of-wands.jpg"
+    "artPath": "assets/cards/sparkles/five-of-sparkles.svg"
   },
   {
     "id": "six-of-sparkles",
@@ -543,7 +543,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching victory. Six of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through victory. Let Six of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is victory. Six of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/six-of-wands.jpg"
+    "artPath": "assets/cards/sparkles/six-of-sparkles.svg"
   },
   {
     "id": "seven-of-sparkles",
@@ -556,7 +556,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching adventure. Seven of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through adventure. Let Seven of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is adventure. Seven of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/seven-of-wands.jpg"
+    "artPath": "assets/cards/sparkles/seven-of-sparkles.svg"
   },
   {
     "id": "eight-of-sparkles",
@@ -569,7 +569,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching momentum. Eight of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through momentum. Let Eight of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is momentum. Eight of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/eight-of-wands.jpg"
+    "artPath": "assets/cards/sparkles/eight-of-sparkles.svg"
   },
   {
     "id": "nine-of-sparkles",
@@ -582,7 +582,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching resilience. Nine of Sparkles asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through resilience. Let Nine of Sparkles show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is resilience. Nine of Sparkles brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/imported/nine-of-wands.jpg"
+    "artPath": "assets/cards/sparkles/nine-of-sparkles.svg"
   },
   {
     "id": "ten-of-sparkles",
