@@ -296,7 +296,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching tenderness. Ace of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through tenderness. Let Ace of Dewdrops show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is tenderness. Ace of Dewdrops brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/dewdrops/ace-of-dewdrops.svg"
+    "artPath": "assets/cards/imported/ace-of-cups.jpg"
   },
   {
     "id": "two-of-dewdrops",
