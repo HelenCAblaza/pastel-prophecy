@@ -413,7 +413,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching full heart. Ten of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through full heart. Let Ten of Dewdrops show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is full heart. Ten of Dewdrops brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/dewdrops/ten-of-dewdrops.svg"
+    "artPath": "assets/cards/imported/ten-of-cups.jpg"
   },
   {
     "id": "page-of-dewdrops",
