@@ -335,7 +335,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching longing. Four of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through longing. Let Four of Dewdrops show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is longing. Four of Dewdrops brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/dewdrops/four-of-dewdrops.svg"
+    "artPath": "assets/cards/imported/four-of-cups.jpg"
   },
   {
     "id": "five-of-dewdrops",
