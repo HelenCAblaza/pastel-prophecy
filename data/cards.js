@@ -348,7 +348,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching healing. Five of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through healing. Let Five of Dewdrops show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is healing. Five of Dewdrops brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/dewdrops/five-of-dewdrops.svg"
+    "artPath": "assets/cards/imported/five-of-cups.jpg"
   },
   {
     "id": "six-of-dewdrops",
