@@ -387,7 +387,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching harmony. Eight of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through harmony. Let Eight of Dewdrops show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is harmony. Eight of Dewdrops brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/dewdrops/eight-of-dewdrops.svg"
+    "artPath": "assets/cards/imported/eight-of-cups.jpg"
   },
   {
     "id": "nine-of-dewdrops",
