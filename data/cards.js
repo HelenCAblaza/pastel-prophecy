@@ -361,7 +361,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching receiving. Six of Dewdrops asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through receiving. Let Six of Dewdrops show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is receiving. Six of Dewdrops brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/dewdrops/six-of-dewdrops.svg"
+    "artPath": "assets/cards/imported/six-of-cups.jpg"
   },
   {
     "id": "seven-of-dewdrops",
