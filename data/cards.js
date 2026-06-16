@@ -660,7 +660,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching clarity. Ace of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through clarity. Let Ace of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is clarity. Ace of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/ace-of-feathers.svg"
+    "artPath": "assets/cards/imported/ace-of-swords.jpg"
   },
   {
     "id": "two-of-feathers",
@@ -673,7 +673,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching decision. Two of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through decision. Let Two of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is decision. Two of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/two-of-feathers.svg"
+    "artPath": "assets/cards/imported/two-of-swords.jpg"
   },
   {
     "id": "three-of-feathers",
@@ -686,7 +686,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching heartbreak. Three of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through heartbreak. Let Three of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is heartbreak. Three of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/three-of-feathers.svg"
+    "artPath": "assets/cards/imported/three-of-swords.jpg"
   },
   {
     "id": "four-of-feathers",
@@ -699,7 +699,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching stillness. Four of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through stillness. Let Four of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is stillness. Four of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/four-of-feathers.svg"
+    "artPath": "assets/cards/imported/four-of-swords.jpg"
   },
   {
     "id": "five-of-feathers",
