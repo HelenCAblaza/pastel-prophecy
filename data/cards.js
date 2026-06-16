@@ -855,7 +855,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching exchange. Two of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through exchange. Let Two of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is exchange. Two of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/two-of-crystals.svg"
+    "artPath": "assets/cards/imported/two-of-pentacles.jpg"
   },
   {
     "id": "three-of-crystals",
@@ -881,7 +881,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching safety. Four of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through safety. Let Four of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is safety. Four of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/four-of-crystals.svg"
+    "artPath": "assets/cards/imported/four-of-pentacles.jpg"
   },
   {
     "id": "five-of-crystals",
