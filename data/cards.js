@@ -790,7 +790,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching page. Page of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through page. Let Page of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is page. Page of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/page-of-feathers.svg"
+    "artPath": "assets/cards/imported/page-of-swords.jpg"
   },
   {
     "id": "knight-of-feathers",
@@ -803,7 +803,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching knight. Knight of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through knight. Let Knight of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is knight. Knight of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/knight-of-feathers.svg"
+    "artPath": "assets/cards/imported/knight-of-swords.jpg"
   },
   {
     "id": "queen-of-feathers",
