@@ -816,7 +816,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching queen. Queen of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through queen. Let Queen of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is queen. Queen of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/queen-of-feathers.svg"
+    "artPath": "assets/cards/imported/queen-of-swords.jpg"
   },
   {
     "id": "king-of-feathers",
@@ -829,7 +829,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching king. King of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through king. Let King of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is king. King of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/king-of-feathers.svg"
+    "artPath": "assets/cards/imported/king-of-swords.jpg"
   },
   {
     "id": "ace-of-crystals",
