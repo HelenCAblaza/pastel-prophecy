@@ -842,7 +842,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching seed. Ace of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through seed. Let Ace of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is seed. Ace of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/ace-of-crystals.svg"
+    "artPath": "assets/cards/imported/ace-of-pentacles.jpg"
   },
   {
     "id": "two-of-crystals",
@@ -868,7 +868,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching craft. Three of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through craft. Let Three of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is craft. Three of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/three-of-crystals.svg"
+    "artPath": "assets/cards/imported/three-of-pentacles.jpg"
   },
   {
     "id": "four-of-crystals",
