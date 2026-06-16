@@ -920,7 +920,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching patience. Seven of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through patience. Let Seven of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is patience. Seven of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/seven-of-crystals.svg"
+    "artPath": "assets/cards/imported/seven-of-pentacles.jpg"
   },
   {
     "id": "eight-of-crystals",
@@ -933,7 +933,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching practice. Eight of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through practice. Let Eight of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is practice. Eight of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/eight-of-crystals.svg"
+    "artPath": "assets/cards/imported/eight-of-pentacles.jpg"
   },
   {
     "id": "nine-of-crystals",
@@ -946,7 +946,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching independence. Nine of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through independence. Let Nine of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is independence. Nine of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/nine-of-crystals.svg"
+    "artPath": "assets/cards/imported/nine-of-pentacles.jpg"
   },
   {
     "id": "ten-of-crystals",
@@ -959,7 +959,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching belonging. Ten of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through belonging. Let Ten of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is belonging. Ten of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/ten-of-crystals.svg"
+    "artPath": "assets/cards/imported/ten-of-pentacles.jpg"
   },
   {
     "id": "page-of-crystals",
