@@ -764,7 +764,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching worry. Nine of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through worry. Let Nine of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is worry. Nine of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/nine-of-feathers.svg"
+    "artPath": "assets/cards/imported/nine-of-swords.jpg"
   },
   {
     "id": "ten-of-feathers",
