@@ -210,6 +210,15 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
   border: 2px solid rgba(255,255,255,.86); box-shadow: 0 18px 45px rgba(102,82,122,.22), 0 0 35px var(--glow-color);
   animation: floatCard 5s ease-in-out infinite;
 }
+.oracle-card.has-detailed-art {
+  width: min(78vw, 300px);
+  aspect-ratio: auto;
+  height: auto;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
 .oracle-card::before { content:""; position:absolute; inset:-20%; background: radial-gradient(circle, var(--glow-color), transparent 55%); animation: pulseGlow 3s ease-in-out infinite; }
 .oracle-card::after { content:"✦ ✧ ✦ ✧ ✦"; position:absolute; inset:0; color: var(--sparkle-color); display:flex; align-items:center; justify-content:center; letter-spacing:14px; opacity:.7; animation: driftSparkles 7s linear infinite; }
 .card-art { position:absolute; inset:0; padding:18px; display:flex; flex-direction:column; align-items:center; justify-content:space-between; text-align:center; background: var(--card-bg); }
@@ -254,17 +263,14 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 }
 
 .detailed-card-art {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
+  height: auto;
+  object-fit: contain;
+  border-radius: 22px;
+  box-shadow: 0 18px 38px rgba(80, 62, 100, .28), 0 7px 16px rgba(80, 62, 100, .18);
 }
-.oracle-card.has-detailed-art::after {
-  opacity: .28;
-  mix-blend-mode: screen;
-}
+.oracle-card.has-detailed-art::after,
 .oracle-card.has-detailed-art::before {
-  opacity: .36;
+  display: none;
 }
