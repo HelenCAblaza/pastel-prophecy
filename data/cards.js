@@ -972,7 +972,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching student. Page of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through student. Let Page of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is student. Page of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/page-of-crystals.svg"
+    "artPath": "assets/cards/imported/page-of-pentacles.jpg"
   },
   {
     "id": "knight-of-crystals",
@@ -985,7 +985,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching builder. Knight of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through builder. Let Knight of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is builder. Knight of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/knight-of-crystals.svg"
+    "artPath": "assets/cards/imported/knight-of-pentacles.jpg"
   },
   {
     "id": "queen-of-crystals",
@@ -998,7 +998,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching keeper. Queen of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through keeper. Let Queen of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is keeper. Queen of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/queen-of-crystals.svg"
+    "artPath": "assets/cards/imported/queen-of-pentacles.jpg"
   },
   {
     "id": "king-of-crystals",
@@ -1011,6 +1011,6 @@ export const cards = [
     "heartMeaning": "Your heart is touching steward. King of Crystals asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through steward. Let King of Crystals show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is steward. King of Crystals brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/crystals/king-of-crystals.svg"
+    "artPath": "assets/cards/imported/king-of-pentacles.jpg"
   }
 ];
