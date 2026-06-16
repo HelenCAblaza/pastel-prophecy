@@ -712,7 +712,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching tension. Five of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through tension. Let Five of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is tension. Five of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/five-of-feathers.svg"
+    "artPath": "assets/cards/imported/five-of-swords.jpg"
   },
   {
     "id": "six-of-feathers",
@@ -725,7 +725,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching insight. Six of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through insight. Let Six of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is insight. Six of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/six-of-feathers.svg"
+    "artPath": "assets/cards/imported/six-of-swords.jpg"
   },
   {
     "id": "seven-of-feathers",
@@ -738,7 +738,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching secrets. Seven of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through secrets. Let Seven of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is secrets. Seven of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/seven-of-feathers.svg"
+    "artPath": "assets/cards/imported/seven-of-swords.jpg"
   },
   {
     "id": "eight-of-feathers",
@@ -751,7 +751,7 @@ export const cards = [
     "heartMeaning": "Your heart is touching imagination. Eight of Feathers asks you to be gentle with what you feel before you try to fix it.",
     "pathMeaning": "Your path is moving through imagination. Let Eight of Feathers show you the next small step instead of the whole staircase.",
     "magicMeaning": "Your hidden magic is imagination. Eight of Feathers brings a soft blessing that helps the day open in your favor.",
-    "artPath": "assets/cards/feathers/eight-of-feathers.svg"
+    "artPath": "assets/cards/imported/eight-of-swords.jpg"
   },
   {
     "id": "nine-of-feathers",
