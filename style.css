@@ -212,7 +212,7 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 }
 .oracle-card.has-detailed-art {
   width: min(78vw, 300px);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 5;
   height: auto;
   padding: 3px;
   overflow: visible;
