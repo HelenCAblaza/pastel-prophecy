@@ -211,13 +211,21 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
   animation: floatCard 5s ease-in-out infinite;
 }
 .oracle-card.has-detailed-art {
-  width: min(78vw, 300px);
+  width: fit-content;
+  max-width: min(78vw, 300px);
   aspect-ratio: auto;
   height: auto;
+  padding: 3px;
   overflow: visible;
   border: 0;
-  background: transparent;
-  box-shadow: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f7bfd8 0%, #f8dfa5 28%, #c8f2df 55%, #bfe7ff 78%, #cdb7f6 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .78),
+    0 0 18px rgba(247, 191, 216, .62),
+    0 0 28px rgba(191, 231, 255, .48),
+    0 18px 34px rgba(80, 62, 100, .24),
+    0 8px 14px rgba(80, 62, 100, .18);
 }
 .oracle-card::before { content:""; position:absolute; inset:-20%; background: radial-gradient(circle, var(--glow-color), transparent 55%); animation: pulseGlow 3s ease-in-out infinite; }
 .oracle-card::after { content:"✦ ✧ ✦ ✧ ✦"; position:absolute; inset:0; color: var(--sparkle-color); display:flex; align-items:center; justify-content:center; letter-spacing:14px; opacity:.7; animation: driftSparkles 7s linear infinite; }
@@ -264,11 +272,12 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 
 .detailed-card-art {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: min(calc(78vw - 6px), 294px);
   height: auto;
   object-fit: contain;
   border-radius: 22px;
-  box-shadow: 0 18px 38px rgba(80, 62, 100, .28), 0 7px 16px rgba(80, 62, 100, .18);
+  box-shadow: 0 10px 20px rgba(80, 62, 100, .18);
 }
 .oracle-card.has-detailed-art::after,
 .oracle-card.has-detailed-art::before {
