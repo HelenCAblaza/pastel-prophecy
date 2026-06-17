@@ -8,18 +8,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=12" />
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
-  <script type="module" src="script.js?v=63"></script>
+  <script type="module" src="script.js?v=64"></script>
 </head>
 <body>
   <main class="app" id="app">
     <section class="screen screen-home is-active" id="home-screen">
-      <div class="moon"></div>
-      <p class="eyebrow">soft watercolor oracle</p>
-      <h1>The Pastel Prophecy</h1>
-      <p class="subtitle">Choose three cards for your Heart, your Path, and your hidden Magic.</p>
-      <button class="primary-button" id="begin-button">Begin Reading</button>
+      <div class="start-art-wrap" aria-label="The Pastel Prophecy welcome screen">
+        <img class="start-art" src="assets/start-page.jpg" alt="The Pastel Prophecy start page with a pink unicorn and a Begin the Prophecy button" />
+        <button class="start-hotspot" id="begin-button" aria-label="Begin the prophecy">
+          <span>Begin the Prophecy</span>
+        </button>
+      </div>
     </section>
 
     <section class="screen" id="shuffle-screen" aria-live="polite">

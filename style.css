@@ -49,6 +49,19 @@ body::before {
   place-items: stretch;
 }
 
+body.home-active {
+  background: #311d4f;
+}
+
+body.home-active::before {
+  display: none;
+}
+
+body.home-active .app {
+  width: min(100%, 430px);
+  padding: 0;
+}
+
 .screen {
   display: none;
   min-height: calc(100dvh - 38px);
@@ -64,6 +77,71 @@ body::before {
 }
 
 .screen.is-active { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+.screen-home,
+.screen-home.is-active {
+  min-height: 100dvh;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #311d4f;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.screen-home::after {
+  display: none;
+}
+
+.start-art-wrap {
+  position: relative;
+  width: min(100vw, 430px, calc(100dvh * 592 / 1280));
+  aspect-ratio: 592 / 1280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #311d4f;
+}
+
+.start-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.start-hotspot {
+  position: absolute;
+  left: 13%;
+  right: 13%;
+  top: 83.4%;
+  height: 7.6%;
+  min-height: 0;
+  padding: 0;
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.start-hotspot span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.start-hotspot:focus-visible {
+  outline: 3px solid rgba(255, 247, 234, .9);
+  outline-offset: 5px;
+  box-shadow: 0 0 24px rgba(248, 223, 165, .9);
+}
 
 .screen::after {
   content: "✦  ·  ✧  ·  ✦";

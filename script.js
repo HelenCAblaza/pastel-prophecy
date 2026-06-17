@@ -38,6 +38,7 @@ let fanDidDrag = false;
 
 function showScreen(id) {
   screens.forEach((screen) => screen.classList.toggle('is-active', screen.id === id));
+  document.body.classList.toggle('home-active', id === 'home-screen');
 }
 
 function shuffle(array) {
@@ -319,5 +320,6 @@ revealButton.addEventListener('click', revealReading);
 $('#download-button').addEventListener('click', downloadReadingImage);
 $('#again-button').addEventListener('click', startReading);
 
+showScreen('home-screen');
 bindFanInteractions();
 initializeDeckStack();
