@@ -112,9 +112,9 @@ function renderPickGrid() {
       button.style.setProperty('--delay', `${Math.min((rowIndex * cardsPerRow + index) * 14, 900)}ms`);
       button.style.setProperty('--index', `${index}`);
       const normalized = arr.length <= 1 ? 0 : (index / (arr.length - 1)) - 0.5;
-      const tilt = normalized * 92;
-      const arcDrop = Math.abs(normalized) * 58;
-      const x = 50 + (normalized * 78);
+      const tilt = normalized * 88;
+      const arcDrop = Math.abs(normalized) * 54;
+      const x = 50 + (normalized * 66);
       const depth = Math.round(100 - Math.abs(normalized) * 100);
       button.style.setProperty('--base-tilt', `${tilt.toFixed(2)}deg`);
       button.style.setProperty('--arc-drop', `${arcDrop.toFixed(2)}px`);

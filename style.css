@@ -279,17 +279,23 @@ h3 { font-size: 1.7rem; }
   text-shadow: 0 2px 16px rgba(255,255,255,.52);
 }
 
-#shuffle-screen .instruction {
+#shuffle-screen .instruction,
+#pick-screen .instruction {
   max-width: 335px;
   margin-top: 14px;
   padding: 10px 18px;
   min-height: 0;
   color: #6b4d83;
-  background: rgba(255, 244, 252, .36);
-  border: 1px solid rgba(255,255,255,.34);
+  background: rgba(255, 244, 252, .46);
+  border: 1px solid rgba(255,255,255,.42);
   border-radius: 999px;
   backdrop-filter: blur(6px);
   text-shadow: 0 1px 10px rgba(255,255,255,.46);
+}
+
+#pick-screen h2 {
+  color: #5e3c76;
+  text-shadow: 0 2px 18px rgba(255,255,255,.58);
 }
 
 .moon {
@@ -352,28 +358,31 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 
 .fan-scroll {
   width: 100%;
-  margin: 6px 0 20px;
-  overflow: hidden;
+  max-width: 430px;
+  margin: 10px auto 22px;
+  overflow: visible;
   touch-action: manipulation;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255,255,255,.26), rgba(255,255,255,.08));
-  padding: 14px 4px 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,.12));
+  border: 1px solid rgba(255,255,255,.28);
+  padding: 18px 14px 24px;
 }
 
 .card-grid {
   display: grid;
-  gap: 2px;
+  gap: 8px;
   width: 100%;
   margin: 0;
+  justify-items: center;
 }
 
 .fan-row {
-  --fan-size: min(17vw, 68px);
+  --fan-size: min(16.5vw, 64px);
   position: relative;
-  width: 100%;
-  max-width: 390px;
-  height: calc(var(--fan-size) * 1.46);
+  width: min(100%, 344px);
+  height: calc(var(--fan-size) * 1.5);
   margin: 0 auto;
+  overflow: visible;
 }
 
 .pick-card {
@@ -386,15 +395,16 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
   aspect-ratio: 54 / 82;
   position: absolute;
   left: var(--x);
-  top: 6px;
+  top: 8px;
   border-radius: 14px;
   transform-origin: 50% 92%;
   transform:
     translateX(-50%)
-    translateY(calc(var(--arc-drop) + (var(--lift) * -18px)))
+    translateY(calc(var(--arc-drop) + (var(--lift) * -14px)))
     rotate(var(--base-tilt))
-    scale(calc(1 + var(--lift) * 0.04));
+    scale(calc(1 + var(--lift) * 0.025));
   z-index: var(--depth);
+  overflow: visible;
   animation: dealIn .45s ease both, floatCard 5.5s ease-in-out infinite;
   animation-delay: var(--delay), calc(var(--delay) + 450ms);
   transition: transform .16s ease, box-shadow .16s ease;
@@ -405,25 +415,28 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 }
 
 .pick-card.is-selected {
-  --lift: 1.25;
-  z-index: 999;
+  --lift: .78;
+  z-index: calc(400 + var(--depth));
   box-shadow: 0 0 0 3px rgba(248,223,165,.95), 0 0 28px rgba(248,223,165,.85);
 }
 
 .pick-card.is-selected::before {
   content: attr(data-pick);
   position: absolute;
-  top: -8px;
-  right: -8px;
-  width: 26px;
-  height: 26px;
+  top: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: var(--gold);
+  background: linear-gradient(180deg, #fff6cf, #f2c95e 56%, #d39f20);
+  border: 1px solid rgba(255, 247, 221, .95);
+  box-shadow: 0 4px 10px rgba(126, 93, 20, .26);
   display: grid;
   place-items: center;
   color: #705177;
+  font-size: .92rem;
   font-weight: 900;
-  z-index: 2;
+  z-index: 5;
 }
 
 .result-list { width: 100%; display: grid; gap: 18px; margin: 22px 0; }
