@@ -291,6 +291,7 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
   animation: floatCard 5s ease-in-out infinite;
 }
 .oracle-card.has-detailed-art {
+  --gold-outline: linear-gradient(135deg, #fff4bf 0%, #d69b25 28%, #f8dfa5 48%, #b87918 70%, #fff0aa 100%);
   display: block;
   width: min(78vw, 300px);
   max-width: min(78vw, 300px);
@@ -369,7 +370,26 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
   border-radius: 22px;
   box-shadow: 0 10px 20px rgba(80, 62, 100, .18);
 }
-.oracle-card.has-detailed-art::after,
-.oracle-card.has-detailed-art::before {
+.oracle-card.has-detailed-art::after {
   display: none;
+}
+.oracle-card.has-detailed-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  padding: 3px;
+  border-radius: inherit;
+  background: var(--gold-outline);
+  pointer-events: none;
+  animation: none;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
 }
