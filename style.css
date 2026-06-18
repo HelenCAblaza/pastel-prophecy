@@ -292,11 +292,12 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 }
 .oracle-card.has-detailed-art {
   display: inline-block;
-  width: min(78vw, 300px);
-  aspect-ratio: 3 / 5;
+  width: fit-content;
+  max-width: min(78vw, 300px);
+  aspect-ratio: auto;
   height: auto;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
   border: 0;
   border-radius: 22px;
   background: transparent;
@@ -334,14 +335,11 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 .export-item { background:rgba(255,255,255,.56); border-radius:30px; padding:22px; text-align:center; }
 .export-item .oracle-card { width:100%; max-width:230px; margin:0 auto 18px; }
 .export-item .oracle-card.has-detailed-art {
-  width: 230px;
-  max-width: 100%;
-  aspect-ratio: 3 / 5;
+  width: fit-content;
+  max-width: 230px;
 }
 .export-item .detailed-card-art {
-  width: 100%;
-  height: 100%;
-  max-width: none;
+  max-width: 230px;
 }
 .export-summary { margin-top:28px; background:rgba(255,251,244,.72); border-radius:34px; padding:34px; text-align:center; font-size:30px; line-height:1.45; }
 .export-footer { text-align:center; margin-top:30px; font-weight:800; color:#8b72a0; }
@@ -359,12 +357,12 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 
 .detailed-card-art {
   display: block;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  object-fit: fill;
+  width: auto;
+  max-width: min(78vw, 300px);
+  height: auto;
+  object-fit: contain;
   border-radius: 22px;
-  box-shadow: none;
+  box-shadow: 0 10px 20px rgba(80, 62, 100, .18);
 }
 .oracle-card.has-detailed-art::after,
 .oracle-card.has-detailed-art::before {
