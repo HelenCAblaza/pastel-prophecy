@@ -57,10 +57,41 @@ body.home-active::before {
   display: none;
 }
 
+body.reading-bg-active {
+  background: #cdb7f6 url("assets/reading-background.jpg?v=1") center / 100vw 100dvh no-repeat fixed;
+}
+
+body.reading-bg-active::before {
+  display: none;
+}
+
 body.home-active .app {
   width: 100vw;
   max-width: none;
   padding: 0;
+}
+
+body.reading-bg-active .app {
+  width: 100vw;
+  max-width: none;
+  padding: 0;
+}
+
+body.reading-bg-active #pick-screen,
+body.reading-bg-active #result-screen {
+  width: 100vw;
+  min-height: 100dvh;
+  padding: max(26px, env(safe-area-inset-top)) 18px max(26px, env(safe-area-inset-bottom));
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  overflow-y: auto;
+}
+
+body.reading-bg-active #result-screen.is-active {
+  justify-content: flex-start;
 }
 
 .screen {

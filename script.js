@@ -39,6 +39,7 @@ let fanDidDrag = false;
 function showScreen(id) {
   screens.forEach((screen) => screen.classList.toggle('is-active', screen.id === id));
   document.body.classList.toggle('home-active', id === 'home-screen');
+  document.body.classList.toggle('reading-bg-active', id === 'pick-screen' || id === 'result-screen');
 }
 
 function shuffle(array) {
