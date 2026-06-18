@@ -91,25 +91,45 @@ function shuffleDeck() {
 function renderPickGrid() {
   cardGrid.innerHTML = '';
   selectedCards = [];
-  cardGrid.style.setProperty('--card-count', `${visibleChoices.length}`);
   updatePickInstruction();
 
-  visibleChoices.forEach((card, index, arr) => {
-    const button = document.createElement('button');
-    button.className = 'pick-card';
-    button.type = 'button';
-    button.style.setProperty('--delay', `${Math.min(index * 14, 900)}ms`);
-    button.style.setProperty('--index', `${index}`);
-    const tilt = ((index / Math.max(1, arr.length - 1)) - 0.5) * 28;
-    button.style.setProperty('--base-tilt', `${tilt.toFixed(2)}deg`);
-    button.setAttribute('aria-label', `Face-down card ${index + 1}`);
-    button.addEventListener('click', () => selectCard(card, button));
-    cardGrid.append(button);
+  const rowCount = 4;
+  const cardsPerRow = Math.ceil(visibleChoices.length / rowCount);
+  const rows = Array.from({ length: rowCount }, (_, rowIndex) =>
+    visibleChoices.slice(rowIndex * cardsPerRow, (rowIndex + 1) * cardsPerRow)
+  ).filter((row) => row.length > 0);
+
+  rows.forEach((rowCards, rowIndex) => {
+    const row = document.createElement('div');
+    row.className = 'fan-row';
+    row.style.setProperty('--row-count', `${rowCards.length}`);
+    row.dataset.row = `${rowIndex}`;
+
+    rowCards.forEach((card, index, arr) => {
+      const button = document.createElement('button');
+      button.className = 'pick-card';
+      button.type = 'button';
+      button.style.setProperty('--delay', `${Math.min((rowIndex * cardsPerRow + index) * 14, 900)}ms`);
+      button.style.setProperty('--index', `${index}`);
+      const normalized = arr.length <= 1 ? 0 : (index / (arr.length - 1)) - 0.5;
+      const tilt = normalized * 92;
+      const arcDrop = Math.abs(normalized) * 58;
+      const x = 50 + (normalized * 78);
+      const depth = Math.round(100 - Math.abs(normalized) * 100);
+      button.style.setProperty('--base-tilt', `${tilt.toFixed(2)}deg`);
+      button.style.setProperty('--arc-drop', `${arcDrop.toFixed(2)}px`);
+      button.style.setProperty('--x', `${x.toFixed(2)}%`);
+      button.style.setProperty('--depth', `${depth}`);
+      button.setAttribute('aria-label', `Face-down card ${rowIndex * cardsPerRow + index + 1}`);
+      button.addEventListener('click', () => selectCard(card, button));
+      row.append(button);
+    });
+
+    cardGrid.append(row);
   });
 
-  const centerLeft = Math.max(0, (cardGrid.scrollWidth - fanScroll.clientWidth) / 2);
-  fanScroll.scrollLeft = centerLeft;
-  updateFanFocus(fanScroll.getBoundingClientRect().left + fanScroll.clientWidth / 2);
+  const centerX = fanScroll.getBoundingClientRect().left + fanScroll.clientWidth / 2;
+  updateFanFocus(centerX);
 }
 
 function selectCard(card, element) {
@@ -138,33 +158,15 @@ function updateFanFocus(clientX) {
 }
 
 function bindFanInteractions() {
-  fanScroll.addEventListener('pointerdown', (event) => {
-    isFanDragging = true;
-    fanDidDrag = false;
-    fanDragStartX = event.clientX;
-    fanStartScrollLeft = fanScroll.scrollLeft;
-    fanScroll.setPointerCapture(event.pointerId);
-    updateFanFocus(event.clientX);
-  });
-
   fanScroll.addEventListener('pointermove', (event) => {
     updateFanFocus(event.clientX);
-    if (!isFanDragging) return;
-    const delta = event.clientX - fanDragStartX;
-    if (Math.abs(delta) > 6) fanDidDrag = true;
-    fanScroll.scrollLeft = fanStartScrollLeft - delta;
   });
 
-  const stopDrag = (event) => {
-    if (isFanDragging && event?.pointerId !== undefined && fanScroll.hasPointerCapture(event.pointerId)) {
-      fanScroll.releasePointerCapture(event.pointerId);
-    }
-    isFanDragging = false;
-    window.setTimeout(() => { fanDidDrag = false; }, 0);
-  };
+  fanScroll.addEventListener('pointerdown', (event) => {
+    fanDidDrag = false;
+    updateFanFocus(event.clientX);
+  });
 
-  fanScroll.addEventListener('pointerup', stopDrag);
-  fanScroll.addEventListener('pointercancel', stopDrag);
   fanScroll.addEventListener('pointerleave', () => {
     const centerX = fanScroll.getBoundingClientRect().left + fanScroll.clientWidth / 2;
     updateFanFocus(centerX);

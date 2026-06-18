@@ -353,41 +353,48 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 .fan-scroll {
   width: 100%;
   margin: 6px 0 20px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-x;
-  border-radius: 20px;
-  background: linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,.08));
-  padding: 6px 0 14px;
+  overflow: hidden;
+  touch-action: manipulation;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,.26), rgba(255,255,255,.08));
+  padding: 14px 4px 20px;
 }
-.fan-scroll::-webkit-scrollbar { height: 8px; }
-.fan-scroll::-webkit-scrollbar-thumb { background: rgba(132,111,147,.35); border-radius: 999px; }
 
 .card-grid {
-  --fan-size: 88px;
-  --fan-step: 17px;
-  position: relative;
-  height: 160px;
-  min-width: calc(var(--fan-size) + (var(--card-count) - 1) * var(--fan-step) + 24px);
+  display: grid;
+  gap: 2px;
+  width: 100%;
   margin: 0;
+}
+
+.fan-row {
+  --fan-size: min(17vw, 68px);
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  height: calc(var(--fan-size) * 1.46);
+  margin: 0 auto;
 }
 
 .pick-card {
   --lift: 0;
   --base-tilt: 0deg;
+  --arc-drop: 0px;
+  --x: 50%;
+  --depth: 1;
   width: var(--fan-size);
   aspect-ratio: 54 / 82;
   position: absolute;
-  left: calc(12px + var(--index) * var(--fan-step));
-  top: 30px;
+  left: var(--x);
+  top: 6px;
   border-radius: 14px;
-  transform-origin: 50% 88%;
+  transform-origin: 50% 92%;
   transform:
-    translateY(calc(var(--lift) * -22px))
+    translateX(-50%)
+    translateY(calc(var(--arc-drop) + (var(--lift) * -18px)))
     rotate(var(--base-tilt))
     scale(calc(1 + var(--lift) * 0.04));
-  z-index: calc(10 + var(--index));
+  z-index: var(--depth);
   animation: dealIn .45s ease both, floatCard 5.5s ease-in-out infinite;
   animation-delay: var(--delay), calc(var(--delay) + 450ms);
   transition: transform .16s ease, box-shadow .16s ease;
