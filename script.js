@@ -179,9 +179,12 @@ function updatePickInstruction() {
   }
 }
 
+const CARD_ART_VERSION = 'crop-20260618';
+
 function cardHTML(card) {
+  const artSrc = card.artPath ? `${card.artPath}?v=${CARD_ART_VERSION}` : '';
   const artContent = card.artPath
-    ? `<img class="detailed-card-art" src="${card.artPath}" alt="${card.name} watercolor card art" loading="lazy" />`
+    ? `<img class="detailed-card-art" src="${artSrc}" alt="${card.name} watercolor card art" loading="lazy" />`
     : `<div class="card-art">
         <div class="card-keyword">${card.keyword}</div>
         <div class="card-symbol">${SUIT_SYMBOLS[card.suit] ?? '✦'}</div>
