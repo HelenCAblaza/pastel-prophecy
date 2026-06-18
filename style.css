@@ -293,8 +293,8 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 .oracle-card.has-detailed-art {
   --gold-outline: linear-gradient(135deg, #fff4bf 0%, #d69b25 28%, #f8dfa5 48%, #b87918 70%, #fff0aa 100%);
   display: block;
-  width: min(78vw, 300px);
-  max-width: min(78vw, 300px);
+  width: min(39vw, 150px);
+  max-width: min(39vw, 150px);
   aspect-ratio: 3 / 5;
   height: auto;
   padding: 0;
