@@ -111,8 +111,7 @@ body.home-active .app {
   display: block;
   width: 100vw;
   height: 100dvh;
-  object-fit: cover;
-  object-position: center;
+  object-fit: fill;
 }
 
 .start-hotspot {
