@@ -57,12 +57,49 @@ body.home-active::before {
   display: none;
 }
 
+body.shuffle-bg-active {
+  background: #c7a5ee url("assets/shuffle-background.jpg?v=1") center / 100vw 100dvh no-repeat fixed;
+}
+
+body.shuffle-bg-active::before {
+  display: none;
+}
+
 body.reading-bg-active {
   background: #cdb7f6 url("assets/reading-background.jpg?v=1") center / 100vw 100dvh no-repeat fixed;
 }
 
 body.reading-bg-active::before {
   display: none;
+}
+
+body.result-bg-active {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255,255,255,.28) 0 2px, transparent 3px),
+    radial-gradient(circle at 78% 16%, rgba(255,244,215,.8) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 84% 33%, rgba(255,255,255,.45) 0 2px, transparent 4px),
+    radial-gradient(circle at 24% 44%, rgba(255,232,191,.72) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 73% 56%, rgba(255,255,255,.35) 0 2px, transparent 4px),
+    radial-gradient(circle at 12% 72%, rgba(255,250,230,.78) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 88% 78%, rgba(255,255,255,.42) 0 2px, transparent 4px),
+    linear-gradient(180deg, #8b61c5 0%, #b786eb 42%, #d4a3ef 100%);
+  background-attachment: fixed;
+}
+
+body.result-bg-active::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(255,255,255,.78) 0 1.6px, transparent 3px),
+    radial-gradient(circle at 82% 12%, rgba(255,245,214,.92) 0 1.8px, transparent 3px),
+    radial-gradient(circle at 72% 30%, rgba(255,255,255,.72) 0 1.4px, transparent 3px),
+    radial-gradient(circle at 28% 42%, rgba(255,238,201,.88) 0 1.8px, transparent 3px),
+    radial-gradient(circle at 80% 58%, rgba(255,255,255,.7) 0 1.6px, transparent 3px),
+    radial-gradient(circle at 16% 72%, rgba(255,244,220,.94) 0 1.8px, transparent 3px),
+    radial-gradient(circle at 88% 82%, rgba(255,255,255,.76) 0 1.5px, transparent 3px);
+  animation: driftStars 9s ease-in-out infinite alternate;
 }
 
 body.home-active .app {
@@ -72,6 +109,13 @@ body.home-active .app {
 }
 
 body.reading-bg-active .app {
+  width: 100vw;
+  max-width: none;
+  padding: 0;
+}
+
+body.shuffle-bg-active .app,
+body.result-bg-active .app {
   width: 100vw;
   max-width: none;
   padding: 0;
@@ -90,7 +134,25 @@ body.reading-bg-active #result-screen {
   overflow-y: auto;
 }
 
+body.shuffle-bg-active #shuffle-screen,
+body.result-bg-active #result-screen {
+  width: 100vw;
+  min-height: 100dvh;
+  padding: max(26px, env(safe-area-inset-top)) 18px max(26px, env(safe-area-inset-bottom));
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  overflow-y: auto;
+}
+
 body.reading-bg-active #result-screen.is-active {
+  justify-content: flex-start;
+}
+
+body.result-bg-active #result-screen.is-active,
+body.shuffle-bg-active #shuffle-screen.is-active {
   justify-content: flex-start;
 }
 
@@ -186,6 +248,11 @@ body.reading-bg-active #result-screen.is-active {
   color: rgba(248, 223, 165, .88);
   letter-spacing: 8px;
   pointer-events: none;
+}
+
+body.shuffle-bg-active .screen::after,
+body.result-bg-active .screen::after {
+  display: none;
 }
 
 h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; margin: 0; color: #5d4774; }
@@ -313,6 +380,14 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
   background: rgba(255, 251, 244, .74); border: 1px solid rgba(255,255,255,.76); border-radius: 26px;
   padding: 16px; box-shadow: 0 12px 26px rgba(102,82,122,.12); width: 100%;
 }
+
+body.result-bg-active .reading-card,
+body.result-bg-active .summary-card {
+  background: rgba(255, 247, 255, .84);
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: 0 16px 32px rgba(71, 43, 108, .18);
+  backdrop-filter: blur(8px);
+}
 .reading-card { display: grid; justify-items: center; gap: 12px; animation: revealUp .55s ease both; }
 .reading-position { color: #9d7eb0; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; font-size: .76rem; }
 .oracle-card {
@@ -384,6 +459,7 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 @keyframes floatCard { 0%,100%{ transform: translateY(0) rotate(var(--tilt,0deg)); } 50%{ transform: translateY(-8px) rotate(var(--tilt,0deg)); } }
 @keyframes pulseGlow { 0%,100%{ opacity:.42; transform:scale(.9); } 50%{ opacity:.85; transform:scale(1.06); } }
 @keyframes driftSparkles { from{ transform:translateY(28px) rotate(0deg); } to{ transform:translateY(-28px) rotate(360deg); } }
+@keyframes driftStars { from { transform: translateY(0); opacity: .8; } to { transform: translateY(-18px); opacity: 1; } }
 @keyframes magicalShuffle { 0%{ transform:rotate(var(--r)) translate(0,0); } 40%{ transform:rotate(calc(var(--r) + 60deg)) translate(calc((var(--i) - 1.5) * 38px), -38px); } 75%{ transform:rotate(calc(var(--r) - 40deg)) translate(calc((1.5 - var(--i)) * 24px), 16px); } 100%{ transform:rotate(var(--r)) translate(0,0); } }
 @keyframes dealIn { from{ opacity:0; transform:translateY(18px) scale(.88); } to{ opacity:1; transform:translateY(0) scale(1); } }
 @keyframes revealUp { from{ opacity:0; transform: translateY(18px) scale(.97); } to{ opacity:1; transform: translateY(0) scale(1); } }

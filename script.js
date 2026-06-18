@@ -1,17 +1,17 @@
 import { cards } from './data/cards.js?v=26';
 
 const POSITIONS = [
-  { key: 'heartMeaning', label: 'Heart', symbol: '♡', hint: 'what your heart is feeling' },
-  { key: 'pathMeaning', label: 'Path', symbol: '✧', hint: 'where your energy is moving' },
-  { key: 'magicMeaning', label: 'Magic', symbol: '☾', hint: 'the blessing around you' }
+  { key: 'heartMeaning', label: 'Heart', hint: 'what your heart is feeling' },
+  { key: 'pathMeaning', label: 'Path', hint: 'where your energy is moving' },
+  { key: 'magicMeaning', label: 'Magic', hint: 'the blessing around you' }
 ];
 
 const SUIT_SYMBOLS = {
-  major: '🦄',
-  dewdrops: '💧',
-  sparkles: '✨',
-  feathers: '🪽',
-  crystals: '💎'
+  major: 'Major Prophecy',
+  dewdrops: 'Dewdrops',
+  sparkles: 'Sparkles',
+  feathers: 'Feathers',
+  crystals: 'Crystals'
 };
 
 let shuffledDeck = [];
@@ -39,7 +39,9 @@ let fanDidDrag = false;
 function showScreen(id) {
   screens.forEach((screen) => screen.classList.toggle('is-active', screen.id === id));
   document.body.classList.toggle('home-active', id === 'home-screen');
-  document.body.classList.toggle('reading-bg-active', id === 'pick-screen' || id === 'result-screen');
+  document.body.classList.toggle('shuffle-bg-active', id === 'shuffle-screen');
+  document.body.classList.toggle('reading-bg-active', id === 'pick-screen');
+  document.body.classList.toggle('result-bg-active', id === 'result-screen');
 }
 
 function shuffle(array) {
@@ -188,7 +190,7 @@ function cardHTML(card) {
     ? `<img class="detailed-card-art" src="${artSrc}" alt="${card.name} watercolor card art" loading="lazy" />`
     : `<div class="card-art">
         <div class="card-keyword">${card.keyword}</div>
-        <div class="card-symbol">${SUIT_SYMBOLS[card.suit] ?? '✦'}</div>
+        <div class="card-symbol">${SUIT_SYMBOLS[card.suit] ?? 'Oracle'}</div>
         <div class="card-name">${card.name}</div>
       </div>`;
 
@@ -204,7 +206,7 @@ function createReadingItem(card, position, index) {
   article.className = 'reading-card';
   article.style.animationDelay = `${index * 180}ms`;
   article.innerHTML = `
-    <div class="reading-position">${position.symbol} ${position.label}</div>
+    <div class="reading-position">${position.label}</div>
     ${cardHTML(card)}
     <h3>${card.name}</h3>
     <p class="brief"><strong>Brief:</strong> ${card.shortMeaning}</p>
@@ -272,7 +274,7 @@ function buildExportCard(reading, summary, guidance) {
     <div class="export-three">
       ${reading.map(({ card, position }) => `
         <section class="export-item">
-          <div class="reading-position">${position.symbol} ${position.label}</div>
+          <div class="reading-position">${position.label}</div>
           ${cardHTML(card)}
           <h3>${card.name}</h3>
           <p><strong>Brief:</strong> ${card.shortMeaning}</p>
@@ -288,7 +290,7 @@ function buildExportCard(reading, summary, guidance) {
       <h3>Don’t (for all 3 cards)</h3>
       <ul>${guidance.dont.map((item) => `<li>${item}</li>`).join('')}</ul>
     </section>
-    <div class="export-footer">A soft little prophecy for your day ✨</div>
+    <div class="export-footer">A soft little prophecy for your day</div>
   `;
 }
 
@@ -308,7 +310,7 @@ async function downloadReadingImage() {
     link.download = `the-pastel-prophecy-${stamp}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
-    button.textContent = 'Downloaded ✨';
+    button.textContent = 'Downloaded';
     window.setTimeout(() => { button.textContent = 'Download My Prophecy'; }, 1400);
   } catch (error) {
     console.error(error);
