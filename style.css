@@ -315,12 +315,13 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 
 .deck-stack { width: 148px; height: 214px; position: relative; margin: 26px 0 28px; }
 .deck-card, .pick-card, .mini-card-face {
+  --gold-outline: linear-gradient(135deg, #fff4bf 0%, #d69b25 28%, #f8dfa5 48%, #b87918 70%, #fff0aa 100%);
   border-radius: 18px;
   background:
     linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,.08)),
     url("assets/card-back-v2.jpg?v=1") center / cover no-repeat;
-  border: 2px solid rgba(255,255,255,.72);
-  box-shadow: 0 12px 25px rgba(102,82,122,.2), inset 0 0 0 3px rgba(248,223,165,.24);
+  border: 0;
+  box-shadow: 0 12px 25px rgba(102,82,122,.2), inset 0 0 0 2px rgba(255,248,233,.16);
   overflow: hidden;
 }
 .deck-card { position: absolute; inset: 0; transform: rotate(var(--r)); animation: floatCard 4s ease-in-out infinite; }
@@ -328,9 +329,20 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
+  display: block;
+  padding: 3px;
   border-radius: inherit;
-  box-shadow: inset 0 0 0 1px rgba(255, 236, 205, .5);
+  background: var(--gold-outline);
   pointer-events: none;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
 }
 .deck-card:nth-child(1) { --r: -7deg; }
 .deck-card:nth-child(2) { --r: -2deg; }
