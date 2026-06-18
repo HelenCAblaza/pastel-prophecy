@@ -317,15 +317,20 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 .deck-card, .pick-card, .mini-card-face {
   border-radius: 18px;
   background:
-    radial-gradient(circle at 50% 32%, rgba(255,255,255,.85) 0 12%, transparent 22%),
-    linear-gradient(135deg, #f7bfd8, #cdb7f6 52%, #bfe7ff);
+    linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,.08)),
+    url("assets/card-back-v2.jpg?v=1") center / cover no-repeat;
   border: 2px solid rgba(255,255,255,.72);
-  box-shadow: 0 12px 25px rgba(102,82,122,.2), inset 0 0 0 3px rgba(248,223,165,.32);
+  box-shadow: 0 12px 25px rgba(102,82,122,.2), inset 0 0 0 3px rgba(248,223,165,.24);
+  overflow: hidden;
 }
 .deck-card { position: absolute; inset: 0; transform: rotate(var(--r)); animation: floatCard 4s ease-in-out infinite; }
 .deck-card::after, .pick-card::after, .mini-card-face::after {
-  content: "✦"; position: absolute; inset: 0; display: grid; place-items: center;
-  font-size: 2rem; color: rgba(255,247,234,.92); text-shadow: 0 0 18px rgba(255,255,255,.8);
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255, 236, 205, .5);
+  pointer-events: none;
 }
 .deck-card:nth-child(1) { --r: -7deg; }
 .deck-card:nth-child(2) { --r: -2deg; }
