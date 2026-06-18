@@ -291,13 +291,13 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
   animation: floatCard 5s ease-in-out infinite;
 }
 .oracle-card.has-detailed-art {
-  display: inline-block;
-  width: fit-content;
+  display: block;
+  width: min(78vw, 300px);
   max-width: min(78vw, 300px);
-  aspect-ratio: auto;
+  aspect-ratio: 3 / 5;
   height: auto;
   padding: 0;
-  overflow: visible;
+  overflow: hidden;
   border: 0;
   border-radius: 22px;
   background: transparent;
@@ -335,11 +335,16 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 .export-item { background:rgba(255,255,255,.56); border-radius:30px; padding:22px; text-align:center; }
 .export-item .oracle-card { width:100%; max-width:230px; margin:0 auto 18px; }
 .export-item .oracle-card.has-detailed-art {
-  width: fit-content;
+  width: 100%;
   max-width: 230px;
+  aspect-ratio: 3 / 5;
+  overflow: hidden;
 }
 .export-item .detailed-card-art {
+  width: 100%;
+  height: 100%;
   max-width: 230px;
+  object-fit: fill;
 }
 .export-summary { margin-top:28px; background:rgba(255,251,244,.72); border-radius:34px; padding:34px; text-align:center; font-size:30px; line-height:1.45; }
 .export-footer { text-align:center; margin-top:30px; font-weight:800; color:#8b72a0; }
@@ -357,10 +362,10 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 
 .detailed-card-art {
   display: block;
-  width: auto;
-  max-width: min(78vw, 300px);
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: fill;
   border-radius: 22px;
   box-shadow: 0 10px 20px rgba(80, 62, 100, .18);
 }
