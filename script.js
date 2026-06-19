@@ -56,19 +56,8 @@ function showScreen(id) {
   document.body.classList.toggle('shuffle-bg-active', id === 'shuffle-screen');
   document.body.classList.toggle('reading-bg-active', id === 'pick-screen');
   document.body.classList.toggle('result-bg-active', id === 'result-screen');
-  window.scrollTo(0, 0);
-  document.documentElement.scrollTop = 0;
-  document.body.scrollTop = 0;
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-  }, 50);
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-  }, 150);
+  const activeScreen = document.getElementById(id);
+  if (activeScreen) activeScreen.scrollTop = 0;
 }
 
 function shuffle(array) {
@@ -422,9 +411,8 @@ function revealReading() {
   renderList(doList, guidance.do);
   renderList(dontList, guidance.dont);
   showScreen('result-screen');
-  window.scrollTo(0, 0);
-  document.documentElement.scrollTop = 0;
-  document.body.scrollTop = 0;
+  const resultScreen = document.getElementById('result-screen');
+  if (resultScreen) resultScreen.scrollTop = 0;
 }
 
 $('#begin-button').addEventListener('click', startReading);
