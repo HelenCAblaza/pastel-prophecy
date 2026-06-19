@@ -5,7 +5,7 @@ import {
   UI_STRINGS,
   getLocalizedCard,
   getPositions
-} from './data/localization.js?v=3';
+} from './data/localization.js?v=4';
 
 const SUIT_SYMBOLS = {
   major: 'Major Prophecy',
@@ -443,6 +443,52 @@ function buildExportCard(reading, summary, guidance) {
   `;
 }
 
+function isLikelyInAppOrMobileDownloadRestricted() {
+  const ua = navigator.userAgent || '';
+  return /Telegram|FBAN|FBAV|Instagram|Line|wv|iPhone|iPad|iPod|Android/i.test(ua);
+}
+
+function blobFromCanvas(canvas) {
+  return new Promise((resolve, reject) => {
+    canvas.toBlob((blob) => {
+      if (blob) {
+        resolve(blob);
+      } else {
+        reject(new Error('Canvas export returned an empty blob.'));
+      }
+    }, 'image/png');
+  });
+}
+
+async function tryNativeShare(blob, filename) {
+  if (!navigator.share || typeof File === 'undefined') return false;
+
+  const file = new File([blob], filename, { type: 'image/png' });
+  if (navigator.canShare && !navigator.canShare({ files: [file] })) return false;
+
+  await navigator.share({ files: [file], title: 'The Pastel Prophecy' });
+  return true;
+}
+
+function triggerBlobDownload(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  link.rel = 'noopener';
+  document.body.append(link);
+  link.click();
+  link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 1500);
+}
+
+function openBlobInNewTab(blob) {
+  const url = URL.createObjectURL(blob);
+  const opened = window.open(url, '_blank', 'noopener');
+  window.setTimeout(() => URL.revokeObjectURL(url), 60_000);
+  return Boolean(opened);
+}
+
 async function downloadReadingImage() {
   const ui = getUI();
   const button = $('#download-button');
@@ -455,12 +501,35 @@ async function downloadReadingImage() {
       useCORS: true,
       logging: false
     });
-    const link = document.createElement('a');
     const stamp = new Date().toISOString().slice(0, 10);
-    link.download = `the-pastel-prophecy-${stamp}.png`;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-    button.textContent = ui.downloadDone;
+    const filename = `the-pastel-prophecy-${stamp}.png`;
+    const blob = await blobFromCanvas(canvas);
+    let completed = false;
+
+    try {
+      completed = await tryNativeShare(blob, filename);
+    } catch (shareError) {
+      console.warn('Native share failed, falling back to download.', shareError);
+    }
+
+    if (!completed) {
+      try {
+        triggerBlobDownload(blob, filename);
+        completed = true;
+      } catch (downloadError) {
+        console.warn('Direct download failed, trying new-tab fallback.', downloadError);
+      }
+    }
+
+    if (!completed && isLikelyInAppOrMobileDownloadRestricted()) {
+      completed = openBlobInNewTab(blob);
+      button.textContent = completed ? ui.downloadOpened : ui.downloadFailed;
+    } else {
+      button.textContent = completed ? ui.downloadDone : ui.downloadFailed;
+    }
+
+    if (!completed) throw new Error('All download methods failed.');
+
     window.setTimeout(() => { button.textContent = getUI().downloadReset; }, 1400);
   } catch (error) {
     console.error(error);
