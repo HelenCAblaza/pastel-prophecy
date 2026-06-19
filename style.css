@@ -49,6 +49,47 @@ body::before {
   place-items: stretch;
 }
 
+.language-switcher {
+  position: fixed;
+  top: max(14px, calc(env(safe-area-inset-top) + 8px));
+  right: 14px;
+  z-index: 30;
+  display: flex;
+  gap: 8px;
+}
+
+.lang-button {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  background: rgba(255, 252, 255, .78);
+  box-shadow: 0 10px 24px rgba(84, 52, 124, .18), inset 0 0 0 1px rgba(255,255,255,.65);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.lang-button:hover,
+.lang-button:focus-visible {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(84, 52, 124, .24), inset 0 0 0 1px rgba(255,255,255,.9);
+  outline: none;
+}
+
+.lang-button.is-active {
+  background: rgba(255, 246, 252, .96);
+  box-shadow: 0 0 0 2px rgba(174, 117, 219, .45), 0 12px 30px rgba(84, 52, 124, .24);
+}
+
+.lang-button span {
+  line-height: 1;
+  transform: translateY(1px);
+}
+
 body.home-active {
   background: #311d4f;
 }

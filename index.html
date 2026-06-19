@@ -8,32 +8,37 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=37" />
+  <link rel="stylesheet" href="style.css?v=38" />
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
-  <script type="module" src="script.js?v=81"></script>
+  <script type="module" src="script.js?v=82"></script>
 </head>
 <body>
+  <div class="language-switcher" id="language-switcher" aria-label="Choose language">
+    <button class="lang-button is-active" type="button" data-lang="en" aria-label="English" aria-pressed="true"><span aria-hidden="true">🇬🇧</span></button>
+    <button class="lang-button" type="button" data-lang="th" aria-label="ไทย" aria-pressed="false"><span aria-hidden="true">🇹🇭</span></button>
+    <button class="lang-button" type="button" data-lang="de" aria-label="Deutsch" aria-pressed="false"><span aria-hidden="true">🇩🇪</span></button>
+  </div>
   <main class="app" id="app">
     <section class="screen screen-home is-active" id="home-screen">
       <div class="start-art-wrap" aria-label="The Pastel Prophecy welcome screen">
-        <img class="start-art" src="assets/start-page-v2.jpg?v=1" alt="The Pastel Prophecy start page with a unicorn, castle, and a Begin the Prophecy button" />
+        <img class="start-art" id="start-art-image" src="assets/start-page-v2.jpg?v=1" alt="The Pastel Prophecy start page with a unicorn, castle, and a Begin the Prophecy button" />
         <button class="start-hotspot" id="begin-button" aria-label="Begin the prophecy">
-          <span>Begin the Prophecy</span>
+          <span id="begin-button-text">Begin the Prophecy</span>
         </button>
       </div>
     </section>
 
     <section class="screen" id="shuffle-screen" aria-live="polite">
-      <p class="eyebrow">step one</p>
-      <h2>Wake the deck</h2>
+      <p class="eyebrow" id="shuffle-eyebrow">step one</p>
+      <h2 id="shuffle-title">Wake the deck</h2>
       <p class="instruction" id="shuffle-instruction">Tap shuffle and let the cards drift like little petals.</p>
       <div class="deck-stack" id="deck-stack" aria-hidden="true"></div>
       <button class="primary-button" id="shuffle-button">Shuffle the Cards</button>
     </section>
 
     <section class="screen" id="pick-screen" aria-live="polite">
-      <p class="eyebrow">step two</p>
-      <h2>Choose three cards</h2>
+      <p class="eyebrow" id="pick-eyebrow">step two</p>
+      <h2 id="pick-title">Choose three cards</h2>
       <p class="instruction" id="pick-count">Pick your Heart card first.</p>
       <div class="fan-scroll" id="fan-scroll" aria-label="Drag across the fanned deck">
         <div class="card-grid" id="card-grid"></div>
@@ -47,18 +52,18 @@
         <span class="cards-halo"></span>
         <span class="bottom-halo"></span>
       </div>
-      <p class="eyebrow">your reading</p>
-      <h2>Your Pastel Prophecy</h2>
+      <p class="eyebrow" id="result-eyebrow">your reading</p>
+      <h2 id="result-title">Your Pastel Prophecy</h2>
       <div class="result-list" id="result-list"></div>
       <article class="summary-card">
-        <h3>3 Cards Together</h3>
+        <h3 id="summary-title">3 Cards Together</h3>
         <p id="summary-text"></p>
         <div class="guidance-block">
-          <h4>Do (for all 3 cards)</h4>
+          <h4 id="do-title">Do (for all 3 cards)</h4>
           <ul id="do-list"></ul>
         </div>
         <div class="guidance-block">
-          <h4>Don’t (for all 3 cards)</h4>
+          <h4 id="dont-title">Don’t (for all 3 cards)</h4>
           <ul id="dont-list"></ul>
         </div>
       </article>

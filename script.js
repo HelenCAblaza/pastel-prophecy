@@ -1,10 +1,11 @@
 import { cards } from './data/cards.js?v=27';
-
-const POSITIONS = [
-  { key: 'heartMeaning', label: 'Heart', hint: 'what your heart is feeling' },
-  { key: 'pathMeaning', label: 'Path', hint: 'where your energy is moving' },
-  { key: 'magicMeaning', label: 'Magic', hint: 'the blessing around you' }
-];
+import {
+  DEFAULT_LANGUAGE,
+  LANGUAGE_OPTIONS,
+  UI_STRINGS,
+  getLocalizedCard,
+  getPositions
+} from './data/localization.js?v=2';
 
 const SUIT_SYMBOLS = {
   major: 'Major Prophecy',
@@ -14,9 +15,12 @@ const SUIT_SYMBOLS = {
   crystals: 'Crystals'
 };
 
+const LANGUAGE_STORAGE_KEY = 'pastel-prophecy-language';
+
 let shuffledDeck = [];
 let visibleChoices = [];
 let selectedChoices = [];
+let currentLanguage = getInitialLanguage();
 
 const $ = (selector) => document.querySelector(selector);
 const screens = [...document.querySelectorAll('.screen')];
@@ -30,11 +34,22 @@ const summaryText = $('#summary-text');
 const doList = $('#do-list');
 const dontList = $('#dont-list');
 const exportCard = $('#reading-export-card');
+const languageButtons = [...document.querySelectorAll('.lang-button')];
 
-let isFanDragging = false;
-let fanDragStartX = 0;
-let fanStartScrollLeft = 0;
 let fanDidDrag = false;
+
+function getInitialLanguage() {
+  const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  return LANGUAGE_OPTIONS.some((option) => option.code === saved) ? saved : DEFAULT_LANGUAGE;
+}
+
+function getUI(lang = currentLanguage) {
+  return UI_STRINGS[lang] ?? UI_STRINGS.en;
+}
+
+function getActiveScreenId() {
+  return screens.find((screen) => screen.classList.contains('is-active'))?.id ?? 'home-screen';
+}
 
 function showScreen(id) {
   screens.forEach((screen) => screen.classList.toggle('is-active', screen.id === id));
@@ -63,25 +78,97 @@ function initializeDeckStack() {
   }
 }
 
+function setLanguage(lang) {
+  if (!LANGUAGE_OPTIONS.some((option) => option.code === lang)) return;
+  currentLanguage = lang;
+  window.localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+  applyLanguage();
+}
+
+function bindLanguageSwitcher() {
+  languageButtons.forEach((button) => {
+    button.addEventListener('click', () => setLanguage(button.dataset.lang));
+  });
+}
+
+function updateLanguageButtons() {
+  const ui = getUI();
+  const switcher = $('#language-switcher');
+  switcher?.setAttribute('aria-label', ui.languageSelectorAria);
+
+  languageButtons.forEach((button) => {
+    const isActive = button.dataset.lang === currentLanguage;
+    button.classList.toggle('is-active', isActive);
+    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
+}
+
+function updateStaticText() {
+  const ui = getUI();
+
+  document.documentElement.lang = currentLanguage;
+  document.title = ui.appTitle;
+
+  $('#start-art-image').alt = ui.startImageAlt;
+  $('#begin-button').setAttribute('aria-label', ui.beginAria);
+  $('#begin-button-text').textContent = ui.beginButton;
+
+  $('#shuffle-eyebrow').textContent = ui.stepOne;
+  $('#shuffle-title').textContent = ui.wakeDeck;
+  $('#shuffle-button').textContent = ui.shuffleButton;
+
+  $('#pick-eyebrow').textContent = ui.stepTwo;
+  $('#pick-title').textContent = ui.chooseThree;
+  $('#fan-scroll').setAttribute('aria-label', ui.fanScrollAria);
+  $('#reveal-button').textContent = ui.revealButton;
+
+  $('#result-eyebrow').textContent = ui.yourReading;
+  $('#result-title').textContent = ui.yourPastelProphecy;
+  $('#summary-title').textContent = ui.summaryTitle;
+  $('#do-title').textContent = ui.doTitle;
+  $('#dont-title').textContent = ui.dontTitle;
+  $('#download-button').textContent = ui.downloadReset;
+  $('#again-button').textContent = ui.drawAgain;
+}
+
+function applyLanguage() {
+  updateStaticText();
+  updateLanguageButtons();
+
+  const ui = getUI();
+  const shuffleButton = $('#shuffle-button');
+  $('#shuffle-instruction').textContent = shuffleButton.disabled ? ui.shuffleInstructionBusy : ui.shuffleInstructionIdle;
+
+  if (getActiveScreenId() === 'pick-screen') {
+    updatePickInstruction();
+    syncSelectedCards();
+  }
+
+  if (getActiveScreenId() === 'result-screen' && selectedChoices.length === 3) {
+    revealReading();
+  }
+}
+
 function startReading() {
   selectedChoices = [];
   visibleChoices = [];
   revealButton.classList.add('hidden');
   initializeDeckStack();
   showScreen('shuffle-screen');
+  applyLanguage();
 }
 
 function shuffleDeck() {
+  const ui = getUI();
   shuffledDeck = shuffle(cards);
   deckStack.classList.add('is-shuffling');
   $('#shuffle-button').disabled = true;
-  $('#shuffle-instruction').textContent = 'The deck is swirling through moonlight…';
+  $('#shuffle-instruction').textContent = ui.shuffleInstructionBusy;
 
   window.setTimeout(() => {
     deckStack.classList.remove('is-shuffling');
     $('#shuffle-button').disabled = false;
-    $('#shuffle-instruction').textContent = 'Tap shuffle and let the cards drift like little petals.';
-    // Show the full deck so users can truly pick from all 78 cards.
+    $('#shuffle-instruction').textContent = getUI().shuffleInstructionIdle;
     visibleChoices = shuffledDeck;
     renderPickGrid();
     showScreen('pick-screen');
@@ -89,6 +176,7 @@ function shuffleDeck() {
 }
 
 function renderPickGrid() {
+  const ui = getUI();
   cardGrid.innerHTML = '';
   selectedChoices = [];
   updatePickInstruction();
@@ -120,7 +208,7 @@ function renderPickGrid() {
       button.style.setProperty('--arc-drop', `${arcDrop.toFixed(2)}px`);
       button.style.setProperty('--x', `${x.toFixed(2)}%`);
       button.style.setProperty('--depth', `${depth}`);
-      button.setAttribute('aria-label', `Face-down card ${rowIndex * cardsPerRow + index + 1}`);
+      button.setAttribute('aria-label', ui.faceDownCard(rowIndex * cardsPerRow + index + 1));
       button.setAttribute('aria-pressed', 'false');
       button.addEventListener('click', () => selectCard(card, button));
       row.append(button);
@@ -156,21 +244,24 @@ function selectCard(card, element) {
 }
 
 function syncSelectedCards() {
+  const ui = getUI();
+  const positions = getPositions(currentLanguage);
+
   cardGrid.querySelectorAll('.pick-badge').forEach((badge) => badge.remove());
 
   const cardsInFan = [...cardGrid.querySelectorAll('.pick-card')];
   cardsInFan.forEach((el, index) => {
     if (!el.classList.contains('is-selected')) {
-      el.setAttribute('aria-label', `Face-down card ${index + 1}`);
+      el.setAttribute('aria-label', ui.faceDownCard(index + 1));
     }
   });
 
   selectedChoices.forEach((choice, index) => {
-    const position = POSITIONS[index];
+    const position = positions[index];
     choice.element.dataset.pick = index + 1;
     choice.element.style.setProperty('--selected-order', `${index + 1}`);
     choice.element.style.setProperty('--badge-shift', `${(index - 1) * 24}px`);
-    choice.element.setAttribute('aria-label', `${position.label} card selected. Tap again to deselect.`);
+    choice.element.setAttribute('aria-label', ui.selectedCardAria(position.label));
   });
 
   window.requestAnimationFrame(renderSelectionBadges);
@@ -222,26 +313,37 @@ function bindFanInteractions() {
 }
 
 function updatePickInstruction() {
-  const next = POSITIONS[selectedChoices.length];
+  const ui = getUI();
+  const positions = getPositions(currentLanguage);
+  const next = positions[selectedChoices.length];
   if (selectedChoices.length < 3) {
-    pickCount.textContent = `Pick your ${next.label} card: ${next.hint}.`;
+    pickCount.textContent = ui.pickInstruction(next.label, next.hint);
     revealButton.classList.add('hidden');
   } else {
-    pickCount.textContent = 'Your three cards are glowing. Ready to reveal?';
+    pickCount.textContent = ui.readyToReveal;
     revealButton.classList.remove('hidden');
   }
 }
 
 const CARD_ART_VERSION = 'crop-20260618';
 
+function escapeHtml(text) {
+  return text
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
 function cardHTML(card) {
   const artSrc = card.artPath ? `${card.artPath}?v=${CARD_ART_VERSION}` : '';
   const artContent = card.artPath
-    ? `<img class="detailed-card-art" src="${artSrc}" alt="${card.name} watercolor card art" loading="lazy" />`
+    ? `<img class="detailed-card-art" src="${artSrc}" alt="${escapeHtml(card.name)} card art" loading="lazy" />`
     : `<div class="card-art">
-        <div class="card-keyword">${card.keyword}</div>
-        <div class="card-symbol">${SUIT_SYMBOLS[card.suit] ?? 'Oracle'}</div>
-        <div class="card-name">${card.name}</div>
+        <div class="card-keyword">${escapeHtml(card.keyword)}</div>
+        <div class="card-symbol">${escapeHtml(card.suitName ?? (SUIT_SYMBOLS[card.suit] ?? 'Oracle'))}</div>
+        <div class="card-name">${escapeHtml(card.name)}</div>
       </div>`;
 
   return `
@@ -252,79 +354,29 @@ function cardHTML(card) {
 }
 
 function createReadingItem(card, position, index) {
+  const ui = getUI();
   const article = document.createElement('article');
   article.className = 'reading-card';
   article.style.animationDelay = `${index * 180}ms`;
   article.innerHTML = `
-    <div class="reading-position">${position.label}</div>
+    <div class="reading-position">${escapeHtml(position.label)}</div>
     ${cardHTML(card)}
-    <h3>${card.name}</h3>
-    <p class="brief"><strong>Brief:</strong> ${card.shortMeaning}</p>
-    <p class="meaning">${card[position.key]}</p>
+    <h3>${escapeHtml(card.name)}</h3>
+    <p class="brief"><strong>${escapeHtml(ui.briefLabel)}</strong> ${escapeHtml(card.shortMeaning)}</p>
+    <p class="meaning">${escapeHtml(card[position.key])}</p>
   `;
   return article;
 }
 
-function lowerFirst(text) {
-  return text ? text.charAt(0).toLowerCase() + text.slice(1) : '';
-}
-
-function getSuitEnergy(card) {
-  const suitMap = {
-    major: 'a major spiritual lesson',
-    dewdrops: 'emotional truth',
-    sparkles: 'action and momentum',
-    feathers: 'clarity and hard truth',
-    crystals: 'grounded, practical growth'
-  };
-  return suitMap[card.suit] ?? 'inner guidance';
-}
-
-function getReadingArc(heart, path, magic) {
-  return `Together, these three cards describe a reading that begins in ${lowerFirst(heart.card.keyword)}, moves through ${lowerFirst(path.card.keyword)}, and is blessed by ${lowerFirst(magic.card.keyword)}.`;
-}
-
-function getDoFocus(card, positionKey) {
-  const byPosition = {
-    heartMeaning: `Make space to feel what ${card.name} is showing you before reacting.`,
-    pathMeaning: `Take one concrete step in the direction of ${lowerFirst(card.keyword)}.`,
-    magicMeaning: `Welcome the blessing of ${lowerFirst(card.keyword)} without trying to control every detail.`
-  };
-  return byPosition[positionKey];
-}
-
-function getDontFocus(card, positionKey) {
-  const bySuit = {
-    major: `Don’t treat ${card.name} like a small passing mood — it is asking for real attention.`,
-    dewdrops: `Don’t shut down your feelings just because they are tender or inconvenient.`,
-    sparkles: `Don’t burn through your energy by rushing before your direction is clear.`,
-    feathers: `Don’t let fear, overthinking, or harsh self-talk become the loudest voice.`,
-    crystals: `Don’t ignore the practical side of the message while chasing quick reassurance.`
-  };
-
-  if (positionKey === 'heartMeaning') return bySuit[card.suit];
-  if (positionKey === 'pathMeaning') return `Don’t move ahead in a way that betrays what ${card.name} is teaching you.`;
-  return `Don’t dismiss the help of ${card.name} just because it arrives quietly.`;
-}
-
 function generateSummary(reading) {
-  const [heart, path, magic] = reading;
-  return `${heart.card.name} in the Heart position reveals an inner climate of ${lowerFirst(heart.card.keyword)}, while ${path.card.name} on your Path asks you to move through ${lowerFirst(path.card.keyword)}. ${magic.card.name} in the Magic position surrounds the whole reading with ${lowerFirst(magic.card.keyword)}. ${getReadingArc(heart, path, magic)}`;
+  return getUI().summary(reading[0].card, reading[1].card, reading[2].card);
 }
 
 function generateSharedGuidance(reading) {
-  const [heart, path, magic] = reading;
+  const ui = getUI();
   return {
-    do: [
-      getDoFocus(heart.card, heart.position.key),
-      getDoFocus(path.card, path.position.key),
-      getDoFocus(magic.card, magic.position.key)
-    ],
-    dont: [
-      getDontFocus(heart.card, heart.position.key),
-      getDontFocus(path.card, path.position.key),
-      getDontFocus(magic.card, magic.position.key)
-    ]
+    do: ui.doLines(reading[0].card, reading[1].card, reading[2].card),
+    dont: ui.dontLines(reading[0].card, reading[1].card, reading[2].card)
   };
 }
 
@@ -337,8 +389,16 @@ function renderList(element, items) {
   });
 }
 
+function getLocalizedReading() {
+  const positions = getPositions(currentLanguage);
+  return selectedChoices.map(({ card }, index) => ({
+    card: getLocalizedCard(card, currentLanguage),
+    position: positions[index]
+  }));
+}
+
 function revealReading() {
-  const reading = selectedChoices.map(({ card }, index) => ({ card, position: POSITIONS[index] }));
+  const reading = getLocalizedReading();
   const summary = generateSummary(reading);
   const guidance = generateSharedGuidance(reading);
 
@@ -354,37 +414,39 @@ function revealReading() {
 }
 
 function buildExportCard(reading, summary, guidance) {
-  const date = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+  const ui = getUI();
+  const date = new Date().toLocaleDateString(ui.locale, { year: 'numeric', month: 'long', day: 'numeric' });
   exportCard.innerHTML = `
-    <h2>The Pastel Prophecy</h2>
-    <div class="export-date">${date}</div>
+    <h2>${escapeHtml(ui.appTitle)}</h2>
+    <div class="export-date">${escapeHtml(date)}</div>
     <div class="export-three">
       ${reading.map(({ card, position }) => `
         <section class="export-item">
-          <div class="reading-position">${position.label}</div>
+          <div class="reading-position">${escapeHtml(position.label)}</div>
           ${cardHTML(card)}
-          <h3>${card.name}</h3>
-          <p><strong>Brief:</strong> ${card.shortMeaning}</p>
-          <p>${card[position.key]}</p>
+          <h3>${escapeHtml(card.name)}</h3>
+          <p><strong>${escapeHtml(ui.briefLabel)}</strong> ${escapeHtml(card.shortMeaning)}</p>
+          <p>${escapeHtml(card[position.key])}</p>
         </section>
       `).join('')}
     </div>
     <section class="export-summary">
-      <h3>3 Cards Together</h3>
-      <p>${summary}</p>
-      <h3>Do (for all 3 cards)</h3>
-      <ul>${guidance.do.map((item) => `<li>${item}</li>`).join('')}</ul>
-      <h3>Don’t (for all 3 cards)</h3>
-      <ul>${guidance.dont.map((item) => `<li>${item}</li>`).join('')}</ul>
+      <h3>${escapeHtml(ui.summaryTitle)}</h3>
+      <p>${escapeHtml(summary)}</p>
+      <h3>${escapeHtml(ui.doTitle)}</h3>
+      <ul>${guidance.do.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+      <h3>${escapeHtml(ui.dontTitle)}</h3>
+      <ul>${guidance.dont.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
     </section>
-    <div class="export-footer">A soft little prophecy for your day</div>
+    <div class="export-footer">${escapeHtml(ui.exportFooter)}</div>
   `;
 }
 
 async function downloadReadingImage() {
+  const ui = getUI();
   const button = $('#download-button');
   button.disabled = true;
-  button.textContent = 'Painting your prophecy…';
+  button.textContent = ui.downloadBusy;
   try {
     const canvas = await html2canvas(exportCard, {
       backgroundColor: null,
@@ -397,11 +459,11 @@ async function downloadReadingImage() {
     link.download = `the-pastel-prophecy-${stamp}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
-    button.textContent = 'Downloaded';
-    window.setTimeout(() => { button.textContent = 'Download My Prophecy'; }, 1400);
+    button.textContent = ui.downloadDone;
+    window.setTimeout(() => { button.textContent = getUI().downloadReset; }, 1400);
   } catch (error) {
     console.error(error);
-    button.textContent = 'Download failed — try again';
+    button.textContent = ui.downloadFailed;
   } finally {
     window.setTimeout(() => { button.disabled = false; }, 900);
   }
@@ -415,4 +477,6 @@ $('#again-button').addEventListener('click', startReading);
 
 showScreen('home-screen');
 bindFanInteractions();
+bindLanguageSwitcher();
 initializeDeckStack();
+applyLanguage();
