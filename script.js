@@ -265,28 +265,61 @@ function createReadingItem(card, position, index) {
   return article;
 }
 
+function lowerFirst(text) {
+  return text ? text.charAt(0).toLowerCase() + text.slice(1) : '';
+}
+
+function getSuitEnergy(card) {
+  const suitMap = {
+    major: 'a major turning point',
+    dewdrops: 'emotional truth',
+    sparkles: 'action and momentum',
+    feathers: 'clarity and hard truth',
+    crystals: 'grounded, practical growth'
+  };
+  return suitMap[card.suit] ?? 'inner guidance';
+}
+
+function getDoFocus(card, positionKey) {
+  const byPosition = {
+    heartMeaning: `Make space to feel what ${card.name} is showing you before reacting.`,
+    pathMeaning: `Take one concrete step in the direction of ${lowerFirst(card.keyword)}.`,
+    magicMeaning: `Welcome the blessing of ${lowerFirst(card.keyword)} without trying to control every detail.`
+  };
+  return byPosition[positionKey];
+}
+
+function getDontFocus(card, positionKey) {
+  const bySuit = {
+    major: `Don’t treat ${card.name} like a small passing mood — it is asking for real attention.`,
+    dewdrops: `Don’t shut down your feelings just because they are tender or inconvenient.`,
+    sparkles: `Don’t burn through your energy by rushing before your direction is clear.`,
+    feathers: `Don’t let fear, overthinking, or harsh self-talk become the loudest voice.`,
+    crystals: `Don’t ignore the practical side of the message while chasing quick reassurance.`
+  };
+
+  if (positionKey === 'heartMeaning') return bySuit[card.suit];
+  if (positionKey === 'pathMeaning') return `Don’t move ahead in a way that betrays what ${card.name} is teaching you.`;
+  return `Don’t dismiss the help of ${card.name} just because it arrives quietly.`;
+}
+
 function generateSummary(reading) {
   const [heart, path, magic] = reading;
-  const templates = [
-    `Your heart is learning ${heart.card.keyword.toLowerCase()}, while your path moves through ${path.card.keyword.toLowerCase()}. The magic of ${magic.card.name} suggests that a gentle blessing arrives when you choose the next kind step.`,
-    `${heart.card.name} softens your inner world, ${path.card.name} points your feet forward, and ${magic.card.name} sprinkles the reading with ${magic.card.keyword.toLowerCase()}. Let this prophecy be small, sweet, and doable today.`,
-    `A pastel thread connects ${heart.card.keyword.toLowerCase()}, ${path.card.keyword.toLowerCase()}, and ${magic.card.keyword.toLowerCase()}. You do not need to rush the answer — the cards are asking you to follow the shimmer one step at a time.`
-  ];
-  return templates[Math.floor(Math.random() * templates.length)];
+  return `${heart.card.name} in the Heart position reveals an inner climate of ${lowerFirst(heart.card.keyword)}, while ${path.card.name} on your Path asks you to move through ${lowerFirst(path.card.keyword)}. ${magic.card.name} in the Magic position surrounds the whole reading with ${lowerFirst(magic.card.keyword)}. Together, these three cards describe ${getSuitEnergy(heart.card)}, guided toward ${getSuitEnergy(path.card)}, with a final blessing of ${getSuitEnergy(magic.card)} supporting the outcome.`;
 }
 
 function generateSharedGuidance(reading) {
   const [heart, path, magic] = reading;
   return {
     do: [
-      `Take one tiny action inspired by ${path.card.name}.`,
-      `Honor your feelings from ${heart.card.name} before making big decisions.`,
-      `Stay open to small blessings and signs from ${magic.card.name}.`
+      getDoFocus(heart.card, heart.position.key),
+      getDoFocus(path.card, path.position.key),
+      getDoFocus(magic.card, magic.position.key)
     ],
     dont: [
-      'Don’t force a final answer today — let clarity unfold gently.',
-      'Don’t ignore your emotional needs while focusing only on productivity.',
-      'Don’t compare your path to others; your timing is uniquely yours.'
+      getDontFocus(heart.card, heart.position.key),
+      getDontFocus(path.card, path.position.key),
+      getDontFocus(magic.card, magic.position.key)
     ]
   };
 }
