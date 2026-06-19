@@ -75,24 +75,38 @@ body.reading-bg-active::before {
 
 body.result-bg-active {
   background:
-    linear-gradient(180deg, rgba(255,255,255,.22), rgba(255,255,255,0) 24%),
-    radial-gradient(circle at 50% 12%, rgba(255, 248, 253, .84) 0 9%, rgba(255, 225, 243, .58) 13%, rgba(247, 191, 216, .18) 24%, transparent 40%),
-    radial-gradient(circle at 50% 88%, rgba(255, 239, 250, .94) 0 14%, rgba(239, 195, 245, .55) 25%, rgba(227, 187, 244, .2) 38%, transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,0) 56%, rgba(246, 214, 243, .26) 76%, rgba(236, 198, 241, .42) 100%),
-    repeating-linear-gradient(
-      160deg,
-      rgba(255, 214, 239, .22) 0 13%,
-      rgba(244, 200, 235, .28) 13% 26%,
-      rgba(235, 207, 252, .22) 26% 39%,
-      rgba(255, 224, 240, .24) 39% 52%,
-      rgba(244, 218, 255, .22) 52% 65%
-    ),
-    linear-gradient(180deg, #f0b7db 0%, #ebb7e8 24%, #e3bbf4 52%, #f4cbe9 74%, #f8def5 100%);
+    linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0) 20%),
+    radial-gradient(circle at 50% 12%, rgba(255, 248, 253, .78) 0 10%, rgba(255, 225, 243, .44) 16%, rgba(247, 191, 216, .12) 28%, transparent 42%),
+    radial-gradient(circle at 50% 50%, rgba(253, 235, 247, .44) 0 15%, rgba(235, 195, 244, .24) 28%, rgba(218, 176, 241, .08) 42%, transparent 62%),
+    radial-gradient(circle at 50% 88%, rgba(255, 239, 250, .82) 0 16%, rgba(239, 195, 245, .42) 28%, rgba(227, 187, 244, .14) 42%, transparent 64%),
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(248, 216, 243, .18) 52%, rgba(232, 190, 241, .34) 100%),
+    linear-gradient(180deg, #eec0e7 0%, #e8b9eb 26%, #dfb6f0 54%, #efc5ea 76%, #f7daf2 100%);
   background-attachment: fixed;
 }
 
 body.result-bg-active::before {
-  content: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url('assets/result-main-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: .75;
+}
+
+body.result-bg-active::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 245, 251, .18) 0%, rgba(255, 245, 251, 0) 22%),
+    radial-gradient(circle at 50% 40%, rgba(255, 243, 248, .28) 0 16%, rgba(244, 206, 239, .18) 28%, rgba(221, 176, 239, .08) 42%, transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0) 58%, rgba(241, 203, 241, .12) 78%, rgba(227, 184, 238, .2) 100%);
 }
 
 body.home-active .app {
@@ -112,6 +126,11 @@ body.result-bg-active .app {
   width: 100vw;
   max-width: none;
   padding: 0;
+}
+
+body.result-bg-active .app {
+  position: relative;
+  z-index: 1;
 }
 
 body.reading-bg-active #pick-screen,
@@ -200,18 +219,32 @@ body.shuffle-bg-active #shuffle-screen.is-active {
   opacity: .95;
 }
 
-.bottom-halo {
+.cards-halo {
   position: absolute;
   left: 50%;
-  bottom: 120px;
-  width: min(110vw, 560px);
-  height: 320px;
+  top: 300px;
+  width: min(120vw, 640px);
+  height: 520px;
   transform: translateX(-50%);
   border-radius: 999px;
   background:
-    radial-gradient(circle at 50% 44%, rgba(255, 247, 255, .94) 0 20%, rgba(245, 214, 244, .6) 34%, rgba(231, 191, 241, .28) 50%, transparent 72%);
-  filter: blur(14px);
-  opacity: .92;
+    radial-gradient(circle at 50% 42%, rgba(255, 244, 248, .88) 0 20%, rgba(246, 211, 243, .54) 32%, rgba(229, 188, 241, .24) 48%, transparent 72%);
+  filter: blur(18px);
+  opacity: .94;
+}
+
+.bottom-halo {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  width: min(118vw, 620px);
+  height: 360px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(255, 247, 255, .88) 0 22%, rgba(245, 214, 244, .5) 36%, rgba(231, 191, 241, .2) 54%, transparent 76%);
+  filter: blur(16px);
+  opacity: .86;
 }
 
 .screen {
