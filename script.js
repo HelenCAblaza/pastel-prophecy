@@ -56,7 +56,11 @@ function showScreen(id) {
   document.body.classList.toggle('shuffle-bg-active', id === 'shuffle-screen');
   document.body.classList.toggle('reading-bg-active', id === 'pick-screen');
   document.body.classList.toggle('result-bg-active', id === 'result-screen');
-  window.scrollTo({ top: 0, behavior: 'instant' });
+  requestAnimationFrame(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  });
 }
 
 function shuffle(array) {
