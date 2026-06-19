@@ -51,44 +51,91 @@ body::before {
 
 .language-switcher {
   position: fixed;
-  top: max(14px, calc(env(safe-area-inset-top) + 8px));
-  right: 14px;
+  top: max(10px, calc(env(safe-area-inset-top) + 6px));
+  right: 10px;
   z-index: 30;
   display: flex;
-  gap: 8px;
+  gap: 6px;
 }
 
 .lang-button {
-  width: 42px;
-  height: 42px;
-  border: 0;
-  border-radius: 999px;
+  min-width: 34px;
+  min-height: 28px;
+  height: 28px;
+  padding: 0 7px;
+  border: 1.5px solid rgba(214, 170, 76, .82);
+  border-radius: 10px;
   display: grid;
   place-items: center;
-  font-size: 1.2rem;
-  background: rgba(255, 252, 255, .78);
-  box-shadow: 0 10px 24px rgba(84, 52, 124, .18), inset 0 0 0 1px rgba(255,255,255,.65);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  background:
+    linear-gradient(180deg, rgba(255, 236, 182, .96) 0%, rgba(232, 193, 105, .94) 52%, rgba(205, 158, 63, .96) 100%);
+  box-shadow:
+    0 8px 18px rgba(84, 52, 124, .16),
+    inset 0 1px 0 rgba(255, 248, 220, .9),
+    inset 0 0 0 1px rgba(255, 239, 195, .55);
   backdrop-filter: blur(8px);
   cursor: pointer;
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
 }
 
 .lang-button:hover,
 .lang-button:focus-visible {
   transform: translateY(-1px) scale(1.03);
-  box-shadow: 0 12px 28px rgba(84, 52, 124, .24), inset 0 0 0 1px rgba(255,255,255,.9);
+  box-shadow:
+    0 10px 22px rgba(84, 52, 124, .22),
+    inset 0 1px 0 rgba(255, 248, 220, .98),
+    inset 0 0 0 1px rgba(255, 245, 211, .7);
+  filter: brightness(1.03);
   outline: none;
 }
 
 .lang-button.is-active {
-  background: rgba(255, 246, 252, .96);
-  box-shadow: 0 0 0 2px rgba(174, 117, 219, .45), 0 12px 30px rgba(84, 52, 124, .24);
+  background:
+    linear-gradient(180deg, rgba(255, 242, 199, .98) 0%, rgba(240, 203, 122, .97) 54%, rgba(214, 168, 74, .98) 100%);
+  box-shadow:
+    0 0 0 1.5px rgba(223, 187, 103, .95),
+    0 10px 24px rgba(84, 52, 124, .22),
+    inset 0 1px 0 rgba(255, 250, 228, .95);
 }
 
 .lang-button span {
   line-height: 1;
-  transform: translateY(1px);
+  transform: translateY(0.5px);
 }
+
+body.thai-language {
+  font-family: "Prompt", "Nunito", system-ui, sans-serif;
+}
+
+body.thai-language h1,
+body.thai-language h2,
+body.thai-language h3,
+body.thai-language h4,
+body.thai-language .eyebrow,
+body.thai-language .instruction,
+body.thai-language .brief,
+body.thai-language .meaning,
+body.thai-language .summary-card,
+body.thai-language button,
+body.thai-language li,
+body.thai-language p {
+  font-family: "Prompt", "Nunito", system-ui, sans-serif;
+}
+
+body.thai-language h2 { font-size: clamp(2rem, 9.4vw, 2.72rem); }
+body.thai-language h3 { font-size: 1.55rem; }
+body.thai-language .eyebrow { font-size: .68rem; letter-spacing: .12em; }
+body.thai-language .subtitle,
+body.thai-language .instruction,
+body.thai-language .brief,
+body.thai-language .meaning,
+body.thai-language li,
+body.thai-language .primary-button,
+body.thai-language .secondary-button,
+body.thai-language .summary-card p { font-size: .95rem; }
 
 body.home-active {
   background: #311d4f;
@@ -191,7 +238,7 @@ body.reading-bg-active #result-screen {
 }
 
 body.reading-bg-active #pick-screen {
-  padding-top: max(46px, calc(env(safe-area-inset-top) + 38px));
+  padding-top: max(76px, calc(env(safe-area-inset-top) + 68px));
 }
 
 body.shuffle-bg-active #shuffle-screen,
@@ -214,7 +261,11 @@ body.result-bg-active #result-screen {
 }
 
 body.shuffle-bg-active #shuffle-screen {
-  padding-top: max(84px, calc(env(safe-area-inset-top) + 76px));
+  padding-top: max(92px, calc(env(safe-area-inset-top) + 84px));
+}
+
+body.result-bg-active #result-screen {
+  padding-top: max(76px, calc(env(safe-area-inset-top) + 68px));
 }
 
 body.reading-bg-active #result-screen.is-active {

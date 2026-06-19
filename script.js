@@ -108,6 +108,7 @@ function updateStaticText() {
 
   document.documentElement.lang = currentLanguage;
   document.title = ui.appTitle;
+  document.body.classList.toggle('thai-language', currentLanguage === 'th');
 
   $('#start-art-image').alt = ui.startImageAlt;
   $('#begin-button').setAttribute('aria-label', ui.beginAria);
