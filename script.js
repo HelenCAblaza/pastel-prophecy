@@ -33,7 +33,6 @@ const resultList = $('#result-list');
 const summaryText = $('#summary-text');
 const doList = $('#do-list');
 const dontList = $('#dont-list');
-const exportCard = $('#reading-export-card');
 const languageButtons = [...document.querySelectorAll('.lang-button')];
 
 let fanDidDrag = false;
@@ -128,7 +127,6 @@ function updateStaticText() {
   $('#summary-title').textContent = ui.summaryTitle;
   $('#do-title').textContent = ui.doTitle;
   $('#dont-title').textContent = ui.dontTitle;
-  $('#download-button').textContent = ui.downloadReset;
   $('#again-button').textContent = ui.drawAgain;
 }
 
@@ -410,139 +408,12 @@ function revealReading() {
   summaryText.textContent = summary;
   renderList(doList, guidance.do);
   renderList(dontList, guidance.dont);
-  buildExportCard(reading, summary, guidance);
   showScreen('result-screen');
-}
-
-function buildExportCard(reading, summary, guidance) {
-  const ui = getUI();
-  const date = new Date().toLocaleDateString(ui.locale, { year: 'numeric', month: 'long', day: 'numeric' });
-  exportCard.innerHTML = `
-    <h2>${escapeHtml(ui.appTitle)}</h2>
-    <div class="export-date">${escapeHtml(date)}</div>
-    <div class="export-three">
-      ${reading.map(({ card, position }) => `
-        <section class="export-item">
-          <div class="reading-position">${escapeHtml(position.label)}</div>
-          ${cardHTML(card)}
-          <h3>${escapeHtml(card.name)}</h3>
-          <p><strong>${escapeHtml(ui.briefLabel)}</strong> ${escapeHtml(card.shortMeaning)}</p>
-          <p>${escapeHtml(card[position.key])}</p>
-        </section>
-      `).join('')}
-    </div>
-    <section class="export-summary">
-      <h3>${escapeHtml(ui.summaryTitle)}</h3>
-      <p>${escapeHtml(summary)}</p>
-      <h3>${escapeHtml(ui.doTitle)}</h3>
-      <ul>${guidance.do.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-      <h3>${escapeHtml(ui.dontTitle)}</h3>
-      <ul>${guidance.dont.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-    </section>
-    <div class="export-footer">${escapeHtml(ui.exportFooter)}</div>
-  `;
-}
-
-function isLikelyInAppOrMobileDownloadRestricted() {
-  const ua = navigator.userAgent || '';
-  return /Telegram|FBAN|FBAV|Instagram|Line|wv|iPhone|iPad|iPod|Android/i.test(ua);
-}
-
-function blobFromCanvas(canvas) {
-  return new Promise((resolve, reject) => {
-    canvas.toBlob((blob) => {
-      if (blob) {
-        resolve(blob);
-      } else {
-        reject(new Error('Canvas export returned an empty blob.'));
-      }
-    }, 'image/png');
-  });
-}
-
-async function tryNativeShare(blob, filename) {
-  if (!navigator.share || typeof File === 'undefined') return false;
-
-  const file = new File([blob], filename, { type: 'image/png' });
-  if (navigator.canShare && !navigator.canShare({ files: [file] })) return false;
-
-  await navigator.share({ files: [file], title: 'The Pastel Prophecy' });
-  return true;
-}
-
-function triggerBlobDownload(blob, filename) {
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = filename;
-  link.rel = 'noopener';
-  document.body.append(link);
-  link.click();
-  link.remove();
-  window.setTimeout(() => URL.revokeObjectURL(url), 1500);
-}
-
-function openBlobInNewTab(blob) {
-  const url = URL.createObjectURL(blob);
-  const opened = window.open(url, '_blank', 'noopener');
-  window.setTimeout(() => URL.revokeObjectURL(url), 60_000);
-  return Boolean(opened);
-}
-
-async function downloadReadingImage() {
-  const ui = getUI();
-  const button = $('#download-button');
-  button.disabled = true;
-  button.textContent = ui.downloadBusy;
-  try {
-    const canvas = await html2canvas(exportCard, {
-      backgroundColor: null,
-      scale: 2,
-      useCORS: true,
-      logging: false
-    });
-    const stamp = new Date().toISOString().slice(0, 10);
-    const filename = `the-pastel-prophecy-${stamp}.png`;
-    const blob = await blobFromCanvas(canvas);
-    let completed = false;
-
-    try {
-      completed = await tryNativeShare(blob, filename);
-    } catch (shareError) {
-      console.warn('Native share failed, falling back to download.', shareError);
-    }
-
-    if (!completed) {
-      try {
-        triggerBlobDownload(blob, filename);
-        completed = true;
-      } catch (downloadError) {
-        console.warn('Direct download failed, trying new-tab fallback.', downloadError);
-      }
-    }
-
-    if (!completed && isLikelyInAppOrMobileDownloadRestricted()) {
-      completed = openBlobInNewTab(blob);
-      button.textContent = completed ? ui.downloadOpened : ui.downloadFailed;
-    } else {
-      button.textContent = completed ? ui.downloadDone : ui.downloadFailed;
-    }
-
-    if (!completed) throw new Error('All download methods failed.');
-
-    window.setTimeout(() => { button.textContent = getUI().downloadReset; }, 1400);
-  } catch (error) {
-    console.error(error);
-    button.textContent = ui.downloadFailed;
-  } finally {
-    window.setTimeout(() => { button.disabled = false; }, 900);
-  }
 }
 
 $('#begin-button').addEventListener('click', startReading);
 $('#shuffle-button').addEventListener('click', shuffleDeck);
 revealButton.addEventListener('click', revealReading);
-$('#download-button').addEventListener('click', downloadReadingImage);
 $('#again-button').addEventListener('click', startReading);
 
 showScreen('home-screen');

@@ -27,15 +27,9 @@ export const UI_STRINGS = {
     summaryTitle: '3 Cards Together',
     doTitle: 'Do (for all 3 cards)',
     dontTitle: 'Don’t (for all 3 cards)',
-    downloadButton: 'Download My Prophecy',
     drawAgain: 'Draw Again',
     exportFooter: 'A soft little prophecy for your day',
     briefLabel: 'Brief:',
-    downloadBusy: 'Painting your prophecy…',
-    downloadDone: 'Downloaded',
-    downloadOpened: 'Image opened — save it from there',
-    downloadReset: 'Download My Prophecy',
-    downloadFailed: 'Download failed — try again',
     languageSelectorAria: 'Choose language',
     faceDownCard: (n) => `Face-down card ${n}`,
     selectedCardAria: (label) => `${label} card selected. Tap again to deselect.`,
@@ -46,16 +40,16 @@ export const UI_STRINGS = {
       path: { label: 'Path', hint: 'where your energy is moving' },
       magic: { label: 'Magic', hint: 'the blessing around you' }
     },
-    summary: (heart, path, magic) => `${heart.name} in the Heart position reveals an inner climate of ${lowerFirst(heart.keyword)}, while ${path.name} on your Path asks you to move through ${lowerFirst(path.keyword)}. ${magic.name} in the Magic position surrounds the whole reading with ${lowerFirst(magic.keyword)}. Together, these three cards describe a reading that begins in ${lowerFirst(heart.keyword)}, moves through ${lowerFirst(path.keyword)}, and is blessed by ${lowerFirst(magic.keyword)}.`,
+    summary: (heart, path, magic) => `A spirit of ${lowerFirst(heart.keyword)} is stirring in your heart right now \u2014 feelings that want to be seen and held with kindness. Your path carries the energy of ${lowerFirst(path.keyword)}, inviting you to move forward with gentle courage. Around you, a blessing of ${lowerFirst(magic.keyword)} quietly gathers, reminding you that you are not alone. Together, these three cards tell a story that begins with honest feeling, continues with brave movement, and is cradled by quiet grace.`,
     doLines: (heart, path, magic) => [
-      `Make space to feel what ${heart.name} is showing you before reacting.`,
-      `Take one concrete step in the direction of ${lowerFirst(path.keyword)}.`,
-      `Welcome the blessing of ${lowerFirst(magic.keyword)} without trying to control every detail.`
+      `Let yourself feel the quality of ${lowerFirst(heart.keyword)} without rushing to fix anything.`,
+      `Take one small, brave step toward ${lowerFirst(path.keyword)}.`,
+      `Trust that the gentle gift of ${lowerFirst(magic.keyword)} is already near you, even on unclear days.`
     ],
     dontLines: (heart, path, magic) => [
-      `Don’t dismiss what ${heart.name} is bringing up in your heart.`,
-      `Don’t move ahead in a way that betrays what ${path.name} is teaching you.`,
-      `Don’t ignore the quiet help of ${magic.name} just because it arrives gently.`
+      `Don\u2019t push away the feeling of ${lowerFirst(heart.keyword)} or judge yourself for being where you are.`,
+      `Don\u2019t force outcomes before ${lowerFirst(path.keyword)} has room to unfold; let timing be your ally.`,
+      `Don\u2019t overlook the quiet help of ${lowerFirst(magic.keyword)} just because it arrives gently.`
     ]
   },
   de: {
@@ -76,18 +70,12 @@ export const UI_STRINGS = {
     fanScrollAria: 'Streiche über das gefächerte Deck',
     revealButton: 'Meine Prophezeiung enthüllen',
     summaryTitle: '3 Karten zusammen',
-    doTitle: 'Tun (für alle 3 Karten)',
-    dontTitle: 'Nicht tun (für alle 3 Karten)',
-    downloadButton: 'Meine Prophezeiung herunterladen',
+    doTitle: 'Tun (f\u00fcr alle 3 Karten)',
+    dontTitle: 'Nicht tun (f\u00fcr alle 3 Karten)',
     drawAgain: 'Neu ziehen',
-    exportFooter: 'Eine sanfte kleine Prophezeiung für deinen Tag',
+    exportFooter: 'Eine sanfte kleine Prophezeiung f\u00fcr deinen Tag',
     briefLabel: 'Kurzdeutung:',
-    downloadBusy: 'Deine Prophezeiung wird gemalt…',
-    downloadDone: 'Heruntergeladen',
-    downloadOpened: 'Bild geöffnet — speichere es von dort',
-    downloadReset: 'Meine Prophezeiung herunterladen',
-    downloadFailed: 'Download fehlgeschlagen — bitte versuche es erneut',
-    languageSelectorAria: 'Sprache auswählen',
+    languageSelectorAria: 'Sprache ausw\u00e4hlen',
     faceDownCard: (n) => `Verdeckte Karte ${n}`,
     selectedCardAria: (label) => `${label}-Karte ausgewählt. Zum Abwählen erneut tippen.`,
     pickInstruction: (label, hint) => `Wähle deine ${label}-Karte: ${hint}.`,
@@ -97,16 +85,16 @@ export const UI_STRINGS = {
       path: { label: 'Weg', hint: 'wohin sich deine Energie bewegt' },
       magic: { label: 'Magie', hint: 'welcher Segen dich umgibt' }
     },
-    summary: (heart, path, magic) => `${heart.name} in der Herzposition zeigt, dass das Thema ${heart.keyword} dein Inneres prägt, während ${path.name} dich auf deinem Weg durch ${path.keyword} führt. ${magic.name} legt ${magic.keyword} wie einen Segen über die ganze Legung. Gemeinsam erzählen diese drei Karten von einem Weg, der bei ${heart.keyword} beginnt, sich durch ${path.keyword} entfaltet und von ${magic.keyword} begleitet wird.`,
+    summary: (heart, path, magic) => `In deinem Herzen spürst du gerade ${lowerFirst(heart.keyword)} \u2014 Gefühle, die gesehen und mit Güte gehalten werden möchten. Dein Weg trägt die Energie von ${lowerFirst(path.keyword)} und lädt dich ein, mit sanftem Mut voranzugehen. Um dich herum sammelt sich still der Segen von ${lowerFirst(magic.keyword)}, der dich daran erinnert, dass du nicht allein bist. Zusammen erzählen diese drei Karten eine Geschichte, die mit ehrlichem Fühlen beginnt, mit mutigem Gehen weitermacht und von stiller Anmut getragen wird.`,
     doLines: (heart, path, magic) => [
-      `Nimm dir Zeit, ehrlich zu fühlen, was ${heart.name} in deinem Herzen berührt.`,
-      `Gehe einen klaren Schritt in Richtung ${path.keyword}.`,
-      `Bleib offen für den stillen Segen, den ${magic.name} in diese Legung bringt.`
+      `Gib dir Zeit, ${lowerFirst(heart.keyword)} zu spüren, ohne sofort alles reparieren zu müssen.`,
+      `Gehe einen kleinen, mutigen Schritt in Richtung ${lowerFirst(path.keyword)}.`,
+      `Vertraue darauf, dass das sanfte Geschenk von ${lowerFirst(magic.keyword)} bereits nah bei dir ist, auch an unklaren Tagen.`
     ],
     dontLines: (heart, path, magic) => [
-      `Übergehe nicht, was ${heart.name} in dir auslöst.`,
-      `Gehe nicht voran, wenn es dem widerspricht, was ${path.name} dich lehren will.`,
-      `Überhöre nicht die sanfte Hilfe von ${magic.name}, nur weil sie leise erscheint.`
+      `Dränge ${lowerFirst(heart.keyword)} nicht weg und verurteile dich nicht für deinen jetzigen Stand.`,
+      `Erzwinge keine Ergebnisse, bevor ${lowerFirst(path.keyword)} Raum hat, sich zu entfalten; lass die Zeit deine Verbündete sein.`,
+      `Übersehe nicht die leise Hilfe von ${lowerFirst(magic.keyword)}, nur weil sie sanft zu dir kommt.`
     ]
   },
   th: {
@@ -129,15 +117,9 @@ export const UI_STRINGS = {
     summaryTitle: '3 ใบนี้เมื่ออ่านร่วมกัน',
     doTitle: 'ควรทำ (สำหรับไพ่ทั้ง 3 ใบ)',
     dontTitle: 'ไม่ควรทำ (สำหรับไพ่ทั้ง 3 ใบ)',
-    downloadButton: 'ดาวน์โหลดคำทำนายของฉัน',
     drawAgain: 'จั่วใหม่อีกครั้ง',
     exportFooter: 'คำทำนายแสนอ่อนโยนสำหรับวันของคุณ',
     briefLabel: 'สรุปย่อ:',
-    downloadBusy: 'กำลังวาดคำทำนายของคุณ…',
-    downloadDone: 'ดาวน์โหลดแล้ว',
-    downloadOpened: 'เปิดรูปแล้ว — บันทึกจากตรงนั้นได้เลย',
-    downloadReset: 'ดาวน์โหลดคำทำนายของฉัน',
-    downloadFailed: 'ดาวน์โหลดไม่สำเร็จ — ลองอีกครั้ง',
     languageSelectorAria: 'เลือกภาษา',
     faceDownCard: (n) => `ไพ่คว่ำใบที่ ${n}`,
     selectedCardAria: (label) => `เลือกไพ่ตำแหน่ง${label}แล้ว แตะอีกครั้งเพื่อยกเลิก`,
@@ -148,16 +130,16 @@ export const UI_STRINGS = {
       path: { label: 'เส้นทาง', hint: 'ทิศทางที่พลังของคุณกำลังเคลื่อนไป' },
       magic: { label: 'เวทมนตร์', hint: 'พรที่กำลังโอบล้อมคุณอยู่' }
     },
-    summary: (heart, path, magic) => `ไพ่ ${heart.name} ในตำแหน่งหัวใจเผยพลังของ${heart.keyword} ขณะที่ไพ่ ${path.name} บนเส้นทางของคุณชี้ให้เดินผ่าน${path.keyword} และไพ่ ${magic.name} ในตำแหน่งเวทมนตร์กำลังห่อหุ้มคำทำนายครั้งนี้ด้วย${magic.keyword} เมื่ออ่านร่วมกัน ไพ่ทั้งสามใบนี้บอกถึงเส้นทางที่เริ่มจาก${heart.keyword} เคลื่อนผ่าน${path.keyword} และได้รับพรจาก${magic.keyword}`,
+    summary: (heart, path, magic) => `ไพ่หัวใจสะท้อนพลังของ${lowerFirst(heart.keyword)}ที่กำลังเกิดขึ้นภายในตัวคุณในขณะนี้ \u2014 ความรู้สึกที่ต้องการถูกมองเห็นและถูกโอบกอดด้วยความอ่อนโยน ไพ่เส้นทางชี้ทิศทางที่พลังของ${lowerFirst(path.keyword)}กำลังเคลื่อนไปและชวนให้คุณก้าวเดินด้วยความกล้าหาญอันนุ่มนวล ไพ่เวทมนตร์ห่อหุ้มคุณด้วยพรแห่ง${lowerFirst(magic.keyword)}อย่างเงียบ ๆ เตือนความจำว่าคุณไม่ได้อยู่ตามลำพัง เมื่ออ่านร่วมกัน ไพ่ทั้งสามใบนี้เล่าเรื่องราวที่เริ่มต้นด้วยความรู้สึกที่ซื่อตรง ดำเนินด้วยการก้าวเดินอย่างกล้าหาญ และถูกโอบอุ้มด้วยความเมตตาอันเงียบสงบ`,
     doLines: (heart, path, magic) => [
-      `รับฟังอย่างซื่อตรงว่าหัวใจของคุณกำลังเรียนรู้อะไรจาก ${heart.name}`,
-      `ก้าวต่อไปอย่างชัดเจนในทิศทางของ${path.keyword}`,
-      `เปิดใจรับพรอันอ่อนโยนของ${magic.keyword}`
+      `อนุญาตให้ตัวเองรู้สึกถึงพลังของ${lowerFirst(heart.keyword)}ตามที่เป็นอยู่โดยไม่ต้องรีบแก้ไขอะไรทันที`,
+      `ก้าวเดินเล็ก ๆ ไปในทิศทางของ${lowerFirst(path.keyword)}ด้วยความกล้าหาญ`,
+      `เชื่อใจว่าของขวัญอันอ่อนโยนของ${lowerFirst(magic.keyword)}อยู่ใกล้ตัวคุณเสมอ แม้ในวันที่ยังไม่ชัดเจน`
     ],
     dontLines: (heart, path, magic) => [
-      `อย่าเพิกเฉยต่อสิ่งที่ ${heart.name} กำลังปลุกขึ้นในใจคุณ`,
-      `อย่าเดินต่อไปในทางที่ขัดกับบทเรียนของ ${path.name}`,
-      `อย่ามองข้ามความช่วยเหลือเงียบ ๆ จาก ${magic.name} เพียงเพราะมันมาอย่างนุ่มนวล`
+      `อย่าปิดกั้นความรู้สึกของ${lowerFirst(heart.keyword)}หรือตำหนิตัวเองที่ยังอยู่ตรงนี้`,
+      `อย่าบังคับผลลัพธ์ก่อนที่${lowerFirst(path.keyword)}จะมีที่ว่างให้คลี่คลาย พยายามให้เวลาเป็นพันธมิตรของคุณ`,
+      `อย่ามองข้ามความช่วยเหลือเงียบ ๆ ของ${lowerFirst(magic.keyword)}เพียงเพราะมันมาอย่างนุ่มนวล`
     ]
   }
 };
