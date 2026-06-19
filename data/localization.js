@@ -358,7 +358,7 @@ export function getPositions(lang) {
 export function getLocalizedCard(card, lang = DEFAULT_LANGUAGE) {
   if (lang === 'en') return card;
 
-  const localizedName = getLocalizedName(card, lang);
+  const localizedName = card.name;
   const localizedKeyword = getLocalizedKeyword(card, lang);
   const meanings = buildLocalizedMeanings(card, lang, localizedName, localizedKeyword);
 
