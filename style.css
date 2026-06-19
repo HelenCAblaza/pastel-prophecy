@@ -293,6 +293,10 @@ h3 { font-size: 1.7rem; }
   text-shadow: 0 1px 10px rgba(255,255,255,.46);
 }
 
+#pick-screen .eyebrow {
+  margin-top: 24px;
+}
+
 #pick-screen h2 {
   color: #5e3c76;
   text-shadow: 0 2px 18px rgba(255,255,255,.58);
@@ -363,9 +367,9 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
   overflow: visible;
   touch-action: manipulation;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,.12));
-  border: 1px solid rgba(255,255,255,.28);
-  padding: 18px 10px 24px;
+  background: transparent;
+  border: 0;
+  padding: 18px 0 24px;
 }
 
 .card-grid {
