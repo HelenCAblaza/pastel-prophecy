@@ -1,4 +1,4 @@
-import { cards } from './data/cards.js?v=26';
+import { cards } from './data/cards.js?v=27';
 
 const POSITIONS = [
   { key: 'heartMeaning', label: 'Heart', hint: 'what your heart is feeling' },
