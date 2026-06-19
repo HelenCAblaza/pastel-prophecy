@@ -82,6 +82,7 @@ body.result-bg-active {
     linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(248, 216, 243, .18) 52%, rgba(232, 190, 241, .34) 100%),
     linear-gradient(180deg, #eec0e7 0%, #e8b9eb 26%, #dfb6f0 54%, #efc5ea 76%, #f7daf2 100%);
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 body.result-bg-active::before {
@@ -131,6 +132,8 @@ body.result-bg-active .app {
 body.result-bg-active .app {
   position: relative;
   z-index: 1;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 body.reading-bg-active #pick-screen,
@@ -161,6 +164,12 @@ body.result-bg-active #result-screen {
   box-shadow: none;
   backdrop-filter: none;
   overflow-y: auto;
+}
+
+body.result-bg-active #result-screen {
+  height: 100dvh;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 body.shuffle-bg-active #shuffle-screen {
@@ -204,6 +213,7 @@ body.shuffle-bg-active #shuffle-screen.is-active {
   pointer-events: none;
   overflow: hidden;
   z-index: 0;
+  opacity: .15;
 }
 
 .title-halo {
