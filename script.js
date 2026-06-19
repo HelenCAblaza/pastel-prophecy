@@ -16,7 +16,7 @@ const SUIT_SYMBOLS = {
 
 let shuffledDeck = [];
 let visibleChoices = [];
-let selectedCards = [];
+let selectedChoices = [];
 
 const $ = (selector) => document.querySelector(selector);
 const screens = [...document.querySelectorAll('.screen')];
@@ -64,7 +64,7 @@ function initializeDeckStack() {
 }
 
 function startReading() {
-  selectedCards = [];
+  selectedChoices = [];
   visibleChoices = [];
   revealButton.classList.add('hidden');
   initializeDeckStack();
@@ -90,7 +90,7 @@ function shuffleDeck() {
 
 function renderPickGrid() {
   cardGrid.innerHTML = '';
-  selectedCards = [];
+  selectedChoices = [];
   updatePickInstruction();
 
   const rowCount = 4;
@@ -121,6 +121,7 @@ function renderPickGrid() {
       button.style.setProperty('--x', `${x.toFixed(2)}%`);
       button.style.setProperty('--depth', `${depth}`);
       button.setAttribute('aria-label', `Face-down card ${rowIndex * cardsPerRow + index + 1}`);
+      button.setAttribute('aria-pressed', 'false');
       button.addEventListener('click', () => selectCard(card, button));
       row.append(button);
     });
@@ -134,14 +135,61 @@ function renderPickGrid() {
 
 function selectCard(card, element) {
   if (fanDidDrag) return;
-  if (element.classList.contains('is-selected')) return;
-  if (selectedCards.length >= 3) return;
 
-  selectedCards.push(card);
-  element.classList.add('is-selected');
-  element.dataset.pick = selectedCards.length;
-  element.setAttribute('aria-label', `${POSITIONS[selectedCards.length - 1].label} card selected`);
+  const existingIndex = selectedChoices.findIndex((choice) => choice.element === element);
+  if (existingIndex >= 0) {
+    selectedChoices.splice(existingIndex, 1);
+    element.classList.remove('is-selected');
+    element.removeAttribute('data-pick');
+    element.style.removeProperty('--selected-order');
+    element.style.removeProperty('--badge-shift');
+    element.setAttribute('aria-pressed', 'false');
+  } else {
+    if (selectedChoices.length >= 3) return;
+    selectedChoices.push({ card, element });
+    element.classList.add('is-selected');
+    element.setAttribute('aria-pressed', 'true');
+  }
+
+  syncSelectedCards();
   updatePickInstruction();
+}
+
+function syncSelectedCards() {
+  cardGrid.querySelectorAll('.pick-badge').forEach((badge) => badge.remove());
+
+  const cardsInFan = [...cardGrid.querySelectorAll('.pick-card')];
+  cardsInFan.forEach((el, index) => {
+    if (!el.classList.contains('is-selected')) {
+      el.setAttribute('aria-label', `Face-down card ${index + 1}`);
+    }
+  });
+
+  selectedChoices.forEach((choice, index) => {
+    const position = POSITIONS[index];
+    choice.element.dataset.pick = index + 1;
+    choice.element.style.setProperty('--selected-order', `${index + 1}`);
+    choice.element.style.setProperty('--badge-shift', `${(index - 1) * 24}px`);
+    choice.element.setAttribute('aria-label', `${position.label} card selected. Tap again to deselect.`);
+  });
+
+  window.requestAnimationFrame(renderSelectionBadges);
+}
+
+function renderSelectionBadges() {
+  cardGrid.querySelectorAll('.pick-badge').forEach((badge) => badge.remove());
+  const gridRect = cardGrid.getBoundingClientRect();
+
+  selectedChoices.forEach((choice, index) => {
+    const rect = choice.element.getBoundingClientRect();
+    const badge = document.createElement('span');
+    badge.className = 'pick-badge';
+    badge.textContent = `${index + 1}`;
+    badge.setAttribute('aria-hidden', 'true');
+    badge.style.left = `${rect.left - gridRect.left + rect.width / 2 + ((index - 1) * 30)}px`;
+    badge.style.top = `${rect.top - gridRect.top - 12}px`;
+    cardGrid.append(badge);
+  });
 }
 
 function updateFanFocus(clientX) {
@@ -174,8 +222,8 @@ function bindFanInteractions() {
 }
 
 function updatePickInstruction() {
-  const next = POSITIONS[selectedCards.length];
-  if (selectedCards.length < 3) {
+  const next = POSITIONS[selectedChoices.length];
+  if (selectedChoices.length < 3) {
     pickCount.textContent = `Pick your ${next.label} card: ${next.hint}.`;
     revealButton.classList.add('hidden');
   } else {
@@ -253,7 +301,7 @@ function renderList(element, items) {
 }
 
 function revealReading() {
-  const reading = selectedCards.map((card, index) => ({ card, position: POSITIONS[index] }));
+  const reading = selectedChoices.map(({ card }, index) => ({ card, position: POSITIONS[index] }));
   const summary = generateSummary(reading);
   const guidance = generateSharedGuidance(reading);
 
