@@ -271,13 +271,17 @@ function lowerFirst(text) {
 
 function getSuitEnergy(card) {
   const suitMap = {
-    major: 'a major turning point',
+    major: 'a major spiritual lesson',
     dewdrops: 'emotional truth',
     sparkles: 'action and momentum',
     feathers: 'clarity and hard truth',
     crystals: 'grounded, practical growth'
   };
   return suitMap[card.suit] ?? 'inner guidance';
+}
+
+function getReadingArc(heart, path, magic) {
+  return `Together, these three cards describe a reading that begins in ${lowerFirst(heart.card.keyword)}, moves through ${lowerFirst(path.card.keyword)}, and is blessed by ${lowerFirst(magic.card.keyword)}.`;
 }
 
 function getDoFocus(card, positionKey) {
@@ -305,7 +309,7 @@ function getDontFocus(card, positionKey) {
 
 function generateSummary(reading) {
   const [heart, path, magic] = reading;
-  return `${heart.card.name} in the Heart position reveals an inner climate of ${lowerFirst(heart.card.keyword)}, while ${path.card.name} on your Path asks you to move through ${lowerFirst(path.card.keyword)}. ${magic.card.name} in the Magic position surrounds the whole reading with ${lowerFirst(magic.card.keyword)}. Together, these three cards describe ${getSuitEnergy(heart.card)}, guided toward ${getSuitEnergy(path.card)}, with a final blessing of ${getSuitEnergy(magic.card)} supporting the outcome.`;
+  return `${heart.card.name} in the Heart position reveals an inner climate of ${lowerFirst(heart.card.keyword)}, while ${path.card.name} on your Path asks you to move through ${lowerFirst(path.card.keyword)}. ${magic.card.name} in the Magic position surrounds the whole reading with ${lowerFirst(magic.card.keyword)}. ${getReadingArc(heart, path, magic)}`;
 }
 
 function generateSharedGuidance(reading) {
