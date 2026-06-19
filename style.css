@@ -75,13 +75,10 @@ body.reading-bg-active::before {
 
 body.result-bg-active {
   background:
-    radial-gradient(circle at 16% 18%, rgba(255,255,255,.34) 0 2px, transparent 4px),
-    radial-gradient(circle at 78% 14%, rgba(255,245,216,.72) 0 1.8px, transparent 4px),
-    radial-gradient(circle at 85% 35%, rgba(255,255,255,.42) 0 2px, transparent 4px),
-    radial-gradient(circle at 24% 50%, rgba(255,236,206,.6) 0 1.8px, transparent 4px),
-    radial-gradient(circle at 74% 62%, rgba(255,255,255,.34) 0 2px, transparent 4px),
     linear-gradient(180deg, rgba(255,255,255,.22), rgba(255,255,255,0) 24%),
     radial-gradient(circle at 50% 12%, rgba(255, 248, 253, .84) 0 9%, rgba(255, 225, 243, .58) 13%, rgba(247, 191, 216, .18) 24%, transparent 40%),
+    radial-gradient(circle at 50% 88%, rgba(255, 239, 250, .94) 0 14%, rgba(239, 195, 245, .55) 25%, rgba(227, 187, 244, .2) 38%, transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0) 56%, rgba(246, 214, 243, .26) 76%, rgba(236, 198, 241, .42) 100%),
     repeating-linear-gradient(
       160deg,
       rgba(255, 214, 239, .22) 0 13%,
@@ -95,23 +92,7 @@ body.result-bg-active {
 }
 
 body.result-bg-active::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    radial-gradient(circle at 10% 14%, rgba(255,255,255,.9) 0 1.5px, transparent 3px),
-    radial-gradient(circle at 26% 24%, rgba(255,236,182,.84) 0 1.8px, transparent 3.8px),
-    radial-gradient(circle at 84% 11%, rgba(255,249,227,.9) 0 1.7px, transparent 3.6px),
-    radial-gradient(circle at 70% 28%, rgba(255,255,255,.82) 0 1.3px, transparent 3px),
-    radial-gradient(circle at 18% 48%, rgba(255,223,146,.78) 0 1.9px, transparent 4px),
-    radial-gradient(circle at 88% 44%, rgba(255,255,255,.82) 0 1.4px, transparent 3px),
-    radial-gradient(circle at 64% 62%, rgba(255,239,187,.8) 0 1.6px, transparent 3.6px),
-    radial-gradient(circle at 14% 78%, rgba(255,255,255,.88) 0 1.5px, transparent 3px),
-    radial-gradient(circle at 82% 84%, rgba(255,224,150,.8) 0 1.8px, transparent 3.8px);
-  filter: drop-shadow(0 0 8px rgba(255, 223, 165, .48));
-  animation: driftGoldSparkles 14s linear infinite alternate;
+  content: none;
 }
 
 body.home-active .app {
@@ -193,24 +174,17 @@ body.shuffle-bg-active #shuffle-screen.is-active {
   text-shadow: 0 1px 10px rgba(255,255,255,.55);
 }
 
-#result-screen > *:not(.result-magic) {
+#result-screen > *:not(.result-ombre) {
   position: relative;
   z-index: 1;
 }
 
-.result-magic {
+.result-ombre {
   position: absolute;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-}
-
-.result-magic-back {
   z-index: 0;
-}
-
-.result-magic-front {
-  z-index: 3;
 }
 
 .title-halo {
@@ -226,154 +200,18 @@ body.shuffle-bg-active #shuffle-screen.is-active {
   opacity: .95;
 }
 
-.sparkle {
+.bottom-halo {
   position: absolute;
-  width: 22px;
-  height: 22px;
-  opacity: .82;
-  filter: drop-shadow(0 0 10px rgba(248, 223, 165, .38));
-  animation: twinkleSparkle 2.9s ease-in-out infinite;
-}
-
-.sparkle::before,
-.sparkle::after {
-  content: "";
-  position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 120px;
+  width: min(110vw, 560px);
+  height: 320px;
+  transform: translateX(-50%);
   border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255, 248, 208, .98), rgba(231, 172, 62, .95) 52%, rgba(255, 243, 184, .9));
-}
-
-.sparkle::before {
-  width: 4px;
-  height: 100%;
-  box-shadow: 0 0 16px rgba(248, 223, 165, .56);
-}
-
-.sparkle::after {
-  width: 100%;
-  height: 4px;
-  box-shadow: 0 0 16px rgba(248, 223, 165, .5);
-}
-
-.sparkle-1 { top: 94px; left: 48px; transform: scale(.8) rotate(18deg); animation-delay: -.2s; }
-.sparkle-2 { top: 132px; right: 54px; transform: scale(1.05) rotate(8deg); animation-delay: -.9s; }
-.sparkle-3 { top: 205px; left: 18px; transform: scale(.7) rotate(-12deg); animation-delay: -1.8s; }
-.sparkle-4 { top: 248px; right: 34px; transform: scale(.88) rotate(28deg); animation-delay: -.6s; }
-.sparkle-5 { top: 338px; left: 52px; transform: scale(1.08) rotate(-6deg); animation-delay: -2.4s; }
-.sparkle-6 { top: 412px; right: 10px; transform: scale(.74) rotate(12deg); animation-delay: -1.1s; }
-.sparkle-7 { top: 508px; left: 26px; transform: scale(.92) rotate(-20deg); animation-delay: -2.1s; }
-.sparkle-8 { bottom: 126px; right: 68px; transform: scale(.82) rotate(14deg); animation-delay: -.35s; }
-.sparkle-9 { top: 168px; left: 112px; transform: scale(.92) rotate(-10deg); animation-delay: -1.45s; }
-.sparkle-10 { top: 284px; right: 102px; transform: scale(.76) rotate(22deg); animation-delay: -2.6s; }
-.sparkle-11 { top: 388px; left: 132px; transform: scale(.84) rotate(5deg); animation-delay: -.75s; }
-.sparkle-12 { top: 520px; right: 128px; transform: scale(.96) rotate(-16deg); animation-delay: -1.95s; }
-.sparkle-13 { bottom: 176px; left: 88px; transform: scale(.72) rotate(34deg); animation-delay: -2.2s; }
-.sparkle-14 { bottom: 94px; right: 42px; transform: scale(1.02) rotate(-8deg); animation-delay: -.4s; }
-
-.butterfly {
-  position: absolute;
-  width: 5px;
-  height: 22px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(117, 84, 139, .9), rgba(148, 108, 159, .88));
-  opacity: .78;
-  filter: drop-shadow(0 4px 10px rgba(169, 118, 171, .24));
-  animation: butterflyFloat 12s ease-in-out infinite;
-}
-
-.butterfly::before,
-.butterfly::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  width: 22px;
-  height: 18px;
-  border-radius: 85% 22% 78% 25%;
   background:
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,.85) 0 16%, transparent 17%),
-    linear-gradient(135deg, rgba(255, 244, 250, .98), rgba(246, 193, 225, .9) 58%, rgba(230, 203, 251, .82));
-  border: 1px solid rgba(255,255,255,.45);
-}
-
-.butterfly::before {
-  right: 2px;
-  transform-origin: right center;
-  transform: rotate(-18deg);
-  animation: flapLeft .95s ease-in-out infinite alternate;
-}
-
-.butterfly::after {
-  left: 2px;
-  transform-origin: left center;
-  transform: scaleX(-1) rotate(-18deg);
-  animation: flapRight .95s ease-in-out infinite alternate;
-}
-
-.butterfly-1 {
-  top: 92px;
-  left: 22px;
-  transform: scale(.86) rotate(-8deg);
-  animation-duration: 13s;
-}
-
-.butterfly-2 {
-  top: 142px;
-  right: 28px;
-  transform: scale(.78) rotate(9deg);
-  animation-duration: 15s;
-}
-
-.butterfly-3 {
-  top: 360px;
-  left: 10px;
-  transform: scale(.7) rotate(-11deg);
-  animation-duration: 12s;
-}
-
-.butterfly-4 {
-  top: 470px;
-  right: 18px;
-  transform: scale(.74) rotate(8deg);
-  animation-duration: 16s;
-}
-
-.butterfly-5 {
-  top: 148px;
-  left: 118px;
-  transform: scale(.68) rotate(-6deg);
-  animation-duration: 14s;
-  animation-delay: -2.7s;
-  opacity: .6;
-}
-
-.butterfly-6 {
-  top: 286px;
-  right: 92px;
-  transform: scale(.8) rotate(12deg);
-  animation-duration: 17s;
-  animation-delay: -5.2s;
-  opacity: .66;
-}
-
-.butterfly-7 {
-  top: 558px;
-  left: 86px;
-  transform: scale(.62) rotate(-14deg);
-  animation-duration: 13s;
-  animation-delay: -3.4s;
-  opacity: .58;
-}
-
-.butterfly-8 {
-  bottom: 102px;
-  right: 36px;
-  transform: scale(.72) rotate(10deg);
-  animation-duration: 15s;
-  animation-delay: -6.1s;
-  opacity: .63;
+    radial-gradient(circle at 50% 44%, rgba(255, 247, 255, .94) 0 20%, rgba(245, 214, 244, .6) 34%, rgba(231, 191, 241, .28) 50%, transparent 72%);
+  filter: blur(14px);
+  opacity: .92;
 }
 
 .screen {
@@ -697,16 +535,16 @@ button:focus-visible { outline: 3px solid rgba(102,82,122,.35); outline-offset: 
 
 .result-list { width: 100%; display: grid; gap: 18px; margin: 22px 0; }
 .reading-card, .summary-card {
-  background: rgba(255, 251, 244, .54); border: 1px solid rgba(255,255,255,.72); border-radius: 26px;
+  background: rgba(255, 251, 244, .42); border: 1px solid rgba(255,255,255,.64); border-radius: 26px;
   padding: 16px; box-shadow: 0 12px 26px rgba(102,82,122,.12); width: 100%;
 }
 
 body.result-bg-active .reading-card,
 body.result-bg-active .summary-card {
-  background: rgba(255, 247, 255, .58);
-  border: 1px solid rgba(255,255,255,.48);
-  box-shadow: 0 16px 32px rgba(71, 43, 108, .18);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 247, 255, .4);
+  border: 1px solid rgba(255,255,255,.38);
+  box-shadow: 0 14px 28px rgba(71, 43, 108, .14);
+  backdrop-filter: blur(6px);
 }
 .reading-card { display: grid; justify-items: center; gap: 12px; animation: revealUp .55s ease both; }
 .reading-position { color: #9d7eb0; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; font-size: .76rem; }
