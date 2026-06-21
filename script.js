@@ -20,192 +20,63 @@ const MUSIC_STORAGE_KEY = 'pastel-prophecy-music';
 
 class HealingMusic {
   constructor() {
-    this.ctx = null;
-    this.masterGain = null;
+    this.audio = null;
     this.isPlaying = false;
-    this.volume = 0.18;
-    this.fadeTime = 3.0;
-    this.voices = [];
-    this.arpeggioInterval = null;
-    this.arpeggioIndex = 0;
-    this.hasEverStarted = false;
+    this.volume = 0.35;
+    this.fadeInterval = null;
+    this.fadeStep = 0.02;
+    this.fadeMs = 80;
   }
 
   init() {
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    this.ctx = new AudioContext();
-
-    this.masterGain = this.ctx.createGain();
-    this.masterGain.gain.value = 0;
-
-    const compressor = this.ctx.createDynamicsCompressor();
-    compressor.threshold.value = -24;
-    compressor.knee.value = 12;
-    compressor.ratio.value = 3;
-    compressor.attack.value = 0.1;
-    compressor.release.value = 0.5;
-
-    const reverb = this.createReverb();
-
-    const dryGain = this.ctx.createGain();
-    dryGain.gain.value = 0.55;
-    const wetGain = this.ctx.createGain();
-    wetGain.gain.value = 0.45;
-
-    this.masterGain.connect(dryGain);
-    dryGain.connect(compressor);
-    this.masterGain.connect(wetGain);
-    wetGain.connect(reverb);
-    reverb.connect(compressor);
-    compressor.connect(this.ctx.destination);
-
-    this.startPad();
-    this.startArpeggio();
+    if (this.audio) return;
+    this.audio = new Audio('assets/healing-music.mp3?v=1');
+    this.audio.loop = true;
+    this.audio.volume = 0;
+    this.audio.preload = 'auto';
   }
 
-  createReverb() {
-    const length = 2.5;
-    const decay = 2.0;
-    const rate = this.ctx.sampleRate;
-    const buffer = this.ctx.createBuffer(2, rate * length, rate);
-    for (let ch = 0; ch < 2; ch++) {
-      const data = buffer.getChannelData(ch);
-      for (let i = 0; i < data.length; i++) {
-        data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / data.length, decay);
+  fadeTo(targetVol) {
+    if (!this.audio) return;
+    window.clearInterval(this.fadeInterval);
+    this.fadeInterval = window.setInterval(() => {
+      if (!this.audio) { window.clearInterval(this.fadeInterval); return; }
+      const diff = targetVol - this.audio.volume;
+      if (Math.abs(diff) < this.fadeStep) {
+        this.audio.volume = targetVol;
+        window.clearInterval(this.fadeInterval);
+        return;
       }
-    }
-    const convolver = this.ctx.createConvolver();
-    convolver.buffer = buffer;
-    return convolver;
+      this.audio.volume += diff > 0 ? this.fadeStep : -this.fadeStep;
+    }, this.fadeMs);
   }
 
-  startPad() {
-    const now = this.ctx.currentTime;
-    const padNotes = [
-      { freq: 130.81, type: 'sine', vol: 0.35 },
-      { freq: 164.81, type: 'sine', vol: 0.22 },
-      { freq: 196.00, type: 'sine', vol: 0.18 },
-      { freq: 261.63, type: 'triangle', vol: 0.05 }
-    ];
-
-    padNotes.forEach((n) => {
-      const osc = this.ctx.createOscillator();
-      osc.type = n.type;
-      osc.frequency.value = n.freq;
-
-      const gain = this.ctx.createGain();
-      gain.gain.value = 0;
-
-      const lfo = this.ctx.createOscillator();
-      lfo.frequency.value = 0.06 + Math.random() * 0.1;
-      const lfoGain = this.ctx.createGain();
-      lfoGain.gain.value = n.vol * 0.4;
-      lfo.connect(lfoGain);
-      lfoGain.connect(gain.gain);
-
-      osc.connect(gain);
-      gain.connect(this.masterGain);
-
-      osc.start(now);
-      lfo.start(now);
-
-      gain.gain.setValueAtTime(0, now);
-      gain.gain.linearRampToValueAtTime(n.vol, now + 4);
-
-      this.voices.push({ osc, gain, lfo, lfoGain });
+  play() {
+    if (this.isPlaying) return Promise.resolve();
+    this.init();
+    this.isPlaying = true;
+    return this.audio.play().then(() => {
+      this.fadeTo(this.volume);
+    }).catch(() => {
+      this.isPlaying = false;
     });
   }
 
-  startArpeggio() {
-    const pentatonic = [130.81, 164.81, 196.00, 220.00, 261.63, 329.63, 392.00, 440.00];
-    const noteDuration = 2.8;
-
-    this.arpeggioInterval = window.setInterval(() => {
-      if (!this.ctx || this.ctx.state === 'closed') return;
-      this.playArpeggioNote(pentatonic[this.arpeggioIndex % pentatonic.length], noteDuration);
-      this.arpeggioIndex += 1;
-    }, noteDuration * 1000);
-
-    this.playArpeggioNote(pentatonic[0], noteDuration);
-  }
-
-  playArpeggioNote(freq, duration) {
-    const now = this.ctx.currentTime;
-
-    const osc = this.ctx.createOscillator();
-    osc.type = 'sine';
-    osc.frequency.value = freq;
-
-    const gain = this.ctx.createGain();
-    gain.gain.value = 0;
-
-    const filter = this.ctx.createBiquadFilter();
-    filter.type = 'lowpass';
-    filter.frequency.value = freq * 4;
-    filter.Q.value = 0.5;
-
-    osc.connect(filter);
-    filter.connect(gain);
-    gain.connect(this.masterGain);
-
-    osc.start(now);
-
-    const attack = 0.6;
-    const release = 2.2;
-    const peak = 0.12;
-
-    gain.gain.setValueAtTime(0, now);
-    gain.gain.linearRampToValueAtTime(peak, now + attack);
-    gain.gain.exponentialRampToValueAtTime(0.001, now + attack + release);
-
-    osc.stop(now + attack + release + 0.1);
-
-    window.setTimeout(() => {
-      try { osc.disconnect(); filter.disconnect(); gain.disconnect(); } catch (_) {}
-    }, (attack + release + 0.2) * 1000);
-  }
-
-  async play() {
-    if (!this.ctx || this.ctx.state === 'closed') this.init();
-    if (this.ctx.state === 'suspended') await this.ctx.resume();
-    if (this.isPlaying) return;
-    this.isPlaying = true;
-    this.hasEverStarted = true;
-
-    const now = this.ctx.currentTime;
-    this.masterGain.gain.cancelScheduledValues(now);
-    this.masterGain.gain.setValueAtTime(Math.max(this.masterGain.gain.value, 0.001), now);
-    this.masterGain.gain.exponentialRampToValueAtTime(this.volume, now + this.fadeTime);
-  }
-
   stop() {
-    if (!this.ctx || !this.isPlaying) return;
+    if (!this.isPlaying) return;
     this.isPlaying = false;
-
-    const now = this.ctx.currentTime;
-    this.masterGain.gain.cancelScheduledValues(now);
-    this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, now);
-    this.masterGain.gain.exponentialRampToValueAtTime(0.001, now + this.fadeTime);
+    this.fadeTo(0);
+    window.setTimeout(() => {
+      if (this.audio && !this.isPlaying) {
+        this.audio.pause();
+        this.audio.currentTime = 0;
+      }
+    }, 2000);
   }
 
   toggle() {
     if (this.isPlaying) this.stop();
     else this.play();
-  }
-
-  cleanup() {
-    if (this.arpeggioInterval) {
-      window.clearInterval(this.arpeggioInterval);
-      this.arpeggioInterval = null;
-    }
-    this.voices.forEach((v) => {
-      try { v.osc.stop(); v.osc.disconnect(); v.gain.disconnect(); v.lfo?.stop(); v.lfo?.disconnect(); } catch (_) {}
-    });
-    this.voices = [];
-    if (this.ctx && this.ctx.state !== 'closed') {
-      this.ctx.close();
-    }
-    this.ctx = null;
   }
 }
 
@@ -637,11 +508,23 @@ function maybeStartMusic() {
   }).catch(() => {});
 }
 
-document.addEventListener('visibilitychange', () => {
-  if (!document.hidden && ambientMusic.isPlaying && ambientMusic.ctx?.state === 'suspended') {
-    ambientMusic.ctx.resume();
-  }
-});
+function unlockAudioOnFirstInteraction() {
+  const handler = () => {
+    ambientMusic.init();
+    ambientMusic.play().then(() => {
+      window.localStorage.setItem(MUSIC_STORAGE_KEY, '1');
+      updateMusicToggle();
+    }).catch(() => {});
+    document.removeEventListener('pointerdown', handler);
+    document.removeEventListener('touchstart', handler);
+    document.removeEventListener('click', handler);
+  };
+  document.addEventListener('pointerdown', handler, { once: true });
+  document.addEventListener('touchstart', handler, { once: true });
+  document.addEventListener('click', handler, { once: true });
+}
+
+unlockAudioOnFirstInteraction();
 
 $('#begin-button').addEventListener('click', startReading);
 $('#shuffle-button').addEventListener('click', shuffleDeck);
