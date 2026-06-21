@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pastel Prophecy Result Background Preview</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: "Nunito", system-ui, sans-serif;
+      display: grid;
+      place-items: center;
+      background: #f4d6f3;
+      overflow: hidden;
+    }
+
+    .phone {
+      position: relative;
+      width: min(100vw, 430px);
+      height: 100dvh;
+      overflow: hidden;
+      color: #6f4e83;
+      background:
+        radial-gradient(circle at 50% 11%, rgba(255,255,255,.72) 0 10%, rgba(255,238,249,.58) 10%, transparent 25%),
+        radial-gradient(circle at 18% 22%, rgba(255,255,255,.28) 0 2px, transparent 4px),
+        radial-gradient(circle at 82% 18%, rgba(255,238,196,.7) 0 2px, transparent 4px),
+        radial-gradient(circle at 20% 74%, rgba(255,255,255,.2) 0 2px, transparent 4px),
+        linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,0) 24%),
+        repeating-linear-gradient(
+          180deg,
+          rgba(255, 199, 232, .65) 0 11%,
+          rgba(241, 194, 244, .74) 11% 22%,
+          rgba(226, 194, 255, .72) 22% 33%,
+          rgba(255, 212, 235, .72) 33% 44%,
+          rgba(244, 210, 255, .76) 44% 55%
+        );
+    }
+
+    .phone::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 8% 14%, rgba(255,255,255,.95) 0 1.6px, transparent 3px),
+        radial-gradient(circle at 23% 24%, rgba(255,224,147,.98) 0 2px, transparent 4px),
+        radial-gradient(circle at 82% 12%, rgba(255,255,255,.92) 0 1.6px, transparent 3px),
+        radial-gradient(circle at 73% 30%, rgba(255,230,170,.98) 0 1.8px, transparent 4px),
+        radial-gradient(circle at 15% 49%, rgba(255,255,255,.88) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 87% 56%, rgba(255,220,133,.94) 0 2px, transparent 4px),
+        radial-gradient(circle at 21% 79%, rgba(255,255,255,.94) 0 1.6px, transparent 3px),
+        radial-gradient(circle at 78% 86%, rgba(255,227,159,.96) 0 2px, transparent 4px);
+      filter: drop-shadow(0 0 8px rgba(248,223,165,.8));
+      opacity: .95;
+      animation: sparkleDrift 10s linear infinite alternate;
+      pointer-events: none;
+    }
+
+    .halo {
+      position: absolute;
+      top: 34px;
+      left: 50%;
+      width: 82%;
+      height: 180px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(255,255,255,.82) 0 16%, rgba(255,235,247,.68) 18%, rgba(255,213,237,.34) 36%, transparent 68%);
+      filter: blur(6px);
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: max(34px, env(safe-area-inset-top)) 18px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      height: 100%;
+    }
+
+    .eyebrow {
+      margin-top: 20px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .72rem;
+      font-weight: 900;
+      color: rgba(131,84,148,.75);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 9vw, 3.2rem);
+      line-height: .95;
+      text-align: center;
+      color: #72478f;
+      text-shadow: 0 2px 14px rgba(255,255,255,.58);
+    }
+
+    .subtitle {
+      margin: 0;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255, 247, 253, .44);
+      border: 1px solid rgba(255,255,255,.52);
+      color: #825d99;
+      font-size: .98rem;
+      text-align: center;
+      backdrop-filter: blur(6px);
+      max-width: 330px;
+    }
+
+    .cards {
+      width: 100%;
+      margin-top: 8px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      min-height: 150px;
+      border-radius: 28px;
+      background: rgba(255, 250, 252, .68);
+      border: 1px solid rgba(255,255,255,.62);
+      box-shadow: 0 16px 28px rgba(130, 92, 147, .16);
+      backdrop-filter: blur(8px);
+    }
+
+    .summary { min-height: 170px; }
+
+    .actions {
+      margin-top: auto;
+      width: 100%;
+      display: grid;
+      gap: 10px;
+      padding-bottom: 8px;
+    }
+
+    .button {
+      height: 50px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #fff7ea, #f8c7e2 52%, #f8dfa5);
+      box-shadow: 0 12px 24px rgba(151, 103, 161, .18);
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,.56);
+    }
+
+    .butterfly {
+      position: absolute;
+      z-index: 1;
+      width: 66px;
+      height: 48px;
+      filter: drop-shadow(0 6px 12px rgba(162, 110, 178, .25));
+      opacity: .9;
+      animation: butterflyFloat 14s ease-in-out infinite;
+    }
+
+    .butterfly svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .butterfly .wing-left,
+    .butterfly .wing-right {
+      transform-box: fill-box;
+      transform-origin: center right;
+      animation: flapLeft .9s ease-in-out infinite alternate;
+    }
+
+    .butterfly .wing-right {
+      transform-origin: center left;
+      animation-name: flapRight;
+    }
+
+    .b1 { top: 92px; left: 18px; transform: scale(.9) rotate(-8deg); }
+    .b2 { top: 148px; right: 22px; transform: scale(1.05) rotate(10deg); animation-duration: 16s; }
+    .b3 { top: 388px; left: 12px; transform: scale(.76) rotate(-10deg); animation-duration: 13s; }
+    .b4 { top: 468px; right: 18px; transform: scale(.86) rotate(9deg); animation-duration: 17s; }
+
+    @keyframes sparkleDrift {
+      0% { transform: translateY(0) scale(1); opacity: .8; }
+      50% { transform: translateY(-14px) scale(1.04); opacity: 1; }
+      100% { transform: translateY(-30px) scale(1.02); opacity: .9; }
+    }
+
+    @keyframes butterflyFloat {
+      0%, 100% { translate: 0 0; }
+      25% { translate: 8px -10px; }
+      50% { translate: -4px -18px; }
+      75% { translate: 10px -8px; }
+    }
+
+    @keyframes flapLeft {
+      from { transform: rotate(10deg) scaleY(1); }
+      to { transform: rotate(24deg) scaleY(.92); }
+    }
+
+    @keyframes flapRight {
+      from { transform: rotate(-10deg) scaleY(1); }
+      to { transform: rotate(-24deg) scaleY(.92); }
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="halo"></div>
+
+    <div class="butterfly b1">
+      <svg viewBox="0 0 120 80" aria-hidden="true">
+        <defs>
+          <linearGradient id="wingA" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ffe5f5"/>
+            <stop offset="45%" stop-color="#f7bfd8"/>
+            <stop offset="100%" stop-color="#dcb7ff"/>
+          </linearGradient>
+          <linearGradient id="wingB" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff5cc"/>
+            <stop offset="100%" stop-color="#f5c9ef"/>
+          </linearGradient>
+        </defs>
+        <g class="wing-left">
+          <path d="M58 35 C28 0, 4 8, 9 34 C13 52, 30 56, 53 45 Z" fill="url(#wingA)" stroke="rgba(255,255,255,.85)" stroke-width="2"/>
+          <path d="M56 42 C31 46, 15 59, 24 74 C34 83, 50 72, 58 52 Z" fill="url(#wingB)" stroke="rgba(255,255,255,.75)" stroke-width="2"/>
+        </g>
+        <g class="wing-right">
+          <path d="M62 35 C92 0, 116 8, 111 34 C107 52, 90 56, 67 45 Z" fill="url(#wingA)" stroke="rgba(255,255,255,.85)" stroke-width="2"/>
+          <path d="M64 42 C89 46, 105 59, 96 74 C86 83, 70 72, 62 52 Z" fill="url(#wingB)" stroke="rgba(255,255,255,.75)" stroke-width="2"/>
+        </g>
+        <ellipse cx="60" cy="40" rx="5" ry="18" fill="#7f5a8f"/>
+        <path d="M58 19 C52 8, 47 6, 44 6" stroke="#7f5a8f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M62 19 C68 8, 73 6, 76 6" stroke="#7f5a8f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="butterfly b2">
+      <svg viewBox="0 0 120 80" aria-hidden="true">
+        <use href="#"></use>
+        <defs>
+          <linearGradient id="wingC" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ffeef9"/>
+            <stop offset="50%" stop-color="#efc3ff"/>
+            <stop offset="100%" stop-color="#f8dfa5"/>
+          </linearGradient>
+          <linearGradient id="wingD" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ffd8ef"/>
+            <stop offset="100%" stop-color="#fff1bf"/>
+          </linearGradient>
+        </defs>
+        <g class="wing-left">
+          <path d="M58 35 C26 2, 3 10, 11 36 C16 52, 34 57, 53 45 Z" fill="url(#wingC)" stroke="rgba(255,255,255,.85)" stroke-width="2"/>
+          <path d="M56 42 C29 48, 18 60, 27 74 C38 81, 52 72, 58 52 Z" fill="url(#wingD)" stroke="rgba(255,255,255,.75)" stroke-width="2"/>
+        </g>
+        <g class="wing-right">
+          <path d="M62 35 C94 2, 117 10, 109 36 C104 52, 86 57, 67 45 Z" fill="url(#wingC)" stroke="rgba(255,255,255,.85)" stroke-width="2"/>
+          <path d="M64 42 C91 48, 102 60, 93 74 C82 81, 68 72, 62 52 Z" fill="url(#wingD)" stroke="rgba(255,255,255,.75)" stroke-width="2"/>
+        </g>
+        <ellipse cx="60" cy="40" rx="5" ry="18" fill="#7f5a8f"/>
+        <path d="M58 19 C52 8, 47 6, 44 6" stroke="#7f5a8f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M62 19 C68 8, 73 6, 76 6" stroke="#7f5a8f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="butterfly b3">
+      <svg viewBox="0 0 120 80" aria-hidden="true">
+        <defs>
+          <linearGradient id="wingE" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff3fb"/>
+            <stop offset="55%" stop-color="#f7bfd8"/>
+            <stop offset="100%" stop-color="#f8dfa5"/>
+          </linearGradient>
+        </defs>
+        <g class="wing-left">
+          <path d="M58 35 C28 4, 5 9, 11 34 C16 49, 30 55, 53 45 Z" fill="url(#wingE)" stroke="rgba(255,255,255,.82)" stroke-width="2"/>
+          <path d="M56 42 C32 48, 18 58, 26 72 C35 80, 49 71, 58 52 Z" fill="#f1d2ff" stroke="rgba(255,255,255,.75)" stroke-width="2"/>
+        </g>
+        <g class="wing-right">
+          <path d="M62 35 C92 4, 115 9, 109 34 C104 49, 90 55, 67 45 Z" fill="url(#wingE)" stroke="rgba(255,255,255,.82)" stroke-width="2"/>
+          <path d="M64 42 C88 48, 102 58, 94 72 C85 80, 71 71, 62 52 Z" fill="#f1d2ff" stroke="rgba(255,255,255,.75)" stroke-width="2"/>
+        </g>
+        <ellipse cx="60" cy="40" rx="5" ry="18" fill="#7f5a8f"/>
+      </svg>
+    </div>
+
+    <div class="butterfly b4">
+      <svg viewBox="0 0 120 80" aria-hidden="true">
+        <defs>
+          <linearGradient id="wingF" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff1f8"/>
+            <stop offset="50%" stop-color="#f3cbff"/>
+            <stop offset="100%" stop-color="#ffd9ef"/>
+          </linearGradient>
+        </defs>
+        <g class="wing-left">
+          <path d="M58 35 C29 1, 8 11, 11 36 C14 50, 30 56, 53 45 Z" fill="url(#wingF)" stroke="rgba(255,255,255,.82)" stroke-width="2"/>
+          <path d="M56 42 C33 48, 20 60, 28 73 C37 81, 50 71, 58 52 Z" fill="#fff1bf" stroke="rgba(255,255,255,.75)" stroke-width="2"/>
+        </g>
+        <g class="wing-right">
+          <path d="M62 35 C91 1, 112 11, 109 36 C106 50, 90 56, 67 45 Z" fill="url(#wingF)" stroke="rgba(255,255,255,.82)" stroke-width="2"/>
+          <path d="M64 42 C87 48, 100 60, 92 73 C83 81, 70 71, 62 52 Z" fill="#fff1bf" stroke="rgba(255,255,255,.75)" stroke-width="2"/>
+        </g>
+        <ellipse cx="60" cy="40" rx="5" ry="18" fill="#7f5a8f"/>
+      </svg>
+    </div>
+
+    <div class="content">
+      <div class="eyebrow">your reading</div>
+      <h1>Your Pastel Prophecy</h1>
+      <p class="subtitle">Pink-toned reveal preview with a brighter ombre halo behind the title and custom illustrated butterflies.</p>
+      <div class="cards">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card summary"></div>
+      </div>
+      <div class="actions">
+        <div class="button"></div>
+        <div class="button secondary"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
