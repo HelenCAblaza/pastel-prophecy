@@ -5,7 +5,7 @@ import {
   UI_STRINGS,
   getLocalizedCard,
   getPositions
-} from './data/localization.js?v=4';
+} from './data/localization.js?v=5';
 
 const SUIT_SYMBOLS = {
   major: 'Major Prophecy',
@@ -16,6 +16,97 @@ const SUIT_SYMBOLS = {
 };
 
 const LANGUAGE_STORAGE_KEY = 'pastel-prophecy-language';
+const MUSIC_STORAGE_KEY = 'pastel-prophecy-music';
+
+class AmbientMusic {
+  constructor() {
+    this.ctx = null;
+    this.masterGain = null;
+    this.filter = null;
+    this.oscillators = [];
+    this.isPlaying = false;
+    this.volume = 0.08;
+    this.fadeTime = 2.5;
+  }
+
+  init() {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    this.ctx = new AudioContext();
+
+    this.masterGain = this.ctx.createGain();
+    this.masterGain.gain.value = 0;
+
+    this.filter = this.ctx.createBiquadFilter();
+    this.filter.type = 'lowpass';
+    this.filter.frequency.value = 600;
+    this.filter.Q.value = 0.4;
+
+    this.masterGain.connect(this.filter);
+    this.filter.connect(this.ctx.destination);
+
+    const now = this.ctx.currentTime;
+    const voices = [
+      { freq: 130.81, detune: 0, type: 'sine', vol: 0.5 },
+      { freq: 164.81, detune: 3, type: 'sine', vol: 0.3 },
+      { freq: 196.00, detune: -2, type: 'sine', vol: 0.25 },
+      { freq: 261.63, detune: 0, type: 'triangle', vol: 0.06 }
+    ];
+
+    voices.forEach((v) => {
+      const osc = this.ctx.createOscillator();
+      osc.type = v.type;
+      osc.frequency.value = v.freq;
+      osc.detune.value = v.detune;
+
+      const gain = this.ctx.createGain();
+      gain.gain.value = v.vol;
+
+      const lfo = this.ctx.createOscillator();
+      lfo.frequency.value = 0.08 + Math.random() * 0.12;
+      const lfoGain = this.ctx.createGain();
+      lfoGain.gain.value = v.vol * 0.35;
+      lfo.connect(lfoGain);
+      lfoGain.connect(gain.gain);
+
+      osc.connect(gain);
+      gain.connect(this.masterGain);
+
+      osc.start(now);
+      lfo.start(now);
+
+      this.oscillators.push({ osc, gain, lfo, lfoGain });
+    });
+  }
+
+  async play() {
+    if (!this.ctx || this.ctx.state === 'closed') this.init();
+    if (this.ctx.state === 'suspended') await this.ctx.resume();
+    if (this.isPlaying) return;
+    this.isPlaying = true;
+
+    const now = this.ctx.currentTime;
+    this.masterGain.gain.cancelScheduledValues(now);
+    this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, now);
+    this.masterGain.gain.linearRampToValueAtTime(this.volume, now + this.fadeTime);
+  }
+
+  stop() {
+    if (!this.ctx || !this.isPlaying) return;
+    this.isPlaying = false;
+
+    const now = this.ctx.currentTime;
+    this.masterGain.gain.cancelScheduledValues(now);
+    this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, now);
+    this.masterGain.gain.linearRampToValueAtTime(0, now + this.fadeTime);
+  }
+
+  toggle() {
+    if (this.isPlaying) this.stop();
+    else this.play();
+  }
+}
+
+const ambientMusic = new AmbientMusic();
 
 let shuffledDeck = [];
 let visibleChoices = [];
@@ -135,6 +226,7 @@ function updateStaticText() {
 function applyLanguage() {
   updateStaticText();
   updateLanguageButtons();
+  updateMusicToggle();
 
   const ui = getUI();
   const shuffleButton = $('#shuffle-button');
@@ -157,6 +249,7 @@ function startReading() {
   initializeDeckStack();
   showScreen('shuffle-screen');
   applyLanguage();
+  maybeStartMusic();
 }
 
 function shuffleDeck() {
@@ -415,6 +508,35 @@ function revealReading() {
   if (resultScreen) resultScreen.scrollTop = 0;
 }
 
+function updateMusicToggle() {
+  const btn = $('#music-toggle');
+  const ui = getUI();
+  const isActive = ambientMusic.isPlaying;
+  btn.classList.toggle('is-active', isActive);
+  btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  btn.setAttribute('aria-label', isActive ? ui.musicToggleOn : ui.musicToggleOff);
+}
+
+function bindMusicToggle() {
+  $('#music-toggle').addEventListener('click', () => {
+    ambientMusic.toggle();
+    window.localStorage.setItem(MUSIC_STORAGE_KEY, ambientMusic.isPlaying ? '1' : '0');
+    updateMusicToggle();
+  });
+}
+
+function maybeStartMusic() {
+  if (window.localStorage.getItem(MUSIC_STORAGE_KEY) === '1') {
+    ambientMusic.play().then(updateMusicToggle).catch(() => {});
+  }
+}
+
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden && ambientMusic.isPlaying && ambientMusic.ctx?.state === 'suspended') {
+    ambientMusic.ctx.resume();
+  }
+});
+
 $('#begin-button').addEventListener('click', startReading);
 $('#shuffle-button').addEventListener('click', shuffleDeck);
 revealButton.addEventListener('click', revealReading);
@@ -424,5 +546,7 @@ if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 showScreen('home-screen');
 bindFanInteractions();
 bindLanguageSwitcher();
+bindMusicToggle();
 initializeDeckStack();
 applyLanguage();
+updateMusicToggle();

@@ -8,10 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Nunito:wght@400;600;700&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=41" />
-  <script type="module" src="script.js?v=90"></script>
+  <link rel="stylesheet" href="style.css?v=42" />
+  <script type="module" src="script.js?v=91"></script>
 </head>
 <body>
+  <button class="music-toggle" id="music-toggle" type="button" aria-label="Music off" aria-pressed="false">
+    <svg class="icon-on" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+    <svg class="icon-off" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+  </button>
   <div class="language-switcher" id="language-switcher" aria-label="Choose language">
     <button class="lang-button is-active" type="button" data-lang="en" aria-label="English" aria-pressed="true"><span aria-hidden="true">🇬🇧</span></button>
     <button class="lang-button" type="button" data-lang="th" aria-label="ไทย" aria-pressed="false"><span aria-hidden="true">🇹🇭</span></button>
