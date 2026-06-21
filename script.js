@@ -18,15 +18,17 @@ const SUIT_SYMBOLS = {
 const LANGUAGE_STORAGE_KEY = 'pastel-prophecy-language';
 const MUSIC_STORAGE_KEY = 'pastel-prophecy-music';
 
-class AmbientMusic {
+class HealingMusic {
   constructor() {
     this.ctx = null;
     this.masterGain = null;
-    this.filter = null;
-    this.oscillators = [];
     this.isPlaying = false;
-    this.volume = 0.08;
-    this.fadeTime = 2.5;
+    this.volume = 0.18;
+    this.fadeTime = 3.0;
+    this.voices = [];
+    this.arpeggioInterval = null;
+    this.arpeggioIndex = 0;
+    this.hasEverStarted = false;
   }
 
   init() {
@@ -36,35 +38,68 @@ class AmbientMusic {
     this.masterGain = this.ctx.createGain();
     this.masterGain.gain.value = 0;
 
-    this.filter = this.ctx.createBiquadFilter();
-    this.filter.type = 'lowpass';
-    this.filter.frequency.value = 600;
-    this.filter.Q.value = 0.4;
+    const compressor = this.ctx.createDynamicsCompressor();
+    compressor.threshold.value = -24;
+    compressor.knee.value = 12;
+    compressor.ratio.value = 3;
+    compressor.attack.value = 0.1;
+    compressor.release.value = 0.5;
 
-    this.masterGain.connect(this.filter);
-    this.filter.connect(this.ctx.destination);
+    const reverb = this.createReverb();
 
+    const dryGain = this.ctx.createGain();
+    dryGain.gain.value = 0.55;
+    const wetGain = this.ctx.createGain();
+    wetGain.gain.value = 0.45;
+
+    this.masterGain.connect(dryGain);
+    dryGain.connect(compressor);
+    this.masterGain.connect(wetGain);
+    wetGain.connect(reverb);
+    reverb.connect(compressor);
+    compressor.connect(this.ctx.destination);
+
+    this.startPad();
+    this.startArpeggio();
+  }
+
+  createReverb() {
+    const length = 2.5;
+    const decay = 2.0;
+    const rate = this.ctx.sampleRate;
+    const buffer = this.ctx.createBuffer(2, rate * length, rate);
+    for (let ch = 0; ch < 2; ch++) {
+      const data = buffer.getChannelData(ch);
+      for (let i = 0; i < data.length; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / data.length, decay);
+      }
+    }
+    const convolver = this.ctx.createConvolver();
+    convolver.buffer = buffer;
+    return convolver;
+  }
+
+  startPad() {
     const now = this.ctx.currentTime;
-    const voices = [
-      { freq: 130.81, detune: 0, type: 'sine', vol: 0.5 },
-      { freq: 164.81, detune: 3, type: 'sine', vol: 0.3 },
-      { freq: 196.00, detune: -2, type: 'sine', vol: 0.25 },
-      { freq: 261.63, detune: 0, type: 'triangle', vol: 0.06 }
+    const padNotes = [
+      { freq: 130.81, type: 'sine', vol: 0.35 },
+      { freq: 164.81, type: 'sine', vol: 0.22 },
+      { freq: 196.00, type: 'sine', vol: 0.18 },
+      { freq: 261.63, type: 'triangle', vol: 0.05 }
     ];
 
-    voices.forEach((v) => {
+    padNotes.forEach((n) => {
       const osc = this.ctx.createOscillator();
-      osc.type = v.type;
-      osc.frequency.value = v.freq;
-      osc.detune.value = v.detune;
+      osc.type = n.type;
+      osc.frequency.value = n.freq;
 
       const gain = this.ctx.createGain();
-      gain.gain.value = v.vol;
+      gain.gain.value = 0;
 
       const lfo = this.ctx.createOscillator();
-      lfo.frequency.value = 0.08 + Math.random() * 0.12;
+      lfo.frequency.value = 0.06 + Math.random() * 0.1;
       const lfoGain = this.ctx.createGain();
-      lfoGain.gain.value = v.vol * 0.35;
+      lfoGain.gain.value = n.vol * 0.4;
       lfo.connect(lfoGain);
       lfoGain.connect(gain.gain);
 
@@ -74,8 +109,60 @@ class AmbientMusic {
       osc.start(now);
       lfo.start(now);
 
-      this.oscillators.push({ osc, gain, lfo, lfoGain });
+      gain.gain.setValueAtTime(0, now);
+      gain.gain.linearRampToValueAtTime(n.vol, now + 4);
+
+      this.voices.push({ osc, gain, lfo, lfoGain });
     });
+  }
+
+  startArpeggio() {
+    const pentatonic = [130.81, 164.81, 196.00, 220.00, 261.63, 329.63, 392.00, 440.00];
+    const noteDuration = 2.8;
+
+    this.arpeggioInterval = window.setInterval(() => {
+      if (!this.ctx || this.ctx.state === 'closed') return;
+      this.playArpeggioNote(pentatonic[this.arpeggioIndex % pentatonic.length], noteDuration);
+      this.arpeggioIndex += 1;
+    }, noteDuration * 1000);
+
+    this.playArpeggioNote(pentatonic[0], noteDuration);
+  }
+
+  playArpeggioNote(freq, duration) {
+    const now = this.ctx.currentTime;
+
+    const osc = this.ctx.createOscillator();
+    osc.type = 'sine';
+    osc.frequency.value = freq;
+
+    const gain = this.ctx.createGain();
+    gain.gain.value = 0;
+
+    const filter = this.ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = freq * 4;
+    filter.Q.value = 0.5;
+
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(this.masterGain);
+
+    osc.start(now);
+
+    const attack = 0.6;
+    const release = 2.2;
+    const peak = 0.12;
+
+    gain.gain.setValueAtTime(0, now);
+    gain.gain.linearRampToValueAtTime(peak, now + attack);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + attack + release);
+
+    osc.stop(now + attack + release + 0.1);
+
+    window.setTimeout(() => {
+      try { osc.disconnect(); filter.disconnect(); gain.disconnect(); } catch (_) {}
+    }, (attack + release + 0.2) * 1000);
   }
 
   async play() {
@@ -83,11 +170,12 @@ class AmbientMusic {
     if (this.ctx.state === 'suspended') await this.ctx.resume();
     if (this.isPlaying) return;
     this.isPlaying = true;
+    this.hasEverStarted = true;
 
     const now = this.ctx.currentTime;
     this.masterGain.gain.cancelScheduledValues(now);
-    this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, now);
-    this.masterGain.gain.linearRampToValueAtTime(this.volume, now + this.fadeTime);
+    this.masterGain.gain.setValueAtTime(Math.max(this.masterGain.gain.value, 0.001), now);
+    this.masterGain.gain.exponentialRampToValueAtTime(this.volume, now + this.fadeTime);
   }
 
   stop() {
@@ -97,16 +185,31 @@ class AmbientMusic {
     const now = this.ctx.currentTime;
     this.masterGain.gain.cancelScheduledValues(now);
     this.masterGain.gain.setValueAtTime(this.masterGain.gain.value, now);
-    this.masterGain.gain.linearRampToValueAtTime(0, now + this.fadeTime);
+    this.masterGain.gain.exponentialRampToValueAtTime(0.001, now + this.fadeTime);
   }
 
   toggle() {
     if (this.isPlaying) this.stop();
     else this.play();
   }
+
+  cleanup() {
+    if (this.arpeggioInterval) {
+      window.clearInterval(this.arpeggioInterval);
+      this.arpeggioInterval = null;
+    }
+    this.voices.forEach((v) => {
+      try { v.osc.stop(); v.osc.disconnect(); v.gain.disconnect(); v.lfo?.stop(); v.lfo?.disconnect(); } catch (_) {}
+    });
+    this.voices = [];
+    if (this.ctx && this.ctx.state !== 'closed') {
+      this.ctx.close();
+    }
+    this.ctx = null;
+  }
 }
 
-const ambientMusic = new AmbientMusic();
+const ambientMusic = new HealingMusic();
 
 let shuffledDeck = [];
 let visibleChoices = [];
@@ -526,9 +629,12 @@ function bindMusicToggle() {
 }
 
 function maybeStartMusic() {
-  if (window.localStorage.getItem(MUSIC_STORAGE_KEY) === '1') {
-    ambientMusic.play().then(updateMusicToggle).catch(() => {});
-  }
+  const saved = window.localStorage.getItem(MUSIC_STORAGE_KEY);
+  if (saved === '0') return;
+  ambientMusic.play().then(() => {
+    window.localStorage.setItem(MUSIC_STORAGE_KEY, '1');
+    updateMusicToggle();
+  }).catch(() => {});
 }
 
 document.addEventListener('visibilitychange', () => {
