@@ -5,7 +5,7 @@ import {
   UI_STRINGS,
   getLocalizedCard,
   getPositions
-} from './data/localization.js?v=6';
+} from './data/localization.js?v=7';
 
 const SUIT_SYMBOLS = {
   major: 'Major Prophecy',

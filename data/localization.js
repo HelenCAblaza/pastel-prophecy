@@ -109,10 +109,10 @@ export const UI_STRINGS = {
     beginAria: 'เริ่มอ่านไพ่',
     startImageAlt: 'หน้าเริ่มต้นของ The Pastel Prophecy มียูนิคอร์น ปราสาท และปุ่มเริ่มอ่านไพ่',
     stepOne: 'ขั้นแรก',
-    stepTwo: 'ขั้นตอนต่อไป',
+    stepTwo: 'ขั้นตอนถัดไป',
     yourReading: 'คำทำนายวันนี้',
     wakeDeck: 'ปลุกไพ่',
-    shuffleInstructionIdle: 'แตะสับไพ่ แล้วปล่อยใจให้ลอยไปตามกลีบดอกไม้',
+    shuffleInstructionIdle: 'แตะปุ่มสับไพ่ แล้วปล่อยใจไปตามสบาย',
     shuffleInstructionBusy: 'ไพ่กำลังหมุนวนอยู่ใต้แสงจันทร์…',
     shuffleButton: 'สับไพ่',
     chooseThree: 'เลือกไพ่สามใบ',
@@ -132,20 +132,20 @@ export const UI_STRINGS = {
     pickInstruction: (label, hint) => `เลือกไพ่${label} — ${hint}`,
     readyToReveal: 'ไพ่สามใบพร้อมแล้ว เปิดคำทำนายเลยไหม?',
     positions: {
-      heart: { label: 'หัวใจ', hint: 'สิ่งที่หัวใจกำลังรู้สึกอยู่ตอนนี้' },
-      path: { label: 'เส้นทาง', hint: 'ทิศทางที่กำลังจะไป' },
-      magic: { label: 'เวทมนตร์', hint: 'พรที่กำลังอยู่รอบตัวคุณ' }
+      heart: { label: 'หัวใจ', hint: 'ตอนนี้หัวใจคุณรู้สึกยังไง' },
+      path: { label: 'เส้นทาง', hint: 'ทิศทางชีวิตที่กำลังจะไป' },
+      magic: { label: 'เวทมนตร์', hint: 'พรที่ล้อมรอบคุณอยู่' }
     },
-    summary: (heart, path, magic) => `ไพ่หัวใจบอกว่าตอนนี้คุณกำลังเต็มไปด้วย${lowerFirst(heart.keyword)} — ความรู้สึกนี้อยากถูกมองเห็นและได้รับการเข้าใจ ไพ่เส้นทางชวนให้คุณก้าวไปข้างหน้าด้วยพลังของ${lowerFirst(path.keyword)} ไม่ต้องรีบ ค่อย ๆ ไปก็ได้ ส่วนไพ่เวทมนตร์คอยย้ำว่ามี${lowerFirst(magic.keyword)}อยู่รอบตัวคุณเสมอ แม้ในวันที่รู้สึกเหงา ไพ่ทั้งสามใบนี้เล่าเรื่องราวของความรู้สึกที่ซื่อตรง การก้าวเดินด้วยความกล้า และความเมตตาที่คอยโอบอุ้มคุณอยู่เสมอ`,
+    summary: (heart, path, magic) => `ตอนนี้หัวใจคุณเต็มไปด้วย${lowerFirst(heart.keyword)} — ความรู้สึกนี้อยากถูกมองเห็นและเข้าใจ เส้นทางข้างหน้าชวนให้คุณก้าวต่อไปด้วย${lowerFirst(path.keyword)} ไม่ต้องรีบนะ ค่อย ๆ ไปก็ได้ ส่วนพรที่ล้อมรอบคุณคือ${lowerFirst(magic.keyword)} แม้ในวันที่เหงาหรือเหนื่อย ก็ยังมีอะไรดี ๆ อยู่เสมอ ไพ่สามใบนี้เล่าเรื่องของความรู้สึกที่จริงใจ การก้าวเดินด้วยความกล้า และความอบอุ่นที่คอยโอบกอดคุณอยู่`,
     doLines: (heart, path, magic) => [
-      `ให้เวลาตัวเองรู้สึก${lowerFirst(heart.keyword)}ตามที่เป็น ไม่ต้องรีบแก้ไขอะไร`,
-      `ก้าวเล็ก ๆ ไปในทิศทางของ${lowerFirst(path.keyword)} ไม่ต้องกลัว`,
-      `เชื่อใจว่า${lowerFirst(magic.keyword)}อยู่ใกล้ตัวคุณเสมอ แม้ในวันที่ยังไม่เห็นชัด`
+      `ให้ตัวเองรู้สึก${lowerFirst(heart.keyword)}ได้เต็มที่ ไม่ต้องรีบแก้ไขอะไร`,
+      `ก้าวเล็ก ๆ ไปข้างหน้าด้วย${lowerFirst(path.keyword)} ไม่ต้องกลัวนะ`,
+      `เชื่อใจว่า${lowerFirst(magic.keyword)}อยู่ใกล้ ๆ เสมอ แม้วันที่ยังไม่เห็นชัด`
     ],
     dontLines: (heart, path, magic) => [
-      `อย่าปิดกั้นความรู้สึก${lowerFirst(heart.keyword)} และอย่าโทษตัวเองที่ยังรู้สึกแบบนี้`,
-      `อย่าบังคับให้${lowerFirst(path.keyword)}ต้องเป็นไปตามที่คิด ปล่อยให้มันคลี่คลายไปตามธรรมชาติ`,
-      `อย่ามองข้าม${lowerFirst(magic.keyword)}เพียงเพราะมันมาแบบเงียบ ๆ`
+      `อย่าปิดกั้นหรือโทษตัวเองที่รู้สึก${lowerFirst(heart.keyword)}`,
+      `อย่าบังคับให้ทุกอย่างเป็นไปตามที่คิด ปล่อยให้มันคลี่คลายไปเอง`,
+      `อย่ามองข้าม${lowerFirst(magic.keyword)}เพราะมันมาแบบเงียบ ๆ`
     ]
   }
 };
@@ -224,54 +224,54 @@ const KEYWORD_TRANSLATIONS = {
   'Diligence': { de: 'Fleiß', th: 'ความขยัน' },
   'Discernment': { de: 'Urteilsvermögen', th: 'สติปัญญา' },
   'Drive': { de: 'Tatkraft', th: 'แรงผลักดัน' },
-  'Emotional balance': { de: 'Emotionale Reife', th: 'อารมณ์ที่สมดุล' },
-  'Emotional fulfillment': { de: 'Emotionale Erfüllung', th: 'ความสมหวังในหัวใจ' },
+  'Emotional balance': { de: 'Emotionale Reife', th: 'อารมณ์สมดุล' },
+  'Emotional fulfillment': { de: 'Emotionale Erf\u00fcllung', th: 'ความสมหวังในหัวใจ' },
   'Emotional renewal': { de: 'Emotionale Erneuerung', th: 'การเยี่ยวยาหัวใจ' },
   'Ending': { de: 'Ende', th: 'การจบ' },
-  'Enthusiasm': { de: 'Begeisterung', th: 'ความกระตื้นร้อน' },
+  'Enthusiasm': { de: 'Begeisterung', th: 'ความกระตือรือร้น' },
   'Expansion': { de: 'Expansion', th: 'การขยายขอบเขต' },
-  'Generosity': { de: 'Großzügigkeit', th: 'ความใจกว้าง' },
+  'Generosity': { de: 'Gro\u00dfz\u00fcgigkeit', th: 'ความใจกว้าง' },
   'Grief': { de: 'Trauer', th: 'ความเสียใจ' },
   'Hardship': { de: 'Entbehrung', th: 'ความลำบาก' },
   'Heartbreak': { de: 'Herzschmerz', th: 'อกหัก' },
   'Hope': { de: 'Hoffnung', th: 'ความหวัง' },
   'Inner knowing': { de: 'Innere Gewissheit', th: 'สัญชาตญาณภายใน' },
-  'Inner strength': { de: 'Innere Stärke', th: 'พลังภายใน' },
+  'Inner strength': { de: 'Innere St\u00e4rke', th: 'พลังภายใน' },
   'Inspiration': { de: 'Inspiration', th: 'แรงบันดาลใจ' },
   'Joy': { de: 'Freude', th: 'ความยินดี' },
-  'Joyful foundation': { de: 'Freudige Stabilität', th: 'รากแห่งความสุข' },
+  'Joyful foundation': { de: 'Freudige Stabilit\u00e4t', th: 'รากแห่งความสุข' },
   'Leap of faith': { de: 'Vertrauenssprung', th: 'การกระโดดด้วยหัวใจ' },
-  'Legacy': { de: 'Vermächtnis', th: 'มรดก' },
-  'Manifestation': { de: 'Manifestation', th: 'การสร้างจากความอธิษฐาน' },
-  'Momentum': { de: 'Schwung', th: 'แรงหนึ่ง' },
+  'Legacy': { de: 'Verm\u00e4chtnis', th: 'มรดก' },
+  'Manifestation': { de: 'Manifestation', th: 'การสร้างสรรค์' },
+  'Momentum': { de: 'Schwung', th: 'แรงขับเคลื่อน' },
   'Mystery': { de: 'Geheimnis', th: 'ความลึกลับ' },
   'Nostalgia': { de: 'Nostalgie', th: 'ความคิดถึง' },
   'Open-hearted message': { de: 'Offenherzige Botschaft', th: 'ข้อความจากหัวใจ' },
   'Opportunity': { de: 'Gelegenheit', th: 'โอกาส' },
   'Partnership': { de: 'Partnerschaft', th: 'ความร่วมมือ' },
   'Patience': { de: 'Geduld', th: 'ความอดทน' },
-  'Perseverance': { de: 'Durchhaltevermögen', th: 'ความอดทนไม่ยอมแพ้' },
+  'Perseverance': { de: 'Durchhalteverm\u00f6gen', th: 'ความอดทน' },
   'Planning': { de: 'Planung', th: 'การวางแผน' },
-  'Practical nurture': { de: 'Praktische Fürsorge', th: 'การดูแลที่ลงมือ' },
+  'Practical nurture': { de: 'Praktische F\u00fcrsorge', th: 'การดูแลที่ลงมือ' },
   'Reason': { de: 'Vernunft', th: 'เหตุผล' },
   'Recognition': { de: 'Anerkennung', th: 'การได้รับรู้' },
-  'Reflection': { de: 'Innenschau', th: 'การทบทวนตน' },
-  'Resilience': { de: 'Widerstandskraft', th: 'ความยืดหยุ่น' },
+  'Reflection': { de: 'Innenschau', th: 'การทบทวนตัวเอง' },
+  'Resilience': { de: 'Widerstandskraft', th: 'ความทนทาน' },
   'Rest': { de: 'Ruhe', th: 'การพักผ่อน' },
-  'Restriction': { de: 'Einschränkung', th: 'การถูกจำกัด' },
-  'Romantic pursuit': { de: 'Romantische Annäherung', th: 'การตามหาความรัก' },
+  'Restriction': { de: 'Einschr\u00e4nkung', th: 'ข้อจำกัด' },
+  'Romantic pursuit': { de: 'Romantische Ann\u00e4herung', th: 'การตามหาความรัก' },
   'Satisfaction': { de: 'Zufriedenheit', th: 'ความพอใจ' },
-  'Security': { de: 'Sicherheit', th: 'ความปลอดภัย' },
-  'Self-sufficiency': { de: 'Unabhängigkeit', th: 'การพึ่งพาของตน' },
+  'Security': { de: 'Sicherheit', th: 'ความมั่นคง' },
+  'Self-sufficiency': { de: 'Unabh\u00e4ngigkeit', th: 'การพึ่งพาตัวเอง' },
   'Stalemate': { de: 'Patt', th: 'ทางตัน' },
   'Strategy': { de: 'Strategie', th: 'กลยุทธ์' },
   'Structure': { de: 'Struktur', th: 'โครงสร้าง' },
   'Study': { de: 'Lernen', th: 'การศึกษา' },
   'Surrender': { de: 'Hingabe', th: 'การยอมรับ' },
   'Teamwork': { de: 'Zusammenarbeit', th: 'การทำงานร่วมกัน' },
-  'Tradition': { de: 'Tradition', th: 'ขนบธรรมเนียม' },
+  'Tradition': { de: 'Tradition', th: 'ประเพณี' },
   'Transformation': { de: 'Transformation', th: 'การเปลี่ยนแปลง' },
-  'Transition': { de: 'Übergang', th: 'ช่วงเวลา' },
+  'Transition': { de: '\u00dcbergang', th: 'ช่วงเปลี่ยนผ่าน' },
   'Truth': { de: 'Wahrheit', th: 'ความจริง' },
   'Turning point': { de: 'Wendepunkt', th: 'จุดเปลี่ยน' },
   'Upheaval': { de: 'Umbruch', th: 'ความปั่นปวน' },
@@ -300,7 +300,7 @@ function getMinorCardName(card, lang) {
 }
 
 function getLocalizedName(card, lang) {
-  if (lang === 'en') return card.name;
+  if (lang === 'en' || lang === 'th') return card.name;
   if (card.suit === 'major') return MAJOR_NAME_TRANSLATIONS[card.name]?.[lang] ?? card.name;
   return getMinorCardName(card, lang);
 }
@@ -330,10 +330,10 @@ function buildLocalizedMeanings(card, lang, localizedName, localizedKeyword) {
   }
 
   return {
-    shortMeaning: `${localizedName} สื่อถึง${localizedKeyword} พลังนี้กำลังเคลื่อนไหวในชีวิตของคุณตอนนี้`,
-    heartMeaning: `ในตำแหน่งหัวใจ ${localizedName} บอกว่าตอนนี้คุณกำลังรู้สึกถึง${localizedKeyword}อยู่ลึกลับ ให้เวลาตัวเองได้รับรู้ความรู้สึกนี้อย่างอ่อนโยน`,
-    pathMeaning: `บนเส้นทางชีวิต ${localizedName} ชวนให้คุณก้าวไปข้างหน้าด้วย${localizedKeyword} ไม่ต้องรีบ เดินไปตามจังหวะของตัวเอง`,
-    magicMeaning: `ไพ่ใบนี้เป็นพรแห่ง${localizedKeyword} คอยอยู่เคียงข้างและหนุนนำคุณอย่างเงียบ ๆ`
+    shortMeaning: `${localizedName} บอกถึง${localizedKeyword} พลังนี้กำลังทำงานในชีวิตคุณอยู่ตอนนี้`,
+    heartMeaning: `ในตำแหน่งหัวใจ ${localizedName} บอกว่าตอนนี้คุณกำลังรู้สึกถึง${localizedKeyword}อยู่ข้างใน ให้เวลาตัวเองได้รู้สึกอย่างอ่อนโยนนะ`,
+    pathMeaning: `บนเส้นทางชีวิต ${localizedName} ชวนให้คุณก้าวไปข้างหน้าด้วย${localizedKeyword} ไม่ต้องรีบ เดินตามจังหวะตัวเองได้เลย`,
+    magicMeaning: `ไพ่ใบนี้เป็นพรแห่ง${localizedKeyword} คอยอุ่นใจและหนุนคุณอยู่แบบเงียบ ๆ`
   };
 }
 
