@@ -22,7 +22,7 @@ class HealingMusic {
   constructor() {
     this.audio = null;
     this.isPlaying = false;
-    this.volume = 0.35;
+    this.volume = 0.22;
     this.fadeInterval = null;
     this.fadeStep = 0.02;
     this.fadeMs = 80;
@@ -30,7 +30,7 @@ class HealingMusic {
 
   init() {
     if (this.audio) return;
-    this.audio = new Audio('assets/healing-music.mp3?v=1');
+    this.audio = new Audio('assets/healing-music.mp3?v=2');
     this.audio.loop = true;
     this.audio.volume = 0;
     this.audio.preload = 'auto';
